@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>মহালয়া | Durga Puja Live</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Georgia, "Noto Serif Bengali", serif;
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(15, 8, 8, 0.60),
+                    rgba(15, 8, 8, 0.82)
+                ),
+                url("images/mahalaya.jpg") center / cover fixed no-repeat;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            padding: 35px 20px 50px;
+        }
+
+        /* TOP SECTION */
+
+        .hero {
+            max-width: 1000px;
+            margin: 0 auto 25px;
+            text-align: center;
+        }
+
+        .hero .small-title {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: #ffd58a;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 78px);
+            color: #ffd166;
+            text-shadow:
+                0 0 12px rgba(255, 190, 70, 0.45),
+                0 4px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 8px;
+        }
+
+        .hero h2 {
+            font-size: clamp(18px, 3vw, 28px);
+            font-weight: normal;
+            color: #fff1d0;
+            margin-bottom: 15px;
+        }
+
+        .date {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 210, 120, 0.3);
+            color: #ffe6b0;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        /* ARTICLE */
+
+        .article-card {
+            width: min(950px, 100%);
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 20px;
+
+            background: rgba(20, 10, 10, 0.72);
+            border: 1px solid rgba(255, 210, 120, 0.18);
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.35),
+                inset 0 0 30px rgba(255, 180, 60, 0.025);
+
+            backdrop-filter: blur(8px);
+        }
+
+        .article-content {
+            max-height: 650px;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+
+        .article-content::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        .article-content::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .article-content::-webkit-scrollbar-thumb {
+            background: rgba(255, 190, 80, 0.45);
+            border-radius: 10px;
+        }
+
+        .article-content h3 {
+            color: #ffd166;
+            font-size: 24px;
+            margin: 25px 0 10px;
+        }
+
+        .article-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .article-content p {
+            color: #f5ead7;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 17px;
+        }
+
+        .article-content strong {
+            color: #ffd98a;
+        }
+
+        .info-box {
+            margin: 25px 0;
+            padding: 18px 20px;
+            border-left: 3px solid #e8a93a;
+            background: rgba(255, 180, 60, 0.08);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .info-box p {
+            margin: 0;
+        }
+
+        /* BUTTONS */
+
+        .bottom-actions {
+            max-width: 950px;
+            margin: 22px auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            border: 1px solid rgba(255, 210, 120, 0.3);
+            background: rgba(0, 0, 0, 0.35);
+            color: #ffe5ae;
+            padding: 11px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            transition: 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background: rgba(255, 190, 70, 0.15);
+            transform: translateY(-1px);
+        }
+
+        #languageBtn {
+            background: rgba(180, 75, 35, 0.25);
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            color: rgba(255, 235, 200, 0.55);
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .page-wrapper {
+                padding: 25px 12px 35px;
+            }
+
+            .hero {
+                margin-bottom: 18px;
+            }
+
+            .hero .small-title {
+                font-size: 10px;
+                letter-spacing: 2px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+                line-height: 1.4;
+            }
+
+            .date {
+                font-size: 11px;
+            }
+
+            .article-card {
+                padding: 20px 16px;
+                border-radius: 15px;
+            }
+
+            .article-content {
+                max-height: 600px;
+                padding-right: 8px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+
+            .article-content p {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .bottom-actions {
+                justify-content: center;
+            }
+
+            .action-btn {
+                font-size: 12px;
+                padding: 10px 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .article-card {
+                padding: 17px 13px;
+            }
+
+            .article-content p {
+                font-size: 13px;
+            }
+        }
+    </style>
+    <style>
+
+    /* 🌼 Mahalaya Shiuli Flowers */
+
+    .mahalaya-flower {
+        position: fixed;
+        width: 22px;
+        height: 22px;
+
+        pointer-events: none;
+        z-index: 99999;
+
+        transform: scale(var(--flower-size));
+
+        animation: mahalayaFlowerFall 4.5s ease-out forwards;
+    }
+
+    .mahalaya-petal {
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 9px;
+        height: 15px;
+
+        background: #fffaf0;
+
+        border-radius: 70% 70% 65% 65%;
+
+        transform-origin: 50% 100%;
+
+        box-shadow:
+            0 0 5px rgba(255, 255, 255, 0.35);
+    }
+
+    .mahalaya-flower-center {
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 6px;
+        height: 6px;
+
+        transform: translate(-50%, -50%);
+
+        background: #f29b38;
+
+        border-radius: 50%;
+
+        box-shadow:
+            0 0 5px rgba(242, 155, 56, 0.6);
+    }
+
+    @keyframes mahalayaFlowerFall {
+
+        0% {
+            opacity: 0;
+            transform:
+                translate(-50%, -50%)
+                scale(var(--flower-size))
+                rotate(0deg);
+        }
+
+        10% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+
+            transform:
+                translate(
+                    var(--flower-x),
+                    var(--flower-y)
+                )
+                scale(var(--flower-size))
+                rotate(220deg);
+        }
+    }
+    .mahalaya-atmosphere {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Soft morning light */
+.morning-glow {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    left: 50%;
+    top: 8%;
+    transform: translateX(-50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 205, 120, 0.16) 0%,
+        rgba(255, 180, 80, 0.06) 35%,
+        transparent 70%
+    );
+
+    filter: blur(8px);
+
+    animation: morningGlow 6s ease-in-out infinite alternate;
+}
+
+/* Tiny floating light particles */
+.light-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+
+    background: rgba(255, 220, 150, 0.75);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px rgba(255, 210, 120, 0.65);
+
+    animation: floatingLight 7s ease-in-out infinite;
+}
+
+.p1 {
+    left: 15%;
+    top: 30%;
+    animation-delay: 0s;
+}
+
+.p2 {
+    left: 28%;
+    top: 65%;
+    animation-delay: 1.2s;
+}
+
+.p3 {
+    left: 72%;
+    top: 25%;
+    animation-delay: 2s;
+}
+
+.p4 {
+    left: 82%;
+    top: 58%;
+    animation-delay: 3.1s;
+}
+
+.p5 {
+    left: 45%;
+    top: 78%;
+    animation-delay: 1.7s;
+}
+
+.p6 {
+    left: 60%;
+    top: 42%;
+    animation-delay: 4s;
+}
+
+@keyframes morningGlow {
+    from {
+        opacity: 0.55;
+        transform: translateX(-50%) scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.08);
+    }
+}
+
+@keyframes floatingLight {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.7);
+    }
+
+    30% {
+        opacity: 0.8;
+    }
+
+    70% {
+        opacity: 0.45;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-80px) scale(1.1);
+    }
+}
+
+.mahalaya-diya {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    width: 90px;
+    height: 75px;
+    transform: translateX(-50%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.diya-bowl {
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 72px;
+    height: 32px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, #b86b32, #7b351d);
+    border-radius: 0 0 45px 45px;
+    border: 2px solid rgba(255, 190, 100, 0.45);
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.45),
+        inset 0 3px 6px rgba(255, 190, 100, 0.25);
+}
+
+.diya-flame {
+    position: absolute;
+    left: 50%;
+    bottom: 34px;
+    width: 18px;
+    height: 30px;
+    transform: translateX(-50%);
+    background: linear-gradient(to top, #ff8a18, #ffd56a, #fff4c2);
+    border-radius: 50%;
+    transform-origin: bottom center;
+    box-shadow:
+        0 0 12px rgba(255, 170, 50, 0.8),
+        0 0 30px rgba(255, 150, 30, 0.45);
+    animation: diyaFlame 1.2s ease-in-out infinite alternate;
+}
+
+.diya-glow {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    width: 150px;
+    height: 100px;
+    transform: translateX(-50%);
+    background: radial-gradient(
+        ellipse,
+        rgba(255, 170, 60, 0.20),
+        transparent 70%
+    );
+    filter: blur(8px);
+    z-index: -1;
+    animation: diyaGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes diyaFlame {
+    0% {
+        transform: translateX(-50%) scaleX(0.88) rotate(-3deg);
+    }
+
+    100% {
+        transform: translateX(-50%) scaleX(0.95) rotate(3deg);
+    }
+}
+
+@keyframes diyaGlow {
+    from {
+        opacity: 0.55;
+        transform: translateX(-50%) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.08);
+    }
+}
+ /* ⏳ Mahalaya Countdown */
+
+.mahalaya-countdown {
+    position: relative;
+    width: min(430px, calc(100% - 30px));
+    margin: 28px auto 24px;
+    padding: 16px 18px;
+
+    background: rgba(20, 12, 10, 0.45);
+    border: 1px solid rgba(255, 210, 130, 0.25);
+    border-radius: 16px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+    z-index: 10;
+}
+
+.countdown-title {
+    color: #ffe3a6;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-bottom: 12px;
+}
+
+.countdown-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+.countdown-time > div {
+    min-width: 70px;
+    padding: 8px 6px;
+
+    background: rgba(255, 190, 90, 0.08);
+    border: 1px solid rgba(255, 210, 130, 0.15);
+    border-radius: 10px;
+}
+
+.countdown-time span {
+    display: block;
+    color: #fff4d6;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.countdown-time small {
+    display: block;
+    margin-top: 4px;
+
+    color: rgba(255, 225, 175, 0.65);
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+/* 🌺 Mahalaya Title Glow */
+
+.mahalaya-title {
+    color: #ffe7b0;
+
+    text-shadow:
+        0 0 6px rgba(255, 210, 120, 0.45),
+        0 0 18px rgba(255, 170, 60, 0.28),
+        0 0 35px rgba(255, 140, 40, 0.16);
+
+    animation: mahalayaTitleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes mahalayaTitleGlow {
+    from {
+        text-shadow:
+            0 0 6px rgba(255, 210, 120, 0.40),
+            0 0 18px rgba(255, 170, 60, 0.22),
+            0 0 30px rgba(255, 140, 40, 0.12);
+    }
+
+    to {
+        text-shadow:
+            0 0 10px rgba(255, 220, 140, 0.75),
+            0 0 25px rgba(255, 180, 70, 0.42),
+            0 0 45px rgba(255, 140, 40, 0.20);
+    }
+}
+#mahalayaBackLink {
+    color: #ffe3a6 !important;
+    background: rgba(20, 12, 10, 0.65) !important;
+    border: 1px solid rgba(255, 210, 130, 0.35) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.30);
+    text-decoration: none;
+}
+
+#mahalayaBackLink:hover {
+    color: #fff0c7 !important;
+    background: rgba(70, 38, 20, 0.75) !important;
+    border-color: rgba(255, 210, 130, 0.60) !important;
+}
+</style>
+</head>
+
+<body>
+
+    <div class="mahalaya-atmosphere">
+    <div class="morning-glow"></div>
+
+    <div class="light-particle p1"></div>
+    <div class="light-particle p2"></div>
+    <div class="light-particle p3"></div>
+    <div class="light-particle p4"></div>
+    <div class="light-particle p5"></div>
+    <div class="light-particle p6"></div>
+</div>
+  <!-- 🪔 Mahalaya Diya -->
+<div class="mahalaya-diya">
+    <div class="diya-flame"></div>
+    <div class="diya-bowl"></div>
+    <div class="diya-glow"></div>
+</div>
+<!-- ⏳ Mahalaya Countdown -->
+
+<div class="mahalaya-countdown">
+    <div class="countdown-title">
+        🌺 মহালয়ার অপেক্ষায়
+    </div>
+
+    <div class="countdown-time">
+        <div>
+            <span id="countDays">00</span>
+            <small>Days</small>
+        </div>
+
+        <div>
+            <span id="countHours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div>
+            <span id="countMinutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div>
+            <span id="countSeconds">00</span>
+            <small>Seconds</small>
+        </div>
+    </div>
+</div>
+<div class="page-wrapper">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="small-title">
+            Durga Puja Live
+        </div>
+
+       <h1 class="mahalaya-title">মহালয়া</h1>
+
+        <h2>দেবীপক্ষের সূচনা ও মায়ের আগমনের বার্তা</h2>
+
+        <div class="date">
+            10 October 2026 • Saturday
+        </div>
+
+    </section>
+
+
+    <!-- ARTICLE -->
+
+    <main class="article-card">
+
+        <div class="article-content" id="bengaliContent">
+
+            <h3>মহালয়া বলতে কী বোঝায়?</h3>
+
+            <p>
+                মহালয়া দুর্গাপূজার আগমনী বার্তা বহনকারী এক বিশেষ দিন।
+                এই দিনটি পিতৃপক্ষের সমাপ্তি এবং দেবীপক্ষের সূচনার সঙ্গে
+                যুক্ত। মহালয়ার ভোর থেকেই বাঙালির মনে দুর্গাপূজার
+                আবহ তৈরি হতে শুরু করে।
+            </p>
+
+            <p>
+                ভোরের অন্ধকার কাটার আগেই চারপাশে বেজে ওঠে
+                <strong>মহিষাসুরমর্দিনী</strong>। বীরেন্দ্রকৃষ্ণ ভদ্রের
+                কণ্ঠে চণ্ডীপাঠ ও আগমনী স্তোত্র বহু প্রজন্ম ধরে
+                বাঙালির দুর্গাপূজার স্মৃতির সঙ্গে মিশে আছে।
+            </p>
+
+
+            <h3>পিতৃপক্ষের সমাপ্তি, দেবীপক্ষের শুরু</h3>
+
+            <p>
+                হিন্দু ধর্মীয় বিশ্বাস অনুযায়ী পিতৃপক্ষ হলো পূর্বপুরুষদের
+                স্মরণ ও তাঁদের উদ্দেশ্যে তর্পণ করার সময়। মহালয়ার সঙ্গে
+                পিতৃপক্ষের সমাপ্তি ঘটে এবং শুরু হয় দেবীপক্ষ।
+            </p>
+
+            <p>
+                এই সময় থেকেই দেবী দুর্গার পৃথিবীতে আগমনের প্রতীক্ষা
+                শুরু হয়। তাই মহালয়া শুধুমাত্র একটি দিন নয়—এটি
+                দুর্গাপূজার আগমনের একটি অনুভূতি।
+            </p>
+
+
+            <h3>তর্পণ ও পূর্বপুরুষদের স্মরণ</h3>
+
+            <p>
+                মহালয়ার সকালে বহু মানুষ নদী বা জলাশয়ের তীরে গিয়ে
+                পূর্বপুরুষদের উদ্দেশ্যে <strong>তর্পণ</strong> করেন।
+                তাঁদের স্মরণ করে জল অর্পণ করা হয় এবং পরিবারের
+                প্রয়াত সদস্যদের জন্য প্রার্থনা করা হয়।
+            </p>
+
+            <div class="info-box">
+                <p>
+                    মহালয়ার ভোরে তর্পণ শুধু একটি ধর্মীয় আচার নয়;
+                    এটি পূর্বপুরুষদের প্রতি শ্রদ্ধা ও স্মৃতির
+                    প্রকাশ হিসেবেও দেখা হয়।
+                </p>
+            </div>
+
+
+            <h3>মহালয়ার ভোর</h3>
+
+            <p>
+                মহালয়ার ভোর বাঙালির সাংস্কৃতিক জীবনের একটি বিশেষ
+                মুহূর্ত। অনেক পরিবার খুব ভোরে ঘুম থেকে উঠে
+                মহিষাসুরমর্দিনী শোনেন।
+            </p>
+
+            <p>
+                রেডিওতে বা বর্তমানে বিভিন্ন ডিজিটাল মাধ্যমে
+                মহিষাসুরমর্দিনীর সম্প্রচার শোনা হয়। এই অভিজ্ঞতা
+                অনেক বাঙালির কাছে দুর্গাপূজার শুরু হওয়ার সঙ্গে
+                সরাসরি যুক্ত।
+            </p>
+
+
+            <h3>অকাল বোধন</h3>
+
+            <p>
+                মহালয়ার সঙ্গে দেবী দুর্গার বোধনের ধারণাটিও
+                বিভিন্নভাবে যুক্ত হয়ে আছে। প্রচলিত কাহিনি অনুযায়ী,
+                শ্রীরামচন্দ্র রাবণের বিরুদ্ধে যুদ্ধের আগে শরৎকালে
+                দেবী দুর্গার আরাধনা করেছিলেন।
+            </p>
+
+            <p>
+                প্রচলিত সময়ের বাইরে দেবীর আরাধনা করা হয়েছিল বলে
+                এই পূজাকে <strong>অকাল বোধন</strong> বলা হয়।
+                পরবর্তীকালে শরৎকালের দুর্গাপূজার সঙ্গে এই কাহিনি
+                গভীরভাবে যুক্ত হয়ে যায়।
+            </p>
+
+
+            <h3>কেন বলা হয় ‘অকাল বোধন’?</h3>
+
+            <p>
+                ‘অকাল’ অর্থ নির্ধারিত সময়ের বাইরে এবং ‘বোধন’ অর্থ
+                দেবীকে জাগ্রত বা আহ্বান করা। তাই শরৎকালে দেবীর
+                এই বিশেষ আহ্বানকে অকাল বোধন বলা হয়।
+            </p>
+
+
+            <h3>মহালয়া ও প্রতিমার চোখ আঁকা</h3>
+
+            <p>
+                বাংলার প্রতিমা নির্মাণের ঐতিহ্যের সঙ্গে মহালয়ার
+                একটি বিশেষ সাংস্কৃতিক সম্পর্ক রয়েছে। অনেক শিল্পী
+                মহালয়ার কাছাকাছি সময়ে দেবীর প্রতিমায়
+                <strong>চক্ষুদান</strong> বা চোখ আঁকার কাজ সম্পন্ন করেন।
+            </p>
+
+            <p>
+                প্রতিমার চোখ আঁকার মুহূর্তকে অত্যন্ত গুরুত্বপূর্ণ
+                বলে মনে করা হয়। শিল্পীর তুলির শেষ স্পর্শে প্রতিমার
+                মুখ যেন জীবন্ত হয়ে ওঠে—এই অনুভূতিই চক্ষুদানের
+                সাংস্কৃতিক তাৎপর্যকে বিশেষ করে তোলে।
+            </p>
+
+
+            <h3>দেবীর নয়টি রূপ</h3>
+
+            <p>
+                দেবী দুর্গার বিভিন্ন রূপের মধ্যে নবরাত্রির
+                নয়টি রূপ বিশেষভাবে পরিচিত। এই নয়টি রূপকে
+                একত্রে <strong>নবদুর্গা</strong> বলা হয়।
+            </p>
+
+            <p>
+                শৈলপুত্রী, ব্রহ্মচারিণী, চন্দ্রঘণ্টা, কুষ্মাণ্ডা,
+                স্কন্দমাতা, কাত্যায়নী, কালরাত্রি, মহাগৌরী এবং
+                সিদ্ধিদাত্রী—এই নয় রূপ দেবীর বিভিন্ন শক্তি ও
+                বৈশিষ্ট্যের প্রতীক হিসেবে বিবেচিত।
+            </p>
+
+
+            <h3>দানবীর কর্ণ ও মহালয়া</h3>
+
+            <p>
+                মহালয়া সম্পর্কে কিছু প্রচলিত লোককথায় মহাভারতের
+                দানবীর কর্ণের কাহিনিও উল্লেখ করা হয়। একটি
+                প্রচলিত ব্যাখ্যায় বলা হয়, কর্ণ জীবিত অবস্থায়
+                প্রচুর দান করলেও পূর্বপুরুষদের উদ্দেশ্যে
+                খাদ্য অর্পণের সুযোগ পাননি।
+            </p>
+
+            <p>
+                মৃত্যুর পর সেই অভিজ্ঞতার সঙ্গে যুক্ত হয়ে
+                পূর্বপুরুষদের উদ্দেশ্যে দান ও তর্পণের গুরুত্ব
+                বোঝানোর একটি লোকবিশ্বাস তৈরি হয়েছে। এটি
+                একটি প্রচলিত পৌরাণিক ব্যাখ্যা; মহালয়ার
+                ঐতিহাসিক অর্থ ব্যাখ্যা করার একমাত্র সূত্র নয়।
+            </p>
+
+
+            <h3>মহালয়ার অনুভূতি</h3>
+
+            <p>
+                মহালয়া এলেই বাঙালির মনে যেন একটি পরিচিত
+                পরিবর্তন শুরু হয়। শরতের আকাশ, কাশফুল,
+                শিউলির গন্ধ এবং ভোরের মহিষাসুরমর্দিনী—
+                সবকিছু মিলিয়ে দুর্গাপূজার অপেক্ষা আরও গভীর হয়ে ওঠে।
+            </p>
+
+            <p>
+                তাই মহালয়া শুধুমাত্র একটি ধর্মীয় দিন নয়।
+                এটি স্মৃতি, সংস্কৃতি, পরিবার, পূর্বপুরুষদের
+                প্রতি শ্রদ্ধা এবং দেবী দুর্গার আগমনের
+                আনন্দ—সবকিছুর সঙ্গে জড়িয়ে থাকা একটি
+                বিশেষ বাঙালি অনুভূতি।
+            </p>
+
+
+            <h3>মহালয়ার মূল তথ্য</h3>
+
+            <div class="info-box">
+
+                <p>
+                    <strong>তারিখ:</strong> ১০ অক্টোবর ২০২৬
+                </p>
+
+                <p>
+                    <strong>বার:</strong> শনিবার
+                </p>
+
+                <p>
+                    <strong>মূল তাৎপর্য:</strong>
+                    পিতৃপক্ষের সমাপ্তি ও দেবীপক্ষের সূচনা
+                </p>
+
+                <p>
+                    <strong>বিশেষ আচার:</strong>
+                    তর্পণ ও পূর্বপুরুষদের স্মরণ
+                </p>
+
+                <p>
+                    <strong>সাংস্কৃতিক ঐতিহ্য:</strong>
+                    মহিষাসুরমর্দিনী ও চণ্ডীপাঠ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ENGLISH VERSION -->
+
+        <div class="article-content" id="englishContent" style="display:none;">
+
+            <h3>What is Mahalaya?</h3>
+
+            <p>
+                Mahalaya is a special day associated with the arrival
+                of Durga Puja. It marks the end of Pitru Paksha and
+                the beginning of Devi Paksha. From the dawn of Mahalaya,
+                the festive atmosphere of Durga Puja begins to appear
+                in Bengali homes.
+            </p>
+
+            <p>
+                Before sunrise, many Bengali households traditionally
+                listen to <strong>Mahishasura Mardini</strong>,
+                including Chandipath and devotional recitations.
+                The voice of Birendra Krishna Bhadra has become deeply
+                connected with the cultural memory of Durga Puja.
+            </p>
+
+
+            <h3>End of Pitru Paksha, Beginning of Devi Paksha</h3>
+
+            <p>
+                According to Hindu traditions, Pitru Paksha is a period
+                dedicated to remembering ancestors and offering
+                tarpan to them. Mahalaya marks the end of this period
+                and the beginning of Devi Paksha.
+            </p>
+
+            <p>
+                It is also associated with the beginning of the
+                anticipation of Goddess Durga's arrival on Earth.
+                Therefore, Mahalaya is more than just a single day;
+                it represents the emotional beginning of Durga Puja.
+            </p>
+
+
+            <h3>Remembering the Ancestors</h3>
+
+            <p>
+                On the morning of Mahalaya, many people visit rivers
+                or other bodies of water to perform <strong>tarpan</strong>
+                for their ancestors. Water is offered while prayers
+                are made in memory of departed family members.
+            </p>
+
+            <div class="info-box">
+                <p>
+                    Tarpan on Mahalaya is regarded not only as a
+                    religious ritual but also as an expression of
+                    respect and remembrance for one's ancestors.
+                </p>
+            </div>
+
+
+            <h3>The Dawn of Mahalaya</h3>
+
+            <p>
+                The dawn of Mahalaya holds a special place in Bengali
+                cultural life. Many families traditionally wake up
+                early in the morning to listen to Mahishasura Mardini.
+            </p>
+
+            <p>
+                The broadcast is now available through radio as well
+                as digital platforms. For many Bengali families,
+                listening to it is directly associated with the
+                beginning of the Durga Puja season.
+            </p>
+
+
+            <h3>Akal Bodhan</h3>
+
+            <p>
+                Mahalaya is also culturally connected with the idea
+                of the awakening of Goddess Durga. According to a
+                popular traditional story, Lord Rama worshipped
+                Goddess Durga before fighting Ravana.
+            </p>
+
+            <p>
+                Since this worship was performed outside the
+                traditionally prescribed period, it became known as
+                <strong>Akal Bodhan</strong>, meaning the awakening
+                of the Goddess at an unusual time.
+            </p>
+
+
+            <h3>Why is it Called Akal Bodhan?</h3>
+
+            <p>
+                The word "Akal" refers to a time outside the usual
+                period, while "Bodhan" refers to awakening or invoking
+                the Goddess. Thus, the autumn invocation of the Goddess
+                became known as Akal Bodhan.
+            </p>
+
+
+            <h3>Mahalaya and the Eyes of the Idol</h3>
+
+            <p>
+                Mahalaya has a special cultural connection with the
+                traditional art of idol-making in Bengal. Many artists
+                complete the painting of the eyes of Goddess Durga,
+                known as <strong>Chokkhu Daan</strong>, around this time.
+            </p>
+
+            <p>
+                The painting of the eyes is considered an important
+                moment in the creation of the idol. The final stroke
+                of the artist's brush is traditionally seen as giving
+                the idol a sense of life and presence.
+            </p>
+
+
+            <h3>The Nine Forms of the Goddess</h3>
+
+            <p>
+                Among the various forms of Goddess Durga, the nine
+                forms associated with Navratri are particularly well
+                known. Together they are called <strong>Navadurga</strong>.
+            </p>
+
+            <p>
+                Shailaputri, Brahmacharini, Chandraghanta, Kushmanda,
+                Skandamata, Katyayani, Kalaratri, Mahagauri and
+                Siddhidatri represent different aspects and forms
+                of the Goddess.
+            </p>
+
+
+            <h3>Karna and Mahalaya</h3>
+
+            <p>
+                Some traditional folk interpretations of Mahalaya
+                also mention the story of Karna from the Mahabharata.
+                One popular interpretation says that although Karna
+                was known for giving generously during his lifetime,
+                he did not have the opportunity to offer food to
+                his ancestors.
+            </p>
+
+            <p>
+                The story became associated with the importance of
+                offerings and remembrance of ancestors. This is a
+                traditional mythological interpretation and is not
+                the only historical explanation of Mahalaya.
+            </p>
+
+
+            <h3>The Feeling of Mahalaya</h3>
+
+            <p>
+                When Mahalaya arrives, a familiar change can be felt
+                throughout Bengal. The autumn sky, kash flowers,
+                the fragrance of shiuli flowers and the sound of
+                Mahishasura Mardini together create a strong feeling
+                that Durga Puja is approaching.
+            </p>
+
+            <p>
+                Mahalaya is therefore not only a religious occasion.
+                It is also connected with memory, culture, family,
+                respect for ancestors and the joyful anticipation
+                of Goddess Durga's arrival.
+            </p>
+
+
+            <h3>Key Information</h3>
+
+            <div class="info-box">
+
+                <p>
+                    <strong>Date:</strong> 10 October 2026
+                </p>
+
+                <p>
+                    <strong>Day:</strong> Saturday
+                </p>
+
+                <p>
+                    <strong>Significance:</strong>
+                    End of Pitru Paksha and beginning of Devi Paksha
+                </p>
+
+                <p>
+                    <strong>Main Ritual:</strong>
+                    Tarpan and remembrance of ancestors
+                </p>
+
+                <p>
+                    <strong>Cultural Tradition:</strong>
+                    Mahishasura Mardini and Chandipath
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- BUTTONS -->
+
+    <div class="bottom-actions">
+
+      <a href="#" id="mahalayaBackLink">← Back to Durga Puja Live</a>
+
+        <button class="action-btn" id="languageBtn">
+            Translate to English
+        </button>
+
+    </div>
+
+
+    <footer>
+        © 2026 Durga Puja Live • Mahalaya
+    </footer>
+
+</div>
+
+
+<script>
+
+    const languageBtn = document.getElementById("languageBtn");
+    const bengaliContent = document.getElementById("bengaliContent");
+    const englishContent = document.getElementById("englishContent");
+
+    let englishMode = false;
+
+    languageBtn.addEventListener("click", function () {
+
+        englishMode = !englishMode;
+
+        if (englishMode) {
+
+            bengaliContent.style.display = "none";
+            englishContent.style.display = "block";
+
+            languageBtn.textContent = "বাংলায় দেখুন";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        } else {
+
+            englishContent.style.display = "none";
+            bengaliContent.style.display = "block";
+
+            languageBtn.textContent = "Translate to English";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+    });
+
+</script>
+<script>
+    // 🌼 Falling Shiuli Flower Effect
+
+    document.addEventListener("click", function (event) {
+
+        // Button/link click হলে flower effect না দেখানো
+        if (event.target.closest("button, a")) {
+            return;
+        }
+
+        const flowerCount = 10;
+
+        for (let i = 0; i < flowerCount; i++) {
+
+            setTimeout(function () {
+
+                const flower = document.createElement("div");
+                flower.className = "mahalaya-flower";
+
+                // 5 petals
+                for (let j = 0; j < 5; j++) {
+
+                    const petal = document.createElement("span");
+                    petal.className = "mahalaya-petal";
+
+                    petal.style.transform =
+                        `rotate(${j * 72}deg) translateY(-7px)`;
+
+                    flower.appendChild(petal);
+                }
+
+                // Orange center
+                const center = document.createElement("span");
+                center.className = "mahalaya-flower-center";
+
+                flower.appendChild(center);
+
+                // Starting position
+                flower.style.left = event.clientX + "px";
+                flower.style.top = event.clientY + "px";
+
+                // Random movement
+                const moveX =
+                    (Math.random() - 0.5) * 220;
+
+                const moveY =
+                    120 + Math.random() * 180;
+
+                flower.style.setProperty("--flower-x", moveX + "px");
+                flower.style.setProperty("--flower-y", moveY + "px");
+
+                const size =
+                    0.8 + Math.random() * 0.35;
+
+                flower.style.setProperty("--flower-size", size);
+
+                document.body.appendChild(flower);
+
+                // Remove after animation
+                setTimeout(function () {
+                    flower.remove();
+                }, 4500);
+
+            }, i * 120);
+        }
+    });
+</script>
+<script>
+    // ⏳ Mahalaya Countdown — 10 October 2026
+
+    const mahalayaDate = new Date(2026, 9, 10, 0, 0, 0).getTime();
+
+    function updateMahalayaCountdown() {
+
+        const now = new Date().getTime();
+        const distance = mahalayaDate - now;
+
+        if (distance <= 0) {
+            document.getElementById("countDays").textContent = "00";
+            document.getElementById("countHours").textContent = "00";
+            document.getElementById("countMinutes").textContent = "00";
+            document.getElementById("countSeconds").textContent = "00";
+
+            document.querySelector(".countdown-title").textContent =
+                "🌺 শুভ মহালয়া";
+
+            return;
+        }
+
+        const days = Math.floor(
+            distance / (1000 * 60 * 60 * 24)
+        );
+
+        const hours = Math.floor(
+            (distance / (1000 * 60 * 60)) % 24
+        );
+
+        const minutes = Math.floor(
+            (distance / (1000 * 60)) % 60
+        );
+
+        const seconds = Math.floor(
+            (distance / 1000) % 60
+        );
+
+        document.getElementById("countDays").textContent =
+            String(days).padStart(2, "0");
+
+        document.getElementById("countHours").textContent =
+            String(hours).padStart(2, "0");
+
+        document.getElementById("countMinutes").textContent =
+            String(minutes).padStart(2, "0");
+
+        document.getElementById("countSeconds").textContent =
+            String(seconds).padStart(2, "0");
+    }
+
+    updateMahalayaCountdown();
+
+    setInterval(updateMahalayaCountdown, 1000);
+</script>
+<script>
+    const mahalayaBackLink = document.getElementById("mahalayaBackLink");
+
+    if (mahalayaBackLink) {
+        mahalayaBackLink.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            if (window.parent !== window) {
+                window.parent.postMessage(
+                    { type: "closeMahalaya" },
+                    "*"
+                );
+            } else {
+                window.location.href = "index.html";
+            }
+        });
+    }
+</script>
+</body>
+</html>

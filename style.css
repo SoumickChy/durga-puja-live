@@ -1,0 +1,3169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: opacity 1.5s ease-in-out;
+
+    z-index: -3;
+}
+
+.background-one {
+    background-image: url("images/photo1.jpg");
+    opacity: 1;
+}
+
+.background-two {
+    background-image: url("images/photo2.jpg");
+    opacity: 0;
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.42);
+
+    z-index: -2;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.content {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+
+    padding: 25px 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.live-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.live-dot {
+    width: 9px;
+    height: 9px;
+
+    background: red;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 10px red;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.subtitle {
+    font-size: 17px;
+    margin-bottom: 15px;
+
+    letter-spacing: 1px;
+
+    text-shadow: 0 2px 8px black;
+}
+
+.hero h1 {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.9);
+}
+
+.description {
+    font-size: 18px;
+
+    max-width: 600px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+
+    text-shadow: 0 2px 8px black;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons button {
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: white;
+    color: black;
+}
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+
+    backdrop-filter: blur(10px);
+}
+
+.hero-buttons button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+
+    padding: 20px 45px 25px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 70px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+
+    text-shadow: 0 2px 8px black;
+}
+
+.footer-item span {
+    opacity: 0.75;
+}
+
+.footer-item strong {
+    font-weight: bold;
+}
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+.music-player {
+    width: 90%;
+    max-width: 850px;
+
+    min-height: 220px;
+
+    margin-top: 20px;
+    padding: 18px;
+
+    display: grid;
+
+    grid-template-columns: 115px 1fr auto;
+    grid-template-rows: auto 40px 40px;
+
+    column-gap: 16px;
+
+    align-items: center;
+
+    background: rgba(20, 20, 20, 0.45);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Album */
+
+.album-art {
+    width: 115px;
+    height: 115px;
+
+    grid-row: 1 / 3;
+}
+
+.album-art img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Song Details */
+
+.song-details {
+    align-self: center;
+}
+
+.now-playing {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    opacity: 0.75;
+}
+
+
+.song-details p {
+    font-size: 15px;
+
+    opacity: 0.65;
+}
+
+
+/* Share */
+
+.share-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.share-buttons button {
+    border: 1px solid rgba(255,255,255,0.25);
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+
+/* Controls */
+
+.player-controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.control-btn,
+.play-btn {
+    border: none;
+
+    color: white;
+
+    background: rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.25s;
+}
+
+.control-btn {
+    width: 52px;
+    height: 52px;
+
+    font-size: 18px;
+}
+
+.play-btn {
+    width: 65px;
+    height: 65px;
+
+    font-size: 24px;
+
+    background: #e51e3a;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.control-btn:hover,
+.play-btn:hover {
+    transform: scale(1.08);
+}
+
+
+/* Progress */
+
+.progress-section {
+    grid-column: 1 / 4;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.progress-section span,
+.volume-section span {
+    font-size: 14px;
+
+    opacity: 0.7;
+
+    min-width: 38px;
+}
+
+
+/* Range */
+
+.progress-bar,
+.volume-bar {
+    appearance: none;
+
+    height: 4px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.25);
+
+    cursor: pointer;
+}
+
+.progress-bar {
+    flex: 1;
+}
+
+.progress-bar::-webkit-slider-thumb,
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+}
+
+
+/* Volume */
+
+.volume-section {
+    grid-column: 1 / 4;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.volume-btn {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.volume-bar {
+    width: 80%;
+
+    max-width: 800px;
+}
+
+/* =========================
+   SHIULI FLOWER
+   ========================= */
+
+.shiuli-flower {
+
+    position: fixed;
+
+    width: 32px;
+    height: 32px;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.3);
+
+    animation:
+        shiuliFall 5s ease-out forwards;
+}
+
+
+/* WHITE PETALS */
+
+.shiuli-petal {
+
+    position: absolute;
+
+    width: 12px;
+    height: 20px;
+
+    left: 10px;
+    top: 6px;
+
+    background: #fffdf5;
+
+    border-radius:
+        70% 70% 45% 45%;
+
+    transform-origin:
+        50% 100%;
+
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ORANGE CENTER */
+
+.shiuli-center {
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    left: 12px;
+    top: 12px;
+
+    background: #f28c28;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 4px rgba(242, 140, 40, 0.8);
+}
+
+
+/* FALLING ANIMATION */
+
+@keyframes shiuliFall {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.3)
+            rotate(0deg);
+    }
+
+    12% {
+
+        opacity: 1;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * 0.15),
+                calc(-50% + 20px)
+            )
+            scale(var(--size))
+            rotate(40deg);
+    }
+
+    45% {
+
+        opacity: 1;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * 0.55),
+                calc(-50% + var(--y) * 0.55)
+            )
+            scale(var(--size))
+            rotate(180deg);
+    }
+
+    70% {
+
+        opacity: 1;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(calc(var(--size) * 0.9))
+            rotate(280deg);
+    }
+
+    82% {
+
+        opacity: 0.9;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) + 15px),
+                calc(-50% + var(--y) + 15px)
+            )
+            scale(calc(var(--size) * 0.85))
+            rotate(330deg);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) + 25px),
+                calc(-50% + var(--y) + 30px)
+            )
+            scale(calc(var(--size) * 0.7))
+            rotate(360deg);
+    }
+}
+
+/* =========================
+   LOGO AREA
+========================= */
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-card {
+    margin-top: 8px;
+
+    padding: 8px 10px;
+
+    background: rgba(0, 0, 0, 0.28);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+.countdown-title {
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+
+    opacity: 0.9;
+
+    letter-spacing: 0.8px;
+}
+
+
+.countdown-time {
+    display: flex;
+
+    gap: 5px;
+}
+
+
+.count-box {
+    min-width: 42px;
+
+    padding: 5px 4px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border-radius: 7px;
+}
+
+
+.count-box strong {
+    display: block;
+
+    font-size: 15px;
+
+    line-height: 1;
+
+    margin-bottom: 3px;
+}
+
+
+.count-box span {
+    font-size: 7px;
+
+    opacity: 0.65;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+}
+
+/* =========================
+   FINAL LAYOUT FIX
+========================= */
+
+/* HEADER */
+.header {
+    position: relative;
+}
+
+
+/* =========================
+   LIVE - MOVE UP
+========================= */
+
+.live-status {
+    position: absolute;
+
+    top: 18px;
+    right: 45px;
+}
+
+
+/* =========================
+   PUJA TIMELINE
+   UNDER LIVE
+========================= */
+
+.puja-timeline {
+    position: absolute;
+
+    top: 70px;
+    right: 45px;
+    left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 5px 7px;
+
+    width: auto;
+
+    background: rgba(0, 0, 0, 0.20);
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    border-radius: 11px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 5px 16px rgba(0, 0, 0, 0.22);
+
+    z-index: 20;
+}
+
+
+/* SMALL DAY BOX */
+
+.puja-day {
+    padding: 5px 8px;
+
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    transition: 0.2s ease;
+}
+
+
+.day-name {
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    white-space: nowrap;
+}
+
+
+/* HOVER */
+
+.puja-day:hover {
+    background: rgba(255, 255, 255, 0.15);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   BRING HERO BACK UP
+========================= */
+
+.hero {
+    transform: translateY(-70px);
+}
+
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+.music-player {
+    width: 90%;
+    max-width: 850px;
+
+    min-height: 220px;
+
+    margin-top: 10px;
+
+    padding: 18px;
+
+    transform: none;
+}
+/* =========================
+   MUSIC PLAYER - FINAL FIX
+========================= */
+.music-player {
+    width: 90%;
+    max-width: 850px;
+
+    padding: 18px;
+
+    display: grid;
+
+    grid-template-columns: 115px minmax(0, 1fr) 285px;
+    grid-template-rows: auto 40px 40px;
+
+    column-gap: 16px;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+/* SONG DETAILS MUST SHRINK */
+
+.song-details {
+    min-width: 0;
+}
+
+
+/* PLAYER CONTROLS */
+
+.player-controls {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+
+/* NORMAL BUTTONS */
+
+.control-btn {
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    font-size: 17px;
+}
+
+
+/* PLAY BUTTON */
+
+.play-btn {
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    font-size: 22px;
+}
+
+
+
+
+/* PROGRESS */
+
+.progress-section {
+    min-width: 0;
+}
+
+
+/* VOLUME */
+
+.volume-section {
+    min-width: 0;
+}
+/* =========================
+   PUJA DATE POPUP
+========================= */
+
+.puja-date-popup {
+    animation: popupShow 0.25s ease-out;
+    font-family: Arial, sans-serif;
+}
+
+
+.popup-day {
+    letter-spacing: 0.5px;
+}
+
+
+.popup-date {
+    letter-spacing: 0.3px;
+}
+
+
+@keyframes popupShow {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-8px) scale(0.92);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+/* =========================
+   ACTIVE PUJA DAY
+========================= */
+
+.puja-day.active-day {
+    background: rgba(255, 255, 255, 0.20);
+
+    border-color: rgba(255, 255, 255, 0.38);
+
+    box-shadow:
+        0 0 12px rgba(255, 210, 120, 0.35),
+        inset 0 0 10px rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-1px);
+}
+
+
+/* Active text */
+
+.puja-day.active-day .day-name {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 8px rgba(255, 210, 120, 0.7);
+}
+/* =========================
+   MINI YOUTUBE VIDEO
+========================= */
+
+.album-art {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.album-art img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 1;
+
+    transition: opacity 0.4s ease;
+}
+
+
+/* YOUTUBE PLAYER */
+
+#youtube-player {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+
+/* YOUTUBE IFRAME */
+
+#youtube-player iframe {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 200px !important;
+    height: 200px !important;
+
+    transform: translate(-50%, -50%);
+
+    border: none;
+}
+/* =========================
+   MINI YOUTUBE VIDEO FIX
+========================= */
+
+.album-art {
+    position: relative;
+    overflow: hidden;
+}
+
+#youtube-player {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    z-index: 5;
+}
+
+#youtube-player iframe {
+    position: absolute !important;
+
+    width: 200px !important;
+    height: 200px !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    border: 0 !important;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.575) !important;
+
+    transform-origin: center center;
+}
+
+/* =========================
+   MUSIC CATEGORIES - FIX
+========================= */
+
+.song-details {
+    min-width: 0;
+    width: 100%;
+}
+
+
+.music-categories {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 10px;
+
+    width: 100%;
+
+    max-width: 390px;
+}
+
+
+.music-category {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: white;
+
+    padding: 5px 8px;
+
+    border-radius: 10px;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    flex-shrink: 0;
+}
+
+
+.music-category:hover {
+    background: rgba(255, 255, 255, 0.16);
+
+    transform: translateY(-1px);
+}
+
+
+.music-category.active-category {
+    background: rgba(255, 255, 255, 0.20);
+
+    border-color: rgba(255, 255, 255, 0.35);
+
+    box-shadow:
+        0 0 8px rgba(255, 210, 120, 0.25);
+}
+
+
+/* Keep player controls inside */
+
+.music-player {
+    overflow: hidden;
+}
+
+
+.player-controls {
+    min-width: 0;
+
+    width: 100%;
+
+    justify-content: flex-end;
+
+    gap: 6px;
+}
+
+
+.control-btn {
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+}
+
+
+.play-btn {
+    flex: 0 0 56px;
+
+    width: 56px;
+    height: 56px;
+}
+/* =========================
+   MUSIC PLAYER - CLEAN FIX
+========================= */
+
+.music-player {
+    width: 90%;
+    max-width: 850px;
+
+    min-height: 250px;
+
+    padding: 18px;
+
+    display: grid;
+
+    grid-template-columns: 115px minmax(0, 1fr) 250px;
+
+    grid-template-rows: auto 42px 38px 38px 30px;
+
+    column-gap: 16px;
+    row-gap: 5px;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* ALBUM */
+
+.album-art {
+    width: 115px;
+    height: 115px;
+
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* SONG INFO */
+
+.song-details {
+    min-width: 0;
+    width: 100%;
+
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    align-self: center;
+}
+
+
+/* SONG TITLE */
+
+
+
+/* SHARE BUTTONS */
+
+.share-buttons {
+    margin-top: 7px;
+
+    gap: 6px;
+}
+
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
+
+.music-categories {
+
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    gap: 5px;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin-top: 8px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding-bottom: 3px;
+
+    scrollbar-width: thin;
+}
+
+
+.music-category {
+
+    flex: 0 0 auto;
+
+    padding: 5px 8px;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.music-category.active-category {
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================
+   PLAYER CONTROLS
+========================= */
+
+.player-controls {
+
+    grid-column: 3;
+    grid-row: 1 / 3;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 0;
+}
+
+
+.control-btn {
+
+    flex: 0 0 42px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 16px;
+}
+
+
+.play-btn {
+
+    flex: 0 0 56px;
+
+    width: 56px;
+    height: 56px;
+
+    font-size: 21px;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-section {
+
+    grid-column: 1 / 4;
+
+    grid-row: 3;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   VOLUME
+========================= */
+
+.volume-section {
+
+    grid-column: 1 / 4;
+
+    grid-row: 4;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+/* =========================
+   PUJA MUSIC CATEGORIES
+   NO SCROLL
+========================= */
+
+.music-categories {
+    grid-column: 1 / 4;
+    grid-row: 5;
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 5px;
+
+    width: 100%;
+
+    margin-top: 4px;
+
+    overflow: visible;
+
+    padding: 0;
+}
+
+
+/* CATEGORY BUTTON */
+
+.music-category {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 5px 3px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-size: 8px;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ACTIVE */
+
+.music-category.active-category {
+    background: rgba(255, 255, 255, 0.20);
+
+    border-color: rgba(255, 255, 255, 0.30);
+}
+
+
+/* =========================
+   COMPACT MUSIC PLAYER
+========================= */
+
+.music-player {
+    min-height: 225px;
+    padding: 14px;
+}
+
+
+/* Song name - allow full title */
+
+
+/* Smaller song info */
+
+.song-details p {
+    font-size: 13px;
+}
+
+
+/* Smaller album/video box */
+
+.album-art {
+    width: 105px;
+    height: 105px;
+}
+
+
+/* Smaller controls */
+
+.control-btn {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+}
+
+.play-btn {
+    width: 52px;
+    height: 52px;
+
+    flex: 0 0 52px;
+}
+
+/* =========================
+   MAHALAYA PLAYLIST DROPDOWN
+========================= */
+
+.music-category-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* SONG LIST */
+
+.playlist-dropdown {
+    position: absolute;
+
+    bottom: calc(100% + 8px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 250px;
+    max-height: 240px;
+
+    overflow-y: auto;
+
+    padding: 8px;
+
+    background: rgba(15, 15, 15, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: 0.2s ease;
+
+    z-index: 9999;
+}
+
+
+/* SHOW ON HOVER */
+
+.music-category-wrapper:hover .playlist-dropdown {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+/* EACH SONG */
+
+.playlist-song {
+
+    width: 100%;
+
+    padding: 8px 10px;
+
+    margin-bottom: 4px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.playlist-song:hover {
+
+    background: rgba(255, 255, 255, 0.14);
+
+}
+
+
+/* LAST ITEM */
+
+.playlist-song:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   MUSIC CATEGORY - FINAL ONE LINE FIX
+========================================= */
+
+.music-categories {
+    grid-column: 1 / 4 !important;
+    grid-row: 5 !important;
+
+    display: flex !important;
+    flex-wrap: nowrap !important;
+
+    align-items: center;
+
+    justify-content: stretch;
+
+    gap: 4px;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-top: 4px;
+
+    padding: 0;
+
+    overflow: visible !important;
+}
+
+
+/* Every category item gets equal space */
+
+.music-categories > .music-category,
+.music-categories > .music-category-wrapper {
+    flex: 1 1 0 !important;
+
+    min-width: 0 !important;
+
+    width: auto !important;
+}
+
+
+/* Wrapper */
+
+.music-category-wrapper {
+    position: relative;
+
+    display: block !important;
+
+    min-width: 0;
+}
+
+
+/* Button inside wrapper */
+
+.music-category-wrapper > .music-category {
+    width: 100% !important;
+
+    min-width: 0 !important;
+}
+
+
+/* Category button */
+
+.music-category {
+    box-sizing: border-box;
+
+    padding: 5px 3px !important;
+
+    font-size: 8px !important;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    border-radius: 7px;
+}
+
+
+/* Dropdown stays above the music player */
+
+.playlist-dropdown {
+    position: absolute !important;
+
+    bottom: calc(100% + 8px) !important;
+
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    z-index: 999999 !important;
+}
+
+/* =================================
+   PLAYLIST DROPDOWN - NO CLIPPING
+================================= */
+
+.music-player {
+    overflow: visible !important;
+}
+
+
+/* Keep the mini YouTube video clipped */
+.album-art {
+    overflow: hidden !important;
+}
+
+
+/* Category area */
+.music-categories {
+    overflow: visible !important;
+}
+
+
+/* Wrapper must stay above other elements */
+.music-category-wrapper {
+    position: relative;
+    z-index: 9999;
+}
+
+
+/* Playlist box */
+.playlist-dropdown {
+    position: absolute !important;
+
+    left: 50% !important;
+
+    bottom: calc(100% + 8px) !important;
+
+    transform: translateX(-50%) !important;
+
+    z-index: 999999 !important;
+
+    width: 250px;
+
+    max-height: 260px;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+}
+
+
+/* Song items */
+.playlist-song {
+    display: block;
+
+    position: relative;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    z-index: 1000000;
+}
+
+/* =========================
+   CURRENT SONG HIGHLIGHT
+========================= */
+
+.playlist-song.current-song {
+    background: rgba(255, 255, 255, 0.18) !important;
+    font-weight: 600;
+}
+
+/* =========================================
+   FINAL MOBILE MUSIC CATEGORY FIX
+   Keep all 7 categories in ONE ROW
+========================================= */
+
+.music-categories {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    gap: 3px !important;
+    overflow: visible !important;
+
+    grid-column: 1 / 4 !important;
+    grid-row: 5 !important;
+}
+
+.music-categories > .music-category,
+.music-categories > .music-category-wrapper {
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+}
+
+.music-category-wrapper {
+    display: block !important;
+    min-width: 0 !important;
+}
+
+.music-category-wrapper > .music-category,
+.music-categories > .music-category {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 5px 2px !important;
+
+    font-size: 8px !important;
+    line-height: 1.1 !important;
+
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+
+    box-sizing: border-box !important;
+}
+
+/* =========================================================
+   COMPLETE WEBSITE RESPONSIVE DESIGN
+   Desktop layout stays unchanged
+========================================================= */
+
+
+/* =========================================================
+   TABLET — 769px to 1100px
+========================================================= */
+
+@media (max-width: 1100px) and (min-width: 769px) {
+
+    .header {
+        padding: 20px 30px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .description {
+        max-width: 550px;
+        font-size: 17px;
+    }
+
+    .music-player {
+        width: calc(100% - 40px) !important;
+        max-width: 850px !important;
+    }
+
+    .footer {
+        padding: 15px 30px 20px;
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 768px and below
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* -------------------------
+       BASIC
+    ------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
+    .content {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+    }
+
+
+    /* -------------------------
+       HEADER
+    ------------------------- */
+
+    .header {
+        width: 100%;
+        padding: 15px 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo-area {
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .countdown-card {
+        margin-top: 6px;
+        padding: 6px 8px;
+    }
+
+    .countdown-time {
+        gap: 3px;
+    }
+
+    .count-box {
+        min-width: 36px;
+        padding: 4px 3px;
+    }
+
+    .count-box strong {
+        font-size: 13px;
+    }
+
+    .count-box span {
+        font-size: 6px;
+    }
+
+
+    /* -------------------------
+       LIVE STATUS
+    ------------------------- */
+
+    .live-status {
+        position: static !important;
+        width: auto;
+        font-size: 11px;
+        padding: 6px 11px;
+    }
+
+
+    /* -------------------------
+       PUJA TIMELINE
+    ------------------------- */
+
+    .puja-timeline {
+        position: static !important;
+
+        width: calc(100% - 20px);
+        max-width: 500px;
+
+        display: flex;
+        justify-content: center;
+
+        gap: 3px;
+        padding: 4px;
+
+        margin: 0 auto;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+    }
+
+    .puja-timeline::-webkit-scrollbar {
+        display: none;
+    }
+
+    .puja-day {
+        flex: 0 0 auto;
+        padding: 5px 6px;
+    }
+
+    .day-name {
+        font-size: 8px;
+    }
+
+
+    /* -------------------------
+       HERO
+    ------------------------- */
+
+    .hero {
+        width: 100%;
+        flex: none;
+
+        padding: 20px 12px 25px;
+
+        transform: none !important;
+
+        justify-content: flex-start;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 11vw, 52px);
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        width: 100%;
+        max-width: 500px;
+
+        font-size: 14px;
+        line-height: 1.5;
+
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        justify-content: center;
+
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .hero-buttons button {
+        padding: 11px 18px;
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       MUSIC PLAYER
+    ===================================================== */
+
+    .music-player {
+        width: calc(100% - 20px) !important;
+        max-width: none !important;
+
+        min-height: auto !important;
+
+        margin: 10px auto 0 !important;
+        padding: 12px !important;
+
+        display: grid !important;
+
+        grid-template-columns: 82px minmax(0, 1fr) !important;
+
+        grid-template-rows:
+            auto
+            auto
+            auto
+            auto
+            auto !important;
+
+        column-gap: 10px !important;
+        row-gap: 8px !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* -------------------------
+       ALBUM
+    ------------------------- */
+
+    .album-art {
+        width: 82px !important;
+        height: 82px !important;
+
+        grid-column: 1 !important;
+        grid-row: 1 / 3 !important;
+
+        border-radius: 12px;
+    }
+
+    #youtube-player {
+        border-radius: 12px;
+    }
+
+
+    /* -------------------------
+       SONG DETAILS
+    ------------------------- */
+
+    .song-details {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+
+        width: 100%;
+        min-width: 0;
+
+        align-self: center;
+    }
+
+    .now-playing {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .song-details h2 {
+        font-size: 16px;
+        line-height: 1.2;
+
+        margin: 3px 0;
+    }
+
+    .song-details p {
+        font-size: 11px;
+    }
+
+
+    /* -------------------------
+       SHARE BUTTONS
+    ------------------------- */
+
+    .share-buttons {
+        gap: 4px;
+        margin-top: 5px;
+    }
+
+    .share-buttons button {
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+
+
+    /* -------------------------
+       PLAYER CONTROLS
+    ------------------------- */
+
+    .player-controls {
+        grid-column: 1 / 3 !important;
+        grid-row: 2 !important;
+
+        width: 100%;
+
+        justify-content: center !important;
+
+        gap: 8px;
+
+        padding-top: 3px;
+    }
+
+    .control-btn {
+        width: 38px !important;
+        height: 38px !important;
+
+        flex: 0 0 38px !important;
+
+        font-size: 14px;
+    }
+
+    .play-btn {
+        width: 48px !important;
+        height: 48px !important;
+
+        flex: 0 0 48px !important;
+
+        font-size: 19px;
+    }
+
+
+    /* -------------------------
+       PROGRESS
+    ------------------------- */
+
+    .progress-section {
+        grid-column: 1 / 3 !important;
+        grid-row: 3 !important;
+
+        width: 100%;
+    }
+
+    .progress-section span {
+        font-size: 10px;
+        min-width: 28px;
+    }
+
+    .progress-bar {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* -------------------------
+       VOLUME
+    ------------------------- */
+
+    .volume-section {
+        grid-column: 1 / 3 !important;
+        grid-row: 4 !important;
+
+        width: 100%;
+    }
+
+    .volume-section span {
+        font-size: 10px;
+        min-width: 28px;
+    }
+
+    .volume-btn {
+        width: 34px;
+        height: 34px;
+
+        flex: 0 0 34px;
+
+        font-size: 14px;
+    }
+
+    .volume-bar {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       MUSIC CATEGORIES
+       ALL 7 STAY IN ONE ROW
+    ===================================================== */
+
+    .music-categories {
+        grid-column: 1 / 3 !important;
+        grid-row: 5 !important;
+
+        display: flex !important;
+
+        flex-wrap: nowrap !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 2px !important;
+
+        margin-top: 2px !important;
+
+        padding: 0 !important;
+
+        overflow: visible !important;
+    }
+
+    .music-categories > .music-category,
+    .music-categories > .music-category-wrapper {
+        flex: 1 1 0 !important;
+
+        width: 0 !important;
+        min-width: 0 !important;
+        max-width: none !important;
+    }
+
+    .music-category-wrapper {
+        display: block !important;
+
+        position: relative;
+
+        min-width: 0 !important;
+    }
+
+    .music-category-wrapper > .music-category,
+    .music-categories > .music-category {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        padding: 5px 1px !important;
+
+        font-size: 7px !important;
+        line-height: 1.1 !important;
+
+        white-space: nowrap !important;
+
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 6px;
+    }
+
+
+    /* -------------------------
+       PLAYLIST DROPDOWN
+    ------------------------- */
+
+    .playlist-dropdown {
+        width: 210px !important;
+        max-width: calc(100vw - 30px);
+
+        max-height: 220px;
+
+        z-index: 999999 !important;
+    }
+
+    .playlist-song {
+        font-size: 9px;
+        padding: 7px 8px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+        width: 100%;
+
+        padding: 15px 12px 20px;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 25px;
+    }
+
+    .footer-item {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES — 400px and below
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .count-box {
+        min-width: 32px;
+    }
+
+    .count-box strong {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .music-player {
+        width: calc(100% - 12px) !important;
+        padding: 9px !important;
+
+        grid-template-columns: 70px minmax(0, 1fr) !important;
+    }
+
+    .album-art {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    .song-details h2 {
+        font-size: 14px;
+    }
+
+    .song-details p {
+        font-size: 10px;
+    }
+
+    .control-btn {
+        width: 34px !important;
+        height: 34px !important;
+
+        flex-basis: 34px !important;
+    }
+
+    .play-btn {
+        width: 44px !important;
+        height: 44px !important;
+
+        flex-basis: 44px !important;
+    }
+
+    .music-category {
+        font-size: 6.5px !important;
+        padding-left: 1px !important;
+        padding-right: 1px !important;
+    }
+
+    .footer {
+        gap: 8px 15px;
+    }
+
+    .footer-item {
+        font-size: 10px;
+    }
+}
+
+.saptami-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.78);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.saptami-overlay.show {
+    opacity: 1;
+}
+
+.saptami-overlay-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.saptami-overlay-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* =========================
+   ASHTAMI DETAILS BUTTON
+========================= */
+
+.ashtami-details-btn {
+    margin-top: 12px;
+    padding: 8px 14px;
+
+    color: #ffe0a3;
+    background: rgba(20, 15, 15, 0.35);
+
+    border: 1px solid rgba(255, 210, 130, 0.25);
+    border-radius: 9px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.ashtami-details-btn:hover {
+    background: rgba(255, 190, 70, 0.15);
+    border-color: rgba(255, 210, 130, 0.5);
+
+    transform: translateY(-1px);
+}
+
+/* =========================
+   ASHTAMI OVERLAY
+========================= */
+
+.ashtami-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 999999;
+
+    width: 100%;
+    height: 100%;
+
+    background: #000;
+
+    opacity: 0;
+
+    transition: opacity 0.25s ease;
+}
+
+.ashtami-overlay.show {
+    opacity: 1;
+}
+
+.ashtami-overlay iframe {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    display: block;
+}
+
+.ashtami-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: #000;
+}
+
+.ashtami-overlay iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+/* ==================================================
+   PUJA INTRO EXPERIENCE
+================================================== */
+
+#pujaIntro {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    width: 100%;
+    height: 100%;
+
+    overflow-y: auto;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(150, 65, 30, 0.22),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(120, 45, 25, 0.14),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #080607,
+            #180b0e 50%,
+            #070607
+        );
+
+    color: #fff;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+}
+
+
+/* HIDE INTRO */
+
+#pujaIntro.intro-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   COMMON
+================================================== */
+
+.intro-screen {
+
+    width: 100%;
+    min-height: 100vh;
+
+    min-height: 100dvh;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px 20px;
+
+    position: relative;
+}
+
+
+/* ==================================================
+   WELCOME
+================================================== */
+
+.intro-welcome-content {
+
+    width: min(650px, 100%);
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.intro-bg-glow {
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(210, 125, 45, 0.12),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.intro-diya {
+
+    font-size: 52px;
+
+    margin-bottom: 14px;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(255, 180, 70, 0.7)
+        );
+
+    animation:
+        introD diya 2.5s ease-in-out infinite;
+}
+
+@keyframes diyaGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+}
+
+.intro-diya {
+    animation:
+        diyaGlow 2.5s ease-in-out infinite;
+}
+
+/* Fix animation name */
+
+@keyframes diyaGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+}
+
+.intro-diya {
+    animation:
+        diyaGlow 2.5s ease-in-out infinite;
+}
+
+
+.intro-label {
+
+    color: #d7b16d;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.intro-welcome-content h1 {
+
+    margin: 0;
+
+    color: #fff1d0;
+
+    font-size:
+        clamp(46px, 9vw, 82px);
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+}
+
+.intro-welcome-content h1 span {
+
+    display: block;
+
+    color: #dca552;
+
+    margin-top: 7px;
+}
+
+.intro-welcome-content p {
+
+    width: min(470px, 100%);
+
+    margin:
+        27px auto 34px;
+
+    color:
+        rgba(255, 239, 210, 0.62);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ENTER */
+
+#enterExperienceBtn,
+#startPujaBtn {
+
+    border:
+        1px solid
+        rgba(224, 176, 91, 0.45);
+
+    border-radius: 50px;
+
+    padding: 14px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(190, 125, 40, 0.35),
+            rgba(90, 35, 23, 0.45)
+        );
+
+    color: #ffe4ad;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+#enterExperienceBtn span,
+#startPujaBtn span {
+
+    margin-left: 8px;
+
+    font-size: 17px;
+}
+
+#enterExperienceBtn:hover,
+#startPujaBtn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.4);
+}
+
+.intro-welcome-content small {
+
+    display: block;
+
+    margin-top: 14px;
+
+    color:
+        rgba(255, 239, 210, 0.3);
+
+    font-size: 10px;
+}
+
+
+/* ==================================================
+   CREATORS
+================================================== */
+
+.creators-screen {
+
+    display: none;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.creators-screen.active {
+    display: flex;
+}
+
+.creators-heading {
+
+    width: min(700px, 100%);
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.creators-heading .small {
+
+    font-size: 34px;
+
+    margin-bottom: 9px;
+}
+
+.creators-heading h2 {
+
+    margin: 0;
+
+    color: #fff0d0;
+
+    font-size:
+        clamp(30px, 6vw, 48px);
+}
+
+.creators-heading h2 span {
+
+    color: #dca552;
+}
+
+.creators-heading > p {
+
+    max-width: 500px;
+
+    margin:
+        12px auto 0;
+
+    color:
+        rgba(255, 239, 210, 0.53);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   CREATOR GRID
+================================================== */
+
+.creator-grid {
+
+    width: min(900px, 100%);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.creator-card {
+
+    min-width: 0;
+
+    padding: 25px;
+
+    display: flex;
+
+    gap: 17px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(224, 176, 91, 0.17);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(45, 20, 21, 0.9),
+            rgba(15, 9, 12, 0.95)
+        );
+
+    box-shadow:
+        0 15px 50px
+        rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.creator-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(224, 176, 91, 0.34);
+}
+
+.creator-icon {
+
+    flex-shrink: 0;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(220, 165, 82, 0.09);
+
+    font-size: 23px;
+}
+
+.creator-content {
+
+    min-width: 0;
+}
+
+.creator-role {
+
+    margin-bottom: 6px;
+
+    color: #d5a55d;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.creator-content h3 {
+
+    margin: 0;
+
+    color: #fff0d0;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+}
+
+.creator-institute {
+
+    margin:
+        6px 0 13px;
+
+    color:
+        rgba(255, 239, 210, 0.45);
+
+    font-size: 11px;
+}
+
+.creator-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-bottom: 13px;
+}
+
+.creator-tags span {
+
+    padding: 5px 8px;
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    color:
+        rgba(255, 226, 176, 0.65);
+
+    font-size: 9px;
+}
+
+.creator-content > p {
+
+    margin: 0 0 15px;
+
+    color:
+        rgba(255, 239, 210, 0.56);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* CONTACT */
+
+.creator-contact {
+
+    margin-top: 13px;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid
+        rgba(255, 210, 120, 0.1);
+}
+
+.creator-contact label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color:
+        rgba(255, 239, 210, 0.34);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.creator-contact a {
+
+    display: block;
+
+    max-width: 100%;
+
+    color: #e2b96e;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+.creator-contact a:hover {
+    color: #ffe5aa;
+}
+
+
+/* EXPLORE */
+
+#startPujaBtn {
+
+    margin-top: 27px;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+    .intro-screen {
+
+        padding:
+            28px 15px;
+    }
+
+    .creator-grid {
+
+        grid-template-columns: 1fr;
+
+        width: min(470px, 100%);
+    }
+
+    .creator-card {
+
+        padding: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .intro-welcome-content h1 {
+
+        font-size: 44px;
+
+        letter-spacing: -2px;
+    }
+
+    .intro-welcome-content p {
+
+        font-size: 12px;
+
+        margin:
+            21px auto 27px;
+    }
+
+    .creator-card {
+
+        gap: 12px;
+
+        padding: 18px;
+    }
+
+    .creator-icon {
+
+        width: 43px;
+        height: 43px;
+
+        font-size: 19px;
+    }
+
+    .creator-content h3 {
+
+        font-size: 17px;
+    }
+
+    .creator-content > p {
+
+        font-size: 10px;
+    }
+
+}

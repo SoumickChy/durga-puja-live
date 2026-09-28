@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>মহা ষষ্ঠী | Durga Puja Live</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family:
+                "Noto Sans Bengali",
+                "Nirmala UI",
+                Arial,
+                sans-serif;
+
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(15, 8, 8, 0.60),
+                    rgba(15, 8, 8, 0.84)
+                ),
+                url("images/shashthi.jpg") center / cover fixed no-repeat;
+        }
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .page {
+            min-height: 100vh;
+            padding: 30px 20px 45px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* =========================
+           TOP AREA
+        ========================= */
+
+        .top-area {
+            width: 100%;
+            max-width: 1050px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 28px;
+        }
+
+        #shashthiBackLink {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 9px 15px;
+
+            color: #ffe3a6;
+            background: rgba(20, 12, 10, 0.65);
+
+            border: 1px solid rgba(255, 210, 130, 0.35);
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 16px rgba(0, 0, 0, 0.30);
+
+            text-decoration: none;
+
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+
+            transition: all 0.2s ease;
+        }
+
+        #shashthiBackLink:hover {
+            color: #fff0c7;
+            background: rgba(70, 38, 20, 0.75);
+
+            border-color: rgba(255, 210, 130, 0.60);
+
+            transform: translateY(-1px);
+        }
+
+        .brand {
+            text-align: right;
+
+            font-family: Arial, sans-serif;
+        }
+
+        .brand-title {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.7px;
+
+            opacity: 0.92;
+        }
+
+        .brand-subtitle {
+            margin-top: 3px;
+
+            font-size: 9px;
+            letter-spacing: 1px;
+
+            opacity: 0.55;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            width: 100%;
+            max-width: 900px;
+
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-small {
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+            letter-spacing: 2px;
+
+            color: rgba(255, 225, 180, 0.78);
+
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            margin: 0;
+
+            font-size: clamp(42px, 7vw, 78px);
+
+            font-weight: 700;
+
+            line-height: 1.08;
+
+            color: #fff4df;
+
+            text-shadow:
+                0 4px 22px rgba(0, 0, 0, 0.80),
+                0 0 22px rgba(255, 190, 90, 0.14);
+        }
+
+        .hero h2 {
+            margin: 12px 0 10px;
+
+            font-size: clamp(18px, 3vw, 28px);
+
+            font-weight: 500;
+
+            color: #ffe5b3;
+        }
+
+        .hero-description {
+            max-width: 720px;
+
+            margin: 0 auto;
+
+            font-size: 14px;
+            line-height: 1.7;
+
+            color: rgba(255, 255, 255, 0.74);
+        }
+
+        .date-badge {
+            display: inline-block;
+
+            margin-top: 17px;
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 220, 160, 0.22);
+
+            color: #ffe2aa;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+            letter-spacing: 0.5px;
+
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* =========================
+           ARTICLE CARD
+        ========================= */
+
+        .article-card {
+            width: 100%;
+            max-width: 900px;
+
+            padding: 20px;
+
+            background: rgba(15, 9, 9, 0.52);
+
+            border: 1px solid rgba(255, 255, 255, 0.16);
+
+            border-radius: 20px;
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            box-shadow:
+                0 14px 45px rgba(0, 0, 0, 0.40);
+
+            overflow: hidden;
+        }
+
+        /* =========================
+           LANGUAGE BUTTON
+        ========================= */
+
+        .article-toolbar {
+            display: flex;
+            justify-content: flex-end;
+
+            margin-bottom: 10px;
+        }
+
+        #languageBtn {
+            padding: 7px 12px;
+
+            border-radius: 9px;
+
+            border: 1px solid rgba(255, 210, 130, 0.30);
+
+            background: rgba(255, 190, 70, 0.10);
+
+            color: #ffe2ad;
+
+            font-size: 10px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+        }
+
+        #languageBtn:hover {
+            background: rgba(255, 190, 70, 0.20);
+
+            border-color: rgba(255, 210, 130, 0.55);
+
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           ARTICLE
+        ========================= */
+
+        .article-content {
+            max-height: 650px;
+
+            overflow-y: auto;
+
+            padding: 5px 10px 10px 5px;
+
+            scrollbar-width: thin;
+            scrollbar-color:
+                rgba(255, 205, 130, 0.40)
+                transparent;
+        }
+
+        .article-content::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .article-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .article-content::-webkit-scrollbar-thumb {
+            background: rgba(255, 205, 130, 0.40);
+
+            border-radius: 10px;
+        }
+
+        .article-content h3 {
+            margin: 22px 0 9px;
+
+            color: #ffe0a3;
+
+            font-size: 18px;
+
+            font-weight: 700;
+        }
+
+        .article-content h3:first-child {
+            margin-top: 5px;
+        }
+
+        .article-content h4 {
+            margin: 20px 0 8px;
+
+            color: #ffd995;
+
+            font-size: 15px;
+        }
+
+        .article-content p {
+            margin: 0 0 13px;
+
+            color: rgba(255, 255, 255, 0.82);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            text-align: left;
+        }
+
+        .article-content strong {
+            color: #ffe7b8;
+        }
+
+        .article-content ul {
+            margin: 7px 0 16px;
+            padding-left: 22px;
+        }
+
+        .article-content li {
+            margin-bottom: 8px;
+
+            color: rgba(255, 255, 255, 0.80);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        /* =========================
+           TIMING BOX
+        ========================= */
+
+        .timing-box {
+            margin: 24px 0 8px;
+
+            padding: 15px;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 190, 70, 0.10),
+                    rgba(80, 35, 20, 0.20)
+                );
+
+            border: 1px solid rgba(255, 210, 130, 0.22);
+        }
+
+        .timing-box h3 {
+            margin-top: 0;
+            margin-bottom: 13px;
+        }
+
+        .timing-row {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 10px 0;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .timing-row:last-child {
+            border-bottom: none;
+        }
+
+        .timing-label {
+            color: rgba(255, 255, 255, 0.68);
+
+            font-size: 11px;
+        }
+
+        .timing-value {
+            color: #ffe2aa;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            text-align: right;
+        }
+
+        /* =========================
+           KEY FACTS
+        ========================= */
+
+        .facts-box {
+            margin-top: 22px;
+
+            padding: 15px;
+
+            border-radius: 14px;
+
+            background: rgba(255, 255, 255, 0.045);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.10);
+        }
+
+        .facts-box h3 {
+            margin-top: 0;
+        }
+
+        .fact {
+            display: flex;
+
+            gap: 10px;
+
+            margin-bottom: 9px;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .fact:last-child {
+            margin-bottom: 0;
+        }
+
+        .fact-mark {
+            color: #ffd68e;
+
+            flex: 0 0 auto;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .page-footer {
+            width: 100%;
+            max-width: 900px;
+
+            text-align: center;
+
+            margin-top: 18px;
+
+            color: rgba(255, 255, 255, 0.42);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 0.5px;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .page {
+                padding: 18px 12px 30px;
+            }
+
+            .top-area {
+                margin-bottom: 20px;
+            }
+
+            .brand {
+                display: none;
+            }
+
+            .hero {
+                margin-bottom: 18px;
+            }
+
+            .hero-small {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+            }
+
+            .hero h1 {
+                font-size: clamp(36px, 12vw, 58px);
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero-description {
+                font-size: 12px;
+                line-height: 1.65;
+            }
+
+            .article-card {
+                padding: 13px;
+
+                border-radius: 16px;
+            }
+
+            .article-content {
+                max-height: 68vh;
+
+                padding-right: 6px;
+            }
+
+            .article-content h3 {
+                font-size: 16px;
+            }
+
+            .article-content h4 {
+                font-size: 14px;
+            }
+
+            .article-content p,
+            .article-content li {
+                font-size: 12px;
+
+                line-height: 1.85;
+            }
+
+            .timing-row {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .timing-value {
+                text-align: left;
+            }
+        }
+
+        /* =========================
+           SMALL PHONE
+        ========================= */
+
+        @media (max-width: 400px) {
+
+            .page {
+                padding: 14px 9px 25px;
+            }
+
+            #shashthiBackLink {
+                padding: 8px 11px;
+                font-size: 10px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .hero-description {
+                font-size: 11px;
+            }
+
+            .date-badge {
+                font-size: 9px;
+            }
+
+            .article-card {
+                padding: 10px;
+            }
+
+            .article-content {
+                max-height: 70vh;
+            }
+
+            .article-content p,
+            .article-content li {
+                font-size: 11.5px;
+            }
+
+            .fact {
+                font-size: 11px;
+            }
+        }
+        .shashthi-countdown {
+    width: min(520px, 100%);
+    margin: 18px auto 0;
+    padding: 13px 14px;
+
+    background: rgba(15, 8, 8, 0.42);
+    border: 1px solid rgba(255, 210, 130, 0.20);
+    border-radius: 14px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.countdown-title {
+    margin-bottom: 10px;
+
+    color: #ffe0a3;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+}
+
+.countdown-item {
+    padding: 8px 4px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9px;
+}
+
+.countdown-item span {
+    display: block;
+
+    color: #fff0cf;
+
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.countdown-item small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    text-transform: uppercase;
+}
+
+#shashthiCountdownMessage {
+    margin-top: 9px;
+
+    color: rgba(255, 225, 180, 0.72);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+}
+
+@media (max-width: 400px) {
+
+    .shashthi-countdown {
+        padding: 10px;
+    }
+
+    .countdown-item span {
+        font-size: 17px;
+    }
+
+    .countdown-item small {
+        font-size: 7px;
+    }
+}
+#shashthiBottomBack {
+    display: block;
+    width: fit-content;
+    margin: 45px auto 20px;
+    padding: 8px 14px;
+
+    color: #ffe0a3;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    background: rgba(20, 15, 15, 0.35);
+    border: 1px solid rgba(255, 210, 130, 0.25);
+    border-radius: 9px;
+
+    transition: all 0.2s ease;
+}
+
+#shashthiBottomBack:hover {
+    background: rgba(255, 190, 70, 0.15);
+    border-color: rgba(255, 210, 130, 0.5);
+    transform: translateY(-1px);
+}
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- =========================
+         TOP
+    ========================= -->
+
+   <div class="top-area">
+
+
+    
+
+        <div class="brand">
+            <div class="brand-title">
+                Durga Puja Live
+            </div>
+
+            <div class="brand-subtitle">
+                SHARADIYA DURGA PUJA 2026
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-small">
+            DURGA PUJA LIVE
+        </div>
+
+        <h1>মহা ষষ্ঠী</h1>
+
+        <h2>
+            দেবীর আগমন ও বোধনের দিন
+        </h2>
+
+        <p class="hero-description">
+            শারদীয় দুর্গাপূজার আনুষ্ঠানিক সূচনা,
+            দেবীর বোধন এবং মর্ত্যে মাকে বরণ করে নেওয়ার
+            এক পবিত্র দিন।
+        </p>
+
+        <div class="date-badge">
+            16 October 2026 • Friday
+        </div>
+        <div class="shashthi-countdown">
+    <div class="countdown-title">
+        Maha Shashthi Countdown
+    </div>
+
+    <div class="countdown-grid">
+        <div class="countdown-item">
+            <span id="shashthiDays">00</span>
+            <small>Days</small>
+        </div>
+
+        <div class="countdown-item">
+            <span id="shashthiHours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="countdown-item">
+            <span id="shashthiMinutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="countdown-item">
+            <span id="shashthiSeconds">00</span>
+            <small>Seconds</small>
+        </div>
+    </div>
+
+    <div id="shashthiCountdownMessage"></div>
+</div>
+    </section>
+
+
+    <!-- =========================
+         ARTICLE CARD
+    ========================= -->
+
+    <section class="article-card">
+
+        <div class="article-toolbar">
+
+            <button id="languageBtn">
+                Translate to English
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             BENGALI
+        ========================= -->
+
+        <div class="article-content" id="bengaliContent">
+
+            <h3>
+                মহা ষষ্ঠী — দেবীর আগমন ও বোধনের দিন
+            </h3>
+
+            <p>
+                <strong>মহাষষ্ঠী</strong> তিথির মাধ্যমেই বাঙালি
+                সনাতন ধর্মাবলম্বীদের প্রধান উৎসব শারদীয়
+                দুর্গাপূজার আনুষ্ঠানিক সূচনা ঘটে। শাস্ত্রমতে,
+                এই দিনেই কৈলাস ছেড়ে দেবী দুর্গা তাঁর সন্তানদের
+                সঙ্গে মর্ত্যলোকে, নিজের বাপের বাড়িতে আগমন করেন।
+                তাই ষষ্ঠী শুধু পূজার একটি দিন নয়—এটি দেবীকে
+                আনুষ্ঠানিকভাবে বরণ করে নেওয়ার দিন এবং
+                দুর্গোৎসবের আবহকে পূর্ণতার দিকে নিয়ে যাওয়ার
+                প্রথম গুরুত্বপূর্ণ অধ্যায়।
+            </p>
+
+            <p>
+                মহাষষ্ঠীর বিভিন্ন আচার-অনুষ্ঠানের মধ্য দিয়ে
+                পূজার সংকল্প নেওয়া, দেবীকে জাগ্রত করা,
+                তাঁকে আনুষ্ঠানিকভাবে আমন্ত্রণ জানানো এবং
+                তাঁর উপস্থিতিকে বরণ করার প্রক্রিয়া সম্পন্ন হয়।
+                এই দিনটির প্রধান আচারগুলোর মধ্যে বিশেষভাবে
+                গুরুত্বপূর্ণ হলো <strong>কল্পারম্ভ, বোধন,
+                আমন্ত্রণ ও অধিবাস</strong> এবং শেষে
+                <strong>দেবীর মুখ উন্মোচন</strong>।
+            </p>
+
+
+            <h3>
+                ১. কল্পারম্ভ (Kalparambha)
+            </h3>
+
+            <p>
+                মহাষষ্ঠীর দিনের প্রথম গুরুত্বপূর্ণ আচার হলো
+                <strong>কল্পারম্ভ</strong>। সাধারণত সূর্যোদয়ের
+                পর এই আচার সম্পন্ন করা হয়। এর মধ্য দিয়েই
+                দুর্গাপূজার মূল আনুষ্ঠানিকতার সূচনা হয়।
+            </p>
+
+            <p>
+                পূজাস্থল বা মণ্ডপে জলপূর্ণ একটি তাম্রপাত্র বা
+                ঘট স্থাপন করা হয়। এরপর পুরোহিতের নির্দেশে
+                পূজার প্রধান <strong>সংকল্প</strong> গ্রহণ করা
+                হয়। অর্থাৎ, নির্দিষ্ট শাস্ত্রীয় বিধি ও
+                নিয়ম মেনে আগামী দিনগুলিতে সম্পূর্ণ নিষ্ঠার
+                সঙ্গে দেবীর পূজা সম্পন্ন করার প্রতিজ্ঞা করা হয়।
+            </p>
+
+            <p>
+                কল্পারম্ভের মাধ্যমে পূজার উদ্দেশ্য ও সংকল্প
+                আনুষ্ঠানিকভাবে স্থির করা হয়। এরপর দেবী দুর্গা
+                এবং চণ্ডীর আরাধনার মাধ্যমে ষষ্ঠীর পূজার
+                ধারাবাহিকতা এগিয়ে চলে।
+            </p>
+
+
+            <h3>
+                ২. বোধন (Bodhon / Akaal Bodhon)
+            </h3>
+
+            <p>
+                মহাষষ্ঠীর অন্যতম প্রধান ও গুরুত্বপূর্ণ আচার হলো
+                <strong>বোধন</strong>। সাধারণত তিথি মেনে
+                গোধূলি বেলা বা সন্ধ্যার সময় এই আচার সম্পন্ন
+                করা হয়।
+            </p>
+
+            <p>
+                ‘বোধন’ শব্দের অর্থ হলো <strong>জাগ্রত করা</strong>
+                বা চেতনা প্রদান করা। প্রচলিত ধর্মীয় ও
+                পৌরাণিক বিশ্বাস অনুযায়ী, শরৎকাল দেবতাদের
+                নিদ্রার সময় হিসেবে বিবেচিত হওয়ায় দেবীর
+                আরাধনা শুরু করার আগে তাঁকে জাগ্রত করার
+                প্রয়োজন হয়। এই জাগরণই বোধন নামে পরিচিত।
+            </p>
+
+            <p>
+                বোধনের সঙ্গে জড়িয়ে রয়েছে শ্রীরামচন্দ্রের
+                অকালবোধনের পৌরাণিক কাহিনি। লঙ্কার রাজা
+                রাবণকে বধ করার উদ্দেশ্যে শ্রীরামচন্দ্র
+                শরৎকালে দেবী দুর্গার আরাধনা করেছিলেন বলে
+                পুরাণে বর্ণিত হয়। প্রচলিত বিশ্বাস অনুযায়ী,
+                এই সময়ে দেবীর পূজা ছিল স্বাভাবিক সময়ের
+                তুলনায় অকাল, তাই এর নাম হয়
+                <strong>অকালবোধন</strong>।
+            </p>
+
+            <p>
+                এই পৌরাণিক স্মৃতিই বাংলার শারদীয় দুর্গাপূজায়
+                বোধনকে একটি বিশেষ তাৎপর্য দিয়েছে। মহাষষ্ঠীর
+                সন্ধ্যার বোধনের মাধ্যমে দেবীকে পূজার জন্য
+                আনুষ্ঠানিকভাবে জাগ্রত ও আহ্বান করা হয়।
+            </p>
+
+
+            <h3>
+                ৩. আমন্ত্রণ ও অধিবাস
+                (Amantran &amp; Adhivas)
+            </h3>
+
+            <p>
+                বোধনের পর শুরু হয় দেবীকে আনুষ্ঠানিকভাবে
+                <strong>আমন্ত্রণ</strong> জানানোর পর্ব।
+                এই আচারগুলোর মাধ্যমে দেবীকে মর্ত্যে এসে
+                ভক্তদের পূজা গ্রহণ করার জন্য সশ্রদ্ধ আহ্বান
+                জানানো হয়।
+            </p>
+
+            <h4>
+                বিল্ব নিমন্ত্রণ / আমন্ত্রণ
+            </h4>
+
+            <p>
+                আমন্ত্রণের সঙ্গে জড়িয়ে রয়েছে
+                <strong>বিল্ব বৃক্ষ</strong> বা বেল গাছ।
+                কোনো পবিত্র স্থানে থাকা বিল্ববৃক্ষের নিচে
+                জলপূর্ণ ঘট স্থাপন করে দেবীকে পূজা গ্রহণের
+                জন্য আনুষ্ঠানিকভাবে আহ্বান জানানো হয়।
+            </p>
+
+            <p>
+                এই আমন্ত্রণের মধ্যে রয়েছে দেবীর প্রতি
+                শ্রদ্ধা, ভক্তি এবং তাঁকে মর্ত্যলোকে
+                সাদরে বরণ করে নেওয়ার ভাবনা। তাই বিল্ব
+                নিমন্ত্রণ ষষ্ঠীর সন্ধ্যার আচারগুলোর একটি
+                গুরুত্বপূর্ণ অংশ।
+            </p>
+
+            <h4>
+                অধিবাস
+            </h4>
+
+            <p>
+                আমন্ত্রণের পর সম্পন্ন হয়
+                <strong>অধিবাস</strong>। এই আচার দেবীর
+                প্রতীকী উপস্থিতিকে বরণ ও পবিত্র করার সঙ্গে
+                যুক্ত। মঙ্গলানুষ্ঠানের অংশ হিসেবে ঘটের
+                চারপাশে পবিত্র সুতো বাঁধা এবং বরণডালা
+                সাজানোর মতো আচার সম্পন্ন করা হয়।
+            </p>
+
+            <p>
+                প্রচলিত বিশ্বাস অনুযায়ী, অধিবাসের মাধ্যমে
+                দেবীর উপস্থিতিকে পূজাস্থলে স্বাগত জানানোর
+                প্রক্রিয়া আরও পূর্ণতা পায়। মৃন্ময়ী
+                প্রতিমাকে কেন্দ্র করে দেবীর উপস্থিতি ও
+                আরাধনার যে পবিত্র পরিবেশ তৈরি হয়,
+                অধিবাস সেই পরিবেশের একটি গুরুত্বপূর্ণ
+                অংশ।
+            </p>
+
+
+            <h3>
+                ৪. দেবীর মুখ উন্মোচন
+            </h3>
+
+            <p>
+                মহাষষ্ঠীর সন্ধ্যার আচার ও আমন্ত্রণের পর
+                আসে অত্যন্ত আবেগঘন একটি মুহূর্ত—
+                <strong>দেবীর মুখ উন্মোচন</strong>।
+                এতক্ষণ প্রতিমার মুখ যে আবরণে ঢাকা থাকে,
+                এই পর্বে সেই আবরণ সরিয়ে ভক্তদের সামনে
+                মায়ের মুখ দর্শনের সুযোগ তৈরি হয়।
+            </p>
+
+            <p>
+                সাধারণ মানুষের কাছে এটি অনেক সময়
+                <strong>‘মায়ের মুখ দর্শন’</strong> নামে
+                পরিচিত। দেবীর মুখ উন্মোচনের সময় মণ্ডপে
+                ঢাকের বাদ্য, শাঁখের ধ্বনি এবং উলুধ্বনিতে
+                এক বিশেষ উৎসবমুখর পরিবেশ তৈরি হয়।
+            </p>
+
+            <p>
+                এই মুহূর্তেই যেন অপেক্ষার অবসান ঘটে।
+                দেবী দুর্গাকে সপরিবারে বরণ করে নিয়ে
+                শুরু হয় শারদীয় দুর্গোৎসবের পূর্ণ
+                আনন্দময় আবহ। ষষ্ঠীর এই মুহূর্ত থেকেই
+                বহু মানুষের কাছে দুর্গাপূজা সত্যিকার
+                অর্থে শুরু হয়ে যায়।
+            </p>
+
+
+            <!-- =========================
+                 TIMINGS
+            ========================= -->
+
+            <div class="timing-box">
+
+                <h3>
+                    মহা ষষ্ঠীর গুরুত্বপূর্ণ সময়
+                </h3>
+
+                <div class="timing-row">
+
+                    <div class="timing-label">
+                        মহাষষ্ঠী
+                    </div>
+
+                    <div class="timing-value">
+                        16 October 2026 • Friday
+                    </div>
+
+                </div>
+
+                <div class="timing-row">
+
+                    <div class="timing-label">
+                        Shashthi Tithi শুরু
+                    </div>
+
+                    <div class="timing-value">
+                        16 October • 3:25 AM
+                    </div>
+
+                </div>
+
+                <div class="timing-row">
+
+                    <div class="timing-label">
+                        Shashthi Tithi শেষ
+                    </div>
+
+                    <div class="timing-value">
+                        17 October • 5:54 AM
+                    </div>
+
+                </div>
+
+                <div class="timing-row">
+
+                    <div class="timing-label">
+                        Bilva Nimantran
+                    </div>
+
+                    <div class="timing-value">
+                        16 October • 3:41 PM – 6:00 PM
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 KEY FACTS
+            ========================= -->
+
+            <div class="facts-box">
+
+                <h3>
+                    মহা ষষ্ঠীর মূল তথ্য
+                </h3>
+
+                <div class="fact">
+                    <span class="fact-mark">🪔</span>
+                    <span>
+                        মহাষষ্ঠীর মাধ্যমে শারদীয় দুর্গাপূজার
+                        আনুষ্ঠানিক সূচনা ঘটে।
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🌺</span>
+                    <span>
+                        এই দিনে দেবী দুর্গার মর্ত্যে আগমনের
+                        বিশ্বাসকে কেন্দ্র করে তাঁকে বরণ করা হয়।
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🙏</span>
+                    <span>
+                        কল্পারম্ভের মাধ্যমে পূজার সংকল্প
+                        গ্রহণ করা হয়।
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🔔</span>
+                    <span>
+                        সন্ধ্যায় বোধন ও অকালবোধনের আচার
+                        সম্পন্ন হয়।
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🌿</span>
+                    <span>
+                        বিল্ব নিমন্ত্রণ ও অধিবাসের মাধ্যমে
+                        দেবীকে আনুষ্ঠানিকভাবে আহ্বান ও বরণ
+                        করা হয়।
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🥁</span>
+                    <span>
+                        ঢাক, শাঁখ ও উলুধ্বনির মধ্যে দেবীর
+                        মুখ উন্মোচনের মাধ্যমে ষষ্ঠীর
+                        আবহ আরও পূর্ণতা পায়।
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ENGLISH
+        ========================= -->
+
+        <div
+            class="article-content"
+            id="englishContent"
+            style="display:none;"
+        >
+
+            <h3>
+                Maha Shashthi — The Day of the Goddess's Arrival
+            </h3>
+
+            <p>
+                <strong>Maha Shashthi</strong> marks the formal
+                beginning of Sharadiya Durga Puja. According to
+                traditional belief, Goddess Durga leaves Mount
+                Kailash with her children and arrives on earth,
+                returning to her maternal home.
+            </p>
+
+            <p>
+                The day is marked by several important rituals
+                through which the worship is formally initiated,
+                the Goddess is awakened, invited and welcomed.
+                The major rituals include
+                <strong>Kalparambha, Bodhon, Amantran and
+                Adhivas</strong>, followed by the unveiling of
+                the Goddess's face.
+            </p>
+
+
+            <h3>
+                1. Kalparambha
+            </h3>
+
+            <p>
+                Kalparambha is one of the first important rituals
+                of Maha Shashthi and is generally performed after
+                sunrise.
+            </p>
+
+            <p>
+                A water-filled copper vessel or sacred pot is
+                placed at the place of worship. The main
+                <strong>Sankalpa</strong>, or sacred resolve,
+                is then taken to formally begin the worship
+                according to the prescribed traditions.
+            </p>
+
+            <p>
+                Through Kalparambha, the purpose and resolve of
+                the Puja are formally established, followed by
+                the worship of Goddess Durga and Chandi.
+            </p>
+
+
+            <h3>
+                2. Bodhon / Akaal Bodhon
+            </h3>
+
+            <p>
+                <strong>Bodhon</strong> is one of the most
+                important rituals of Maha Shashthi. It is
+                generally performed during the evening or
+                twilight according to the tithi.
+            </p>
+
+            <p>
+                The word Bodhon means awakening. According to
+                traditional religious belief, autumn is associated
+                with the period of divine sleep, and therefore
+                the Goddess is ritually awakened before the
+                worship begins.
+            </p>
+
+            <p>
+                Bodhon is also associated with the traditional
+                story of Lord Rama. Before fighting Ravana,
+                Rama is believed to have worshipped Goddess Durga
+                during autumn. Since this worship was performed
+                outside the usual period, it became known as
+                <strong>Akaal Bodhon</strong>.
+            </p>
+
+            <p>
+                This traditional story gives Bodhon a special
+                place in the Sharadiya Durga Puja celebrations.
+            </p>
+
+
+            <h3>
+                3. Amantran &amp; Adhivas
+            </h3>
+
+            <p>
+                Following Bodhon, the Goddess is formally invited
+                to accept the worship. This is known as
+                <strong>Amantran</strong>.
+            </p>
+
+            <h4>
+                Bilva Nimantran
+            </h4>
+
+            <p>
+                The invitation is traditionally associated with
+                the sacred <strong>Bilva tree</strong>. A
+                water-filled sacred vessel is placed beneath or
+                near the Bilva tree, and the Goddess is formally
+                invited to come and receive the worship.
+            </p>
+
+            <h4>
+                Adhivas
+            </h4>
+
+            <p>
+                Adhivas follows the invitation and is associated
+                with welcoming and sanctifying the symbolic
+                presence of the Goddess. Traditional ceremonial
+                elements such as sacred thread and a decorated
+                welcoming tray form part of this auspicious
+                ritual.
+            </p>
+
+
+            <h3>
+                4. Unveiling the Goddess's Face
+            </h3>
+
+            <p>
+                After the evening rituals and invitation are
+                completed, the covering over the Goddess's face
+                is removed. This moment is popularly experienced
+                as the first public viewing of the Mother's face.
+            </p>
+
+            <p>
+                The unveiling takes place amid the powerful sound
+                of traditional <strong>dhak</strong>, conch shells
+                and ululation, creating a deeply festive atmosphere.
+            </p>
+
+            <p>
+                For many devotees, this is the moment when the
+                long-awaited celebration truly begins and the
+                Goddess is welcomed into the Puja celebrations
+                with her family.
+            </p>
+
+
+            <div class="timing-box">
+
+                <h3>
+                    Maha Shashthi — Important Timings
+                </h3>
+
+                <div class="timing-row">
+                    <div class="timing-label">
+                        Maha Shashthi
+                    </div>
+
+                    <div class="timing-value">
+                        16 October 2026 • Friday
+                    </div>
+                </div>
+
+                <div class="timing-row">
+                    <div class="timing-label">
+                        Shashthi Tithi Begins
+                    </div>
+
+                    <div class="timing-value">
+                        16 October • 3:25 AM
+                    </div>
+                </div>
+
+                <div class="timing-row">
+                    <div class="timing-label">
+                        Shashthi Tithi Ends
+                    </div>
+
+                    <div class="timing-value">
+                        17 October • 5:54 AM
+                    </div>
+                </div>
+
+                <div class="timing-row">
+                    <div class="timing-label">
+                        Bilva Nimantran
+                    </div>
+
+                    <div class="timing-value">
+                        16 October • 3:41 PM – 6:00 PM
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="facts-box">
+
+                <h3>
+                    Key Facts of Maha Shashthi
+                </h3>
+
+                <div class="fact">
+                    <span class="fact-mark">🪔</span>
+                    <span>
+                        Maha Shashthi formally marks the beginning
+                        of Sharadiya Durga Puja.
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🌺</span>
+                    <span>
+                        The day is associated with the arrival of
+                        Goddess Durga at her maternal home on earth.
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🙏</span>
+                    <span>
+                        Kalparambha establishes the sacred resolve
+                        for the Puja.
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🔔</span>
+                    <span>
+                        Bodhon or Akaal Bodhon is performed in
+                        the evening.
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🌿</span>
+                    <span>
+                        Bilva Nimantran and Adhivas formally
+                        welcome the Goddess.
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-mark">🥁</span>
+                    <span>
+                        The unveiling of the Goddess's face amid
+                        dhak, conch shells and ululation marks
+                        a powerful moment of celebration.
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+<a href="#" id="shashthiBottomBack">
+    ← Back to Durga Puja Live
+</a>
+
+
+    <div class="page-footer">
+        Durga Puja Live • Sharadiya Durga Puja 2026
+    </div>
+
+</div>
+
+
+<script>
+
+    /* =========================
+       LANGUAGE TOGGLE
+    ========================= */
+
+    const languageBtn =
+        document.getElementById("languageBtn");
+
+    const bengaliContent =
+        document.getElementById("bengaliContent");
+
+    const englishContent =
+        document.getElementById("englishContent");
+
+    let englishMode = false;
+
+    languageBtn.addEventListener("click", function () {
+
+        englishMode = !englishMode;
+
+        if (englishMode) {
+
+            bengaliContent.style.display = "none";
+            englishContent.style.display = "block";
+
+            languageBtn.textContent =
+                "বাংলায় দেখুন";
+
+        } else {
+
+            englishContent.style.display = "none";
+            bengaliContent.style.display = "block";
+
+            languageBtn.textContent =
+                "Translate to English";
+        }
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    /* =========================
+       BACK TO MAIN PAGE
+    ========================= */
+
+    const shashthiBackLink =
+        document.getElementById("shashthiBackLink");
+
+    if (shashthiBackLink) {
+
+        shashthiBackLink.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                if (window.parent !== window) {
+
+                    window.parent.postMessage(
+                        {
+                            type: "closeShashthi"
+                        },
+                        "*"
+                    );
+
+                } else {
+
+                    window.location.href =
+                        "index.html";
+                }
+
+            }
+        );
+    }
+/* =========================
+   SHASHTHI COUNTDOWN
+========================= */
+
+const shashthiBottomBack =
+    document.getElementById("shashthiBottomBack");
+
+if (shashthiBottomBack) {
+    shashthiBottomBack.addEventListener(
+        "click",
+        function (event) {
+            event.preventDefault();
+
+            if (window.parent !== window) {
+                window.parent.postMessage(
+                    { type: "closeShashthi" },
+                    "*"
+                );
+            } else {
+                window.location.href = "index.html";
+            }
+        }
+    );
+}
+
+const shashthiTargetDate =
+    new Date(2026, 9, 16, 0, 0, 0).getTime();
+
+function updateShashthiCountdown() {
+
+    const now = new Date().getTime();
+
+    const distance =
+        shashthiTargetDate - now;
+
+    const days =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours =
+        Math.floor(
+            (distance % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
+
+    const minutes =
+        Math.floor(
+            (distance % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
+
+    const seconds =
+        Math.floor(
+            (distance % (1000 * 60))
+            / 1000
+        );
+
+    const daysElement =
+        document.getElementById("shashthiDays");
+
+    const hoursElement =
+        document.getElementById("shashthiHours");
+
+    const minutesElement =
+        document.getElementById("shashthiMinutes");
+
+    const secondsElement =
+        document.getElementById("shashthiSeconds");
+
+    const messageElement =
+        document.getElementById(
+            "shashthiCountdownMessage"
+        );
+
+    if (distance > 0) {
+
+        daysElement.textContent =
+            String(days).padStart(2, "0");
+
+        hoursElement.textContent =
+            String(hours).padStart(2, "0");
+
+        minutesElement.textContent =
+            String(minutes).padStart(2, "0");
+
+        secondsElement.textContent =
+            String(seconds).padStart(2, "0");
+
+        messageElement.textContent =
+            "Countdown to Maha Shashthi • 16 October 2026";
+
+    } else {
+
+        daysElement.textContent = "00";
+        hoursElement.textContent = "00";
+        minutesElement.textContent = "00";
+        secondsElement.textContent = "00";
+
+        messageElement.textContent =
+            "Maha Shashthi is here 🪔";
+
+    }
+}
+
+updateShashthiCountdown();
+
+setInterval(
+    updateShashthiCountdown,
+    1000
+);
+</script>
+<!-- ===== SHASHTHI FLOWER + DIYA + SMOKE EFFECT ===== -->
+
+<style>
+    /* =========================
+       FLOATING FLOWERS
+       ========================= */
+
+    .shashthi-flowers {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 40;
+    }
+
+    .shashthi-flower {
+        position: absolute;
+        top: -40px;
+        font-size: 18px;
+        opacity: 0;
+        animation: shashthiFlowerFall linear infinite;
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.25));
+    }
+
+    .shashthi-flower:nth-child(1) {
+        left: 8%;
+        font-size: 17px;
+        animation-duration: 10s;
+        animation-delay: 0s;
+    }
+
+    .shashthi-flower:nth-child(2) {
+        left: 22%;
+        font-size: 13px;
+        animation-duration: 13s;
+        animation-delay: 2s;
+    }
+
+    .shashthi-flower:nth-child(3) {
+        left: 37%;
+        font-size: 19px;
+        animation-duration: 11s;
+        animation-delay: 4s;
+    }
+
+    .shashthi-flower:nth-child(4) {
+        left: 52%;
+        font-size: 14px;
+        animation-duration: 14s;
+        animation-delay: 1s;
+    }
+
+    .shashthi-flower:nth-child(5) {
+        left: 68%;
+        font-size: 18px;
+        animation-duration: 12s;
+        animation-delay: 5s;
+    }
+
+    .shashthi-flower:nth-child(6) {
+        left: 82%;
+        font-size: 15px;
+        animation-duration: 15s;
+        animation-delay: 3s;
+    }
+
+    .shashthi-flower:nth-child(7) {
+        left: 94%;
+        font-size: 12px;
+        animation-duration: 11s;
+        animation-delay: 6s;
+    }
+
+    @keyframes shashthiFlowerFall {
+        0% {
+            top: -40px;
+            opacity: 0;
+            transform: translateX(0) rotate(0deg);
+        }
+
+        10% {
+            opacity: 0.8;
+        }
+
+        45% {
+            transform: translateX(35px) rotate(150deg);
+        }
+
+        75% {
+            opacity: 0.65;
+            transform: translateX(-30px) rotate(270deg);
+        }
+
+        100% {
+            top: 105%;
+            opacity: 0;
+            transform: translateX(20px) rotate(360deg);
+        }
+    }
+
+
+    /* =========================
+       DIYA SCENE
+       ========================= */
+
+    .shashthi-diya-scene {
+        position: fixed;
+        left: 50%;
+        bottom: 18px;
+        transform: translateX(-50%);
+        width: 90px;
+        height: 150px;
+        z-index: 50;
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+
+    /* Golden glow */
+
+    .shashthi-diya-glow {
+        position: absolute;
+        bottom: 8px;
+        width: 75px;
+        height: 48px;
+
+        background: radial-gradient(
+            ellipse,
+            rgba(255, 177, 55, 0.30) 0%,
+            rgba(255, 125, 25, 0.12) 40%,
+            transparent 75%
+        );
+
+        filter: blur(5px);
+
+        animation:
+            diyaGlow 2.2s ease-in-out infinite alternate;
+    }
+
+
+    /* Diya */
+
+    .shashthi-diya {
+        position: absolute;
+        bottom: 9px;
+
+        width: 64px;
+        height: 25px;
+
+        background: linear-gradient(
+            to bottom,
+            #c97932,
+            #8d431e 75%,
+            #54200f
+        );
+
+        border-radius: 0 0 34px 34px;
+
+        box-shadow:
+            inset 0 4px 5px rgba(255, 205, 120, 0.25),
+            0 5px 15px rgba(0, 0, 0, 0.45);
+    }
+
+
+    /* Diya rim */
+
+    .shashthi-diya::before {
+        content: "";
+
+        position: absolute;
+        top: -5px;
+        left: 4px;
+
+        width: 56px;
+        height: 12px;
+
+        background: linear-gradient(
+            to bottom,
+            #e29a4c,
+            #9c4c22
+        );
+
+        border-radius: 50%;
+
+        box-shadow:
+            inset 0 2px 3px rgba(255, 225, 160, 0.35);
+    }
+
+
+    /* Wick */
+
+    .shashthi-wick {
+        position: absolute;
+
+        bottom: 32px;
+
+        width: 4px;
+        height: 10px;
+
+        background: #35170d;
+
+        border-radius: 50%;
+
+        z-index: 3;
+
+        transform: rotate(3deg);
+    }
+
+
+    /* Flame */
+
+    .shashthi-flame {
+        position: absolute;
+
+        bottom: 37px;
+
+        width: 17px;
+        height: 30px;
+
+        background: linear-gradient(
+            to top,
+            #ff7a18,
+            #ffc247 55%,
+            #fff3bd
+        );
+
+        border-radius: 55% 45% 55% 45%;
+
+        filter: drop-shadow(
+            0 0 7px rgba(255, 170, 45, 0.8)
+        );
+
+        animation:
+            diyaFlame 0.75s ease-in-out infinite alternate,
+            diyaFloat 2s ease-in-out infinite;
+
+        z-index: 2;
+    }
+
+
+    /* Inner flame */
+
+    .shashthi-flame::after {
+        content: "";
+
+        position: absolute;
+
+        left: 5px;
+        bottom: 3px;
+
+        width: 7px;
+        height: 17px;
+
+        background: #fff8d6;
+
+        border-radius: 50%;
+    }
+
+
+    /* =========================
+       SMOKE
+       ========================= */
+
+    .shashthi-smoke {
+        position: absolute;
+
+        bottom: 63px;
+
+        width: 48px;
+        height: 75px;
+
+        z-index: 1;
+
+        opacity: 0.65;
+    }
+
+    .shashthi-smoke span {
+        position: absolute;
+
+        bottom: 0;
+        left: 50%;
+
+        width: 11px;
+        height: 11px;
+
+        border-radius: 50%;
+
+        background: rgba(225, 225, 215, 0.20);
+
+        filter: blur(4px);
+
+        animation:
+            shashthiSmoke 4.5s ease-out infinite;
+    }
+
+    .shashthi-smoke span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .shashthi-smoke span:nth-child(2) {
+        animation-delay: 1.2s;
+    }
+
+    .shashthi-smoke span:nth-child(3) {
+        animation-delay: 2.4s;
+    }
+
+    .shashthi-smoke span:nth-child(4) {
+        animation-delay: 3.6s;
+    }
+
+
+    /* =========================
+       ANIMATIONS
+       ========================= */
+
+    @keyframes diyaGlow {
+        from {
+            opacity: 0.55;
+            transform: scale(0.92);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1.08);
+        }
+    }
+
+    @keyframes diyaFlame {
+        0% {
+            transform: rotate(-4deg) scale(0.94);
+        }
+
+        50% {
+            transform: rotate(4deg) scale(1.05);
+        }
+
+        100% {
+            transform: rotate(-2deg) scale(0.98);
+        }
+    }
+
+    @keyframes diyaFloat {
+        0%,
+        100% {
+            margin-left: 0;
+        }
+
+        50% {
+            margin-left: 2px;
+        }
+    }
+
+    @keyframes shashthiSmoke {
+        0% {
+            bottom: 0;
+            left: 50%;
+            opacity: 0;
+            transform: scale(0.45);
+        }
+
+        15% {
+            opacity: 0.45;
+        }
+
+        45% {
+            opacity: 0.30;
+        }
+
+        75% {
+            opacity: 0.12;
+        }
+
+        100% {
+            bottom: 70px;
+            left: 35%;
+            opacity: 0;
+            transform: scale(2.4);
+        }
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 600px) {
+
+        .shashthi-diya-scene {
+            bottom: 12px;
+            transform: translateX(-50%) scale(0.82);
+            transform-origin: bottom center;
+        }
+
+        .shashthi-flower {
+            font-size: 13px;
+        }
+    }
+</style>
+
+
+<!-- FLOWERS -->
+
+<div class="shashthi-flowers">
+
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+    <div class="shashthi-flower">🌸</div>
+
+</div>
+
+
+<!-- DIYA + SMOKE -->
+
+<div class="shashthi-diya-scene">
+
+    <div class="shashthi-smoke">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="shashthi-diya-glow"></div>
+
+    <div class="shashthi-wick"></div>
+
+    <div class="shashthi-flame"></div>
+
+    <div class="shashthi-diya"></div>
+
+</div>
+
+<!-- ===== END SHASHTHI EFFECT ===== -->
+</body>
+</html>

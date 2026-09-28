@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Durga Puja Live</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<!-- ==================================================
+     PUJA INTRO EXPERIENCE
+================================================== -->
+
+<div id="pujaIntro">
+
+    <!-- =========================
+         WELCOME SCREEN
+    ========================== -->
+
+    <section id="introWelcome" class="intro-screen">
+
+        <div class="intro-bg-glow"></div>
+
+        <div class="intro-welcome-content">
+
+            <div class="intro-diya">
+                🪔
+            </div>
+
+            <div class="intro-label">
+                A DIGITAL PUJA EXPERIENCE
+            </div>
+
+            <h1>
+                আগমনী
+            </h1>
+
+            <p>
+                Music, devotion, memories and the spirit
+                of Durga Puja — all in one place.
+            </p>
+
+            <button
+                type="button"
+                id="enterExperienceBtn"
+            >
+                ENTER EXPERIENCE
+                <span>→</span>
+            </button>
+
+            <small>
+                Tap to continue
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CREATORS SCREEN
+    ========================== -->
+
+    <section
+        id="introCreators"
+        class="intro-screen creators-screen"
+    >
+
+        <div class="creators-heading">
+
+            <div class="intro-diya small">
+                🪔
+            </div>
+
+            <div class="intro-label">
+                THE PEOPLE BEHIND THE EXPERIENCE
+            </div>
+
+            <h2>
+                Made with <span>devotion</span>
+            </h2>
+
+            <p>
+                A small collaboration created to bring
+                the Puja experience to the web.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             CREATOR CARDS
+        ========================== -->
+
+        <div class="creator-grid">
+
+
+            <!-- =========================
+                 SOUMICK CHOWDHURY
+            ========================== -->
+
+            <div class="creator-card">
+
+                <div class="creator-icon">
+                    💻
+                </div>
+
+                <div class="creator-content">
+
+                    <div class="creator-role">
+                        DEVELOPER
+                    </div>
+
+                    <h3>
+                        Soumick Chowdhury
+                    </h3>
+
+                    <div class="creator-institute">
+                        KIIT • CSE
+                    </div>
+
+                    <div class="creator-tags">
+
+                        <span>
+                            Frontend
+                        </span>
+
+                        <span>
+                            Backend
+                        </span>
+
+                        <span>
+                            Web Development
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Designed and developed the web experience,
+                        including the frontend, backend and
+                        interactive features.
+                    </p>
+
+
+                    <!-- REVIEW / FEEDBACK -->
+
+                    <div class="creator-contact">
+
+                        <label>
+                            FOR REVIEW &amp; FEEDBACK
+                        </label>
+
+                        <a
+                            class="creator-mail"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=soumickchowdhury240527712004@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ✉
+                            soumickchowdhury240527712004@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 ANKAN GHOSE
+            ========================== -->
+
+            <div class="creator-card">
+
+                <div class="creator-icon">
+                    🎵
+                </div>
+
+                <div class="creator-content">
+
+                    <div class="creator-role">
+                        CONTENT SUPPORT
+                    </div>
+
+                    <h3>
+                        Ankan Ghose
+                    </h3>
+
+                    <div class="creator-institute">
+                        KIIT • CSE
+                    </div>
+
+                    <div class="creator-tags">
+
+                        <span>
+                            Music Research
+                        </span>
+
+                        <span>
+                            Content
+                        </span>
+
+                        <span>
+                            Puja Details
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Supported the project by finding Puja music,
+                        gathering relevant details and helping
+                        organize festival content.
+                    </p>
+
+
+                    <!-- CONTACT -->
+
+                    <div class="creator-contact">
+
+                        <label>
+                            CONTACT
+                        </label>
+
+                        <a
+                            class="creator-mail"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=ankanghose2004@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ✉
+                            ankanghose2004@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ENTER MAIN WEBSITE
+        ========================== -->
+
+        <button
+            type="button"
+            id="startPujaBtn"
+        >
+            EXPLORE PUJA
+            <span>→</span>
+        </button>
+
+    </section>
+
+</div>
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="background background-one"></div>
+    <div class="background background-two"></div>
+    <button
+    id="background-toggle"
+    class="control-btn"
+    title="Pause Background">
+
+    ⏸
+
+</button>
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+ 
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================== -->
+
+    <main class="content">
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+     <header class="header">
+
+    <div class="logo-area">
+
+        <div class="logo">
+            🪔 Durga Puja Live 🪔
+        </div>
+
+        <div class="countdown-card">
+
+            <div class="countdown-title">
+                🪔 মা আসছেন...
+            </div>
+
+            <div class="countdown-time">
+
+                <div class="count-box">
+                    <strong id="days">00</strong>
+                    <span>Days</span>
+                </div>
+
+                <div class="count-box">
+                    <strong id="hours">00</strong>
+                    <span>Hours</span>
+                </div>
+
+                <div class="count-box">
+                    <strong id="minutes">00</strong>
+                    <span>Minutes</span>
+                </div>
+
+                <div class="count-box">
+                    <strong id="seconds">00</strong>
+                    <span>Seconds</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="live-status">
+
+        <span class="live-dot"></span>
+
+        LIVE
+
+    </div>
+
+</header>
+    
+        </header>
+
+
+<!-- =========================
+     PUJA DAY TIMELINE
+========================= -->
+
+<div class="puja-timeline">
+
+    <button class="puja-day" data-date="10 October 2026 • Saturday">
+        <span class="day-name">Mahalaya</span>
+    </button>
+
+    <button class="puja-day" data-date="16 October 2026 • Friday">
+        <span class="day-name">Shashthi</span>
+    </button>
+
+    <button class="puja-day" data-date="17–18 October 2026 • Saturday & Sunday">
+        <span class="day-name">Saptami</span>
+    </button>
+
+    <button class="puja-day" data-date="19 October 2026 • Monday">
+        <span class="day-name">Ashtami</span>
+    </button>
+
+    <button class="puja-day" data-date="20 October 2026 • Tuesday">
+        <span class="day-name">Navami</span>
+    </button>
+
+    <button class="puja-day" data-date="21 October 2026 • Wednesday">
+        <span class="day-name">Dashami</span>
+    </button>
+
+</div>
+</div>
+
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+
+<section class="hero">
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+
+        <section class="hero">
+
+            <p class="subtitle">
+                ✨ Welcome to the Puja Experience ✨
+            </p>
+
+
+            <h1>
+                আগমনী
+            </h1>
+
+
+            <p class="description">
+                Feel the devotion, music and celebration from wherever you are.
+            </p>
+     
+
+            <!-- Listen Button -->
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn">
+                    🎵 Listen Live
+                </button>
+
+            </div>
+
+
+
+            <!-- =========================
+                 MUSIC PLAYER
+            ========================== -->
+
+            <div class="music-player">
+
+<div class="album-art">
+
+    <img
+        id="song-thumbnail"
+        src=""
+        alt="Current song">
+
+    <div id="youtube-player"></div>
+
+</div>
+
+        <!-- =========================
+     SONG INFORMATION
+========================= -->
+
+<div class="song-details">
+
+    <span class="now-playing">
+        NOW PLAYING
+    </span>
+<h2>
+    Select a song
+</h2>
+
+<p>
+    Choose a song from a playlist
+
+</p>
+    <!-- SHARE BUTTONS -->
+
+    <div class="share-buttons"> 
+
+        <button>
+            🔗 SHARE
+        </button>
+
+    </div>
+
+</div>
+
+
+           
+
+                <!-- =========================
+                     PLAYER CONTROLS
+                ========================== -->
+
+                <div class="player-controls">
+
+                    <button
+                        class="control-btn"
+                        title="Shuffle">
+
+                        🔀
+
+                    </button>
+
+
+                    <button
+                        class="control-btn"
+                        title="Repeat">
+
+                        🔁
+
+                    </button>
+
+
+                    <button
+                        class="control-btn"
+                        title="Previous">
+
+                        ⏮
+
+                    </button>
+
+
+                    <button
+                        class="play-btn"
+                        title="Play">
+
+                        ▶
+
+                    </button>
+
+
+                    <button
+                        class="control-btn"
+                        title="Next">
+
+                        ⏭
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =========================
+                     PROGRESS BAR
+                ========================== -->
+
+                <div class="progress-section">
+
+                    <span>
+                        0:00
+                    </span>
+
+
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="progress-bar">
+
+
+                    <span>
+                        4:30
+                    </span>
+
+                </div>
+
+
+
+                <!-- =========================
+                     VOLUME
+                ========================== -->
+
+                <div class="volume-section">
+
+                    <button
+                        class="volume-btn"
+                        title="Volume">
+
+                        🔊
+
+                    </button>
+
+
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="80"
+                        class="volume-bar">
+
+
+                    <span>
+                        80%
+                    </span>
+
+                </div>
+<!-- PUJA MUSIC CATEGORIES -->
+
+<div class="music-categories">
+
+   <div class="music-category-wrapper">
+
+    <button class="music-category" data-playlist="normal">
+        Normal
+    </button>
+
+    <div class="playlist-dropdown"
+         data-playlist-menu="normal">
+    </div>
+
+</div>
+
+    <div class="music-category-wrapper">
+
+    <button class="music-category" data-playlist="mahalaya">
+        Mahalaya
+    </button>
+
+    <div class="playlist-dropdown"
+         data-playlist-menu="mahalaya">
+    </div>
+
+</div>
+
+<div class="music-category-wrapper">
+
+    <button class="music-category" data-playlist="shashthi">
+        Shashthi
+    </button>
+
+    <div class="playlist-dropdown"
+         data-playlist-menu="shashthi">
+    </div>
+
+</div>
+
+    <div class="music-category-wrapper">
+
+    <button class="music-category" data-playlist="saptami">
+        Saptami
+    </button>
+
+    <div class="playlist-dropdown"
+         data-playlist-menu="saptami">
+    </div>
+
+</div>
+    <div class="music-category-wrapper">
+
+    <button class="music-category" data-playlist="ashtami">
+        Ashtami
+    </button>
+
+    <div class="playlist-dropdown"
+         data-playlist-menu="ashtami">
+    </div>
+
+</div>
+
+    <div class="music-category-wrapper">
+
+    <button class="music-category" data-playlist="navami">
+        Navami
+    </button>
+
+    <div class="playlist-dropdown"
+         data-playlist-menu="navami">
+    </div>
+
+</div>
+
+  <div class="music-category-wrapper">
+
+    <button class="music-category" data-playlist="dashami">
+        Dashami
+    </button>
+
+    <div class="playlist-dropdown"
+         data-playlist-menu="dashami">
+    </div>
+
+</div>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer class="footer">
+
+
+            <div class="footer-item">
+
+                🕉️
+
+                <span>
+                    Festival
+                </span>
+
+                <strong>
+                    Durga Puja
+                </strong>
+
+            </div>
+
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

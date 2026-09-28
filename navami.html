@@ -1,0 +1,1643 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>মহা নবমী | Durga Puja Live</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family:
+                "Noto Sans Bengali",
+                "Nirmala UI",
+                Arial,
+                sans-serif;
+
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(15, 8, 8, 0.60),
+                    rgba(15, 8, 8, 0.84)
+                ),
+                url("images/navami.jpg")
+                center / cover fixed no-repeat;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           SMOKE
+        ========================= */
+
+        .smoke {
+            position: fixed;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,0.08),
+                    transparent 70%
+                );
+
+            filter: blur(25px);
+
+            pointer-events: none;
+
+            opacity: 0.35;
+
+            animation:
+                smokeMove 10s ease-in-out infinite alternate;
+
+            z-index: 0;
+        }
+
+        .smoke-1 {
+            top: 12%;
+            left: -70px;
+        }
+
+        .smoke-2 {
+            top: 45%;
+            right: -80px;
+            animation-delay: 2s;
+        }
+
+        .smoke-3 {
+            bottom: -70px;
+            left: 35%;
+            animation-delay: 4s;
+        }
+
+        @keyframes smokeMove {
+
+            from {
+                transform:
+                    translate(0, 0)
+                    scale(1);
+            }
+
+            to {
+                transform:
+                    translate(50px, -30px)
+                    scale(1.25);
+            }
+        }
+
+
+        /* =========================
+           FLOWERS
+        ========================= */
+
+        .flowers {
+            position: fixed;
+            inset: 0;
+
+            pointer-events: none;
+            overflow: hidden;
+
+            z-index: 1;
+        }
+
+        .flower {
+            position: absolute;
+
+            font-size: 19px;
+
+            opacity: 0;
+
+            animation:
+                flowerFall linear infinite;
+        }
+
+        .flower:nth-child(1) {
+            left: 5%;
+            animation-duration: 9s;
+            animation-delay: 0s;
+        }
+
+        .flower:nth-child(2) {
+            left: 12%;
+            animation-duration: 11s;
+            animation-delay: 2s;
+        }
+
+        .flower:nth-child(3) {
+            left: 20%;
+            animation-duration: 8s;
+            animation-delay: 4s;
+        }
+
+        .flower:nth-child(4) {
+            left: 29%;
+            animation-duration: 12s;
+            animation-delay: 1s;
+        }
+
+        .flower:nth-child(5) {
+            left: 38%;
+            animation-duration: 10s;
+            animation-delay: 5s;
+        }
+
+        .flower:nth-child(6) {
+            left: 47%;
+            animation-duration: 9s;
+            animation-delay: 3s;
+        }
+
+        .flower:nth-child(7) {
+            left: 56%;
+            animation-duration: 12s;
+            animation-delay: 0s;
+        }
+
+        .flower:nth-child(8) {
+            left: 64%;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+
+        .flower:nth-child(9) {
+            left: 72%;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .flower:nth-child(10) {
+            left: 80%;
+            animation-duration: 11s;
+            animation-delay: 5s;
+        }
+
+        .flower:nth-child(11) {
+            left: 88%;
+            animation-duration: 9s;
+            animation-delay: 1s;
+        }
+
+        .flower:nth-child(12) {
+            left: 95%;
+            animation-duration: 12s;
+            animation-delay: 3s;
+        }
+
+        @keyframes flowerFall {
+
+            0% {
+                top: -30px;
+                opacity: 0;
+
+                transform:
+                    rotate(0deg)
+                    translateX(0);
+            }
+
+            15% {
+                opacity: 0.75;
+            }
+
+            85% {
+                opacity: 0.75;
+            }
+
+            100% {
+                top: 105%;
+                opacity: 0;
+
+                transform:
+                    rotate(360deg)
+                    translateX(45px);
+            }
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .page {
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+            min-height: 100vh;
+
+            padding:
+                28px 20px 70px;
+        }
+
+
+        /* =========================
+           TOP
+        ========================= */
+
+        .top-area {
+            max-width: 1100px;
+
+            margin:
+                0 auto 35px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+
+            color: #ffe0a3;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            padding:
+                9px 15px;
+
+            border:
+                1px solid
+                rgba(255,210,120,0.35);
+
+            border-radius: 9px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,190,70,0.18),
+                    rgba(130,55,25,0.28)
+                );
+
+            transition:
+                all 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform:
+                translateY(-1px);
+
+            border-color:
+                rgba(255,210,120,0.60);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,190,70,0.30),
+                    rgba(150,65,25,0.38)
+                );
+        }
+
+        .brand {
+            text-align: right;
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 700;
+
+            color: #ffe4ae;
+        }
+
+        .brand-subtitle {
+            margin-top: 4px;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            opacity: 0.65;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            max-width: 850px;
+
+            margin:
+                0 auto 45px;
+
+            text-align: center;
+
+            padding:
+                45px 25px 40px;
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(35,18,12,0.72),
+                    rgba(10,6,5,0.68)
+                );
+
+            border:
+                1px solid
+                rgba(255,210,120,0.20);
+
+            box-shadow:
+                0 20px 60px
+                rgba(0,0,0,0.40);
+
+            backdrop-filter:
+                blur(8px);
+        }
+
+        .hero-icon {
+            font-size: 46px;
+
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            margin: 0;
+
+            font-size:
+                clamp(38px, 7vw, 68px);
+
+            color: #ffe1a0;
+
+            text-shadow:
+                0 4px 20px
+                rgba(255,160,60,0.25);
+        }
+
+        .hero h2 {
+            margin:
+                7px 0 18px;
+
+            font-size: 21px;
+
+            font-weight: 500;
+
+            letter-spacing: 2px;
+
+            color:
+                rgba(255,240,210,0.82);
+        }
+
+        .date-badge {
+            display: inline-block;
+
+            padding:
+                8px 18px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(255,190,80,0.12);
+
+            border:
+                1px solid
+                rgba(255,210,120,0.25);
+
+            color: #ffe1a5;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           COUNTDOWN
+        ========================= */
+
+        .countdown-box {
+            max-width: 680px;
+
+            margin:
+                32px auto 0;
+
+            padding: 20px;
+
+            border-radius: 18px;
+
+            background:
+                rgba(0,0,0,0.22);
+
+            border:
+                1px solid
+                rgba(255,210,120,0.14);
+        }
+
+        .countdown-title {
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            color: #ffd993;
+
+            margin-bottom: 15px;
+        }
+
+        .countdown {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 12px;
+        }
+
+        .countdown-item {
+            padding:
+                15px 8px;
+
+            border-radius: 13px;
+
+            background:
+                rgba(255,255,255,0.045);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+        }
+
+        .countdown-item span {
+            display: block;
+
+            font-size: 27px;
+
+            font-weight: 700;
+
+            color: #ffe2a5;
+        }
+
+        .countdown-item small {
+            display: block;
+
+            margin-top: 4px;
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+
+            opacity: 0.55;
+        }
+
+        #navamiCountdownMessage {
+            margin-top: 15px;
+
+            font-size: 12px;
+
+            color:
+                rgba(255,230,190,0.75);
+
+            min-height: 18px;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .navami-content {
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 22px;
+        }
+
+        .navami-section {
+            padding:
+                27px 28px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(38,20,13,0.72),
+                    rgba(15,8,7,0.72)
+                );
+
+            border:
+                1px solid
+                rgba(255,210,120,0.16);
+
+            box-shadow:
+                0 12px 35px
+                rgba(0,0,0,0.22);
+        }
+
+        .navami-section h2 {
+            margin:
+                0 0 14px;
+
+            font-size: 23px;
+
+            color: #ffe0a0;
+        }
+
+        .navami-section h3 {
+            margin:
+                20px 0 8px;
+
+            font-size: 18px;
+
+            color: #ffd38a;
+        }
+
+        .navami-section p {
+            margin:
+                9px 0;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            color:
+                rgba(255,245,230,0.84);
+        }
+
+        .navami-section strong {
+            color: #ffe0a0;
+        }
+
+
+        /* =========================
+           LIST
+        ========================= */
+
+        .navami-list {
+            margin:
+                15px 0 5px;
+
+            padding-left: 22px;
+        }
+
+        .navami-list li {
+            margin:
+                9px 0;
+
+            color:
+                rgba(255,245,230,0.84);
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           HIGHLIGHT
+        ========================= */
+
+        .navami-highlight {
+            margin-top: 20px;
+
+            padding:
+                18px 20px;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,180,60,0.12),
+                    rgba(130,55,25,0.18)
+                );
+
+            border:
+                1px solid
+                rgba(255,210,120,0.20);
+
+            color: #ffe6b0;
+
+            line-height: 1.8;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           TIMING
+        ========================= */
+
+        .navami-time-box {
+            margin-top: 18px;
+
+            padding: 20px;
+
+            border-radius: 14px;
+
+            background:
+                rgba(0,0,0,0.20);
+
+            border:
+                1px solid
+                rgba(255,210,120,0.14);
+        }
+
+        .navami-time-box p {
+            margin:
+                10px 0;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .page {
+                padding:
+                    20px 14px 50px;
+            }
+
+            .top-area {
+                align-items:
+                    flex-start;
+            }
+
+            .brand-title {
+                font-size: 14px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+
+                letter-spacing: 1px;
+            }
+
+            .back-link {
+                font-size: 12px;
+
+                padding:
+                    8px 12px;
+            }
+
+            .hero {
+                padding:
+                    35px 17px 30px;
+            }
+
+            .hero-icon {
+                font-size: 38px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 17px;
+            }
+
+            .countdown {
+                gap: 7px;
+            }
+
+            .countdown-item {
+                padding:
+                    12px 5px;
+            }
+
+            .countdown-item span {
+                font-size: 22px;
+            }
+
+            .navami-section {
+                padding:
+                    21px 19px;
+            }
+
+            .navami-section h2 {
+                font-size: 20px;
+            }
+
+            .navami-section p {
+                font-size: 14px;
+
+                line-height: 1.8;
+            }
+        }
+
+
+        @media (max-width: 430px) {
+
+            .top-area {
+                flex-direction:
+                    column;
+            }
+
+            .brand {
+                text-align: left;
+            }
+
+            .countdown-item span {
+                font-size: 19px;
+            }
+
+            .countdown-item small {
+                font-size: 8px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         SMOKE
+    ========================= -->
+
+    <div class="smoke smoke-1"></div>
+    <div class="smoke smoke-2"></div>
+    <div class="smoke smoke-3"></div>
+
+
+    <!-- =========================
+         FLOWERS
+    ========================= -->
+
+    <div class="flowers">
+
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+
+    </div>
+
+
+    <!-- =========================
+         PAGE
+    ========================= -->
+
+    <div class="page">
+
+
+        <!-- =========================
+             TOP
+        ========================= -->
+
+        <div class="top-area">
+
+            <a
+                href="#"
+                id="navamiBackLink"
+                class="back-link"
+            >
+                ← Back to Puja
+            </a>
+
+
+            <div class="brand">
+
+                <div class="brand-title">
+                    Durga Puja Live
+                </div>
+
+                <div class="brand-subtitle">
+                    SHARADIYA DURGA PUJA 2026
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             HERO
+        ========================= -->
+
+        <section class="hero">
+
+
+            <div class="hero-icon">
+                🪔
+            </div>
+
+
+            <h1>
+                মহানবমী
+            </h1>
+
+
+            <h2>
+                Maha Navami
+            </h2>
+
+
+            <div class="date-badge">
+                20 October 2026 • Tuesday
+            </div>
+
+
+            <!-- =========================
+                 COUNTDOWN
+            ========================= -->
+
+            <div class="countdown-box">
+
+                <div class="countdown-title">
+                    MAHA NAVAMI
+                </div>
+
+
+                <div class="countdown">
+
+
+                    <div class="countdown-item">
+
+                        <span id="navamiDays">
+                            00
+                        </span>
+
+                        <small>
+                            DAYS
+                        </small>
+
+                    </div>
+
+
+                    <div class="countdown-item">
+
+                        <span id="navamiHours">
+                            00
+                        </span>
+
+                        <small>
+                            HOURS
+                        </small>
+
+                    </div>
+
+
+                    <div class="countdown-item">
+
+                        <span id="navamiMinutes">
+                            00
+                        </span>
+
+                        <small>
+                            MINUTES
+                        </small>
+
+                    </div>
+
+
+                    <div class="countdown-item">
+
+                        <span id="navamiSeconds">
+                            00
+                        </span>
+
+                        <small>
+                            SECONDS
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+                <div id="navamiCountdownMessage">
+                    Countdown to Maha Navami
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NAVAMI CONTENT
+        ========================= -->
+
+        <section class="navami-content">
+
+
+            <!-- 1 -->
+
+            <div class="navami-section">
+
+                <h2>
+                    🕯️ সন্ধিপূজার সমাপন ও নবমী কল্পারম্ভ
+                </h2>
+
+                <p>
+                    মহাষ্টমীর শেষ ২৪ মিনিট এবং মহানবমীর প্রথম
+                    ২৪ মিনিট—এই মোট ৪৮ মিনিটের মাহেন্দ্রক্ষণকে
+                    বলা হয় <strong>সন্ধিক্ষণ</strong>।
+                </p>
+
+                <p>
+                    শাস্ত্র মতে, এই সময়েই দেবী দুর্গার ললাট
+                    বা তৃতীয় নয়ন থেকে দেবী চামুণ্ডার উৎপত্তি
+                    হয়েছিল, যিনি চণ্ড ও মুণ্ড নামের দুই
+                    ভয়ংকর অসুরকে বধ করেন।
+                </p>
+
+                <div class="navami-highlight">
+
+                    <strong>
+                        নবমী কল্পারম্ভ
+                    </strong>
+
+                    <br><br>
+
+                    সন্ধিপূজার ঠিক পরেই মহানবমীর মূল পূজা
+                    বা <strong>নবমী কল্পারম্ভ</strong> শুরু হয়।
+
+                    <br><br>
+
+                    পুরোহিতরা নতুন করে সংকল্প করেন এবং
+                    দেবীকে মহিষাসুরমর্দিনী রূপে আবাহন জানান।
+
+                </div>
+
+            </div>
+
+
+            <!-- 2 -->
+
+            <div class="navami-section">
+
+                <h2>
+                    🪔 মহাস্নানের বিস্তারিত বিধি
+                </h2>
+
+                <p>
+                    মহানবমীর মহাস্নান অত্যন্ত জটিল এবং
+                    চমৎকার একটি প্রক্রিয়া। এটি কেবল সাধারণ
+                    জলে হয় না।
+                </p>
+
+                <p>
+                    দেবীর মৃণ্ময়ী প্রতিমার সামনে একটি
+                    দর্পণ রাখা হয় এবং সেই দর্পণে দেবীর
+                    প্রতিবিম্বের ওপর নানা পবিত্র উপাদান
+                    ঢেলে স্নান করানো হয়।
+                </p>
+
+
+                <h3>
+                    অষ্টমৃত্তিকা
+                </h3>
+
+                <p>
+                    আটটি বিশেষ স্থানের মাটি ব্যবহার করা হয়।
+                    যেমন—রাজদ্বারের মাটি, বেশ্যাদ্বারের মাটি,
+                    নদীর তীরের মাটি, উইপোকার ঢিবির মাটি,
+                    গোয়ালের মাটি ইত্যাদি।
+                </p>
+
+
+                <h3>
+                    ঔষধি ও ভেষজ
+                </h3>
+
+                <p>
+                    মহাশঙ্খ জল, গজদন্ত ক্ষরিত জল, কুশ জল,
+                    এবং সর্বৌষধি-মহৌষধি মিশ্রিত জল
+                    ব্যবহার করা হয়।
+                </p>
+
+
+                <h3>
+                    পঞ্চগব্য ও পঞ্চরত্ন
+                </h3>
+
+                <p>
+                    দুধ, দই, ঘি, গোময়, গোমূত্র এবং
+                    সোনা-রুপো-মুক্তো খচিত জল ব্যবহার করা হয়।
+                </p>
+
+            </div>
+
+
+            <!-- 3 -->
+
+            <div class="navami-section">
+
+                <h2>
+                    🔥 চণ্ডীহোম ও পূর্ণাহুতি
+                </h2>
+
+                <p>
+                    মহানবমীর সবচেয়ে পবিত্র অঙ্গ হলো
+                    <strong>চণ্ডীহোম</strong>।
+                </p>
+
+                <p>
+                    শ্রীশ্রীচণ্ডী বা দুর্গা সপ্তশতীর মোট
+                    ৭০০টি শ্লোক পাঠ করতে করতে যজ্ঞাগ্নিতে
+                    আহুতি দেওয়া হয়।
+                </p>
+
+
+                <h3>
+                    যজ্ঞের উপকরণ
+                </h3>
+
+                <ul class="navami-list">
+
+                    <li>
+                        খাঁটি গাওয়া ঘি
+                    </li>
+
+                    <li>
+                        বেলের কাঠ
+                    </li>
+
+                    <li>
+                        শুকনো নারকেল
+                    </li>
+
+                    <li>
+                        কর্পূর
+                    </li>
+
+                    <li>
+                        তিল
+                    </li>
+
+                    <li>
+                        জাওয়া চাল
+                    </li>
+
+                    <li>
+                        ১০৮টি লাল বেলপাতা
+                    </li>
+
+                </ul>
+
+
+                <h3>
+                    পূর্ণাহুতি
+                </h3>
+
+                <p>
+                    ৭০০টি শ্লোক পাঠ শেষ হলে একটি সম্পূর্ণ
+                    বেলফল ঘিয়ে ডুবিয়ে
+                    'পূর্ণমদঃ পূর্ণমিদং...' মন্ত্রোচ্চারণের
+                    মাধ্যমে যজ্ঞের আগুনে অর্পণ করা হয়।
+                </p>
+
+            </div>
+
+
+            <!-- 4 -->
+
+            <div class="navami-section">
+
+                <h2>
+                    👧 কুমারী পূজার শাস্ত্রীয় ভেদ
+                </h2>
+
+                <p>
+                    মহানবমীতে কুমারী পূজার ক্ষেত্রে কন্যার
+                    বয়স অনুযায়ী তাকে দেবীর ভিন্ন ভিন্ন
+                    রূপে কাল্পনিক আরাধনা করা হয়।
+                </p>
+
+
+                <ul class="navami-list">
+
+                    <li>
+                        <strong>১ বছরের কন্যা:</strong>
+                        সন্ধ্যা
+                    </li>
+
+                    <li>
+                        <strong>২ বছরের কন্যা:</strong>
+                        সরস্বতী
+                    </li>
+
+                    <li>
+                        <strong>৩ বছরের কন্যা:</strong>
+                        ত্রিধামূর্তি
+                    </li>
+
+                    <li>
+                        <strong>৪ বছরের কন্যা:</strong>
+                        কালিকা
+                    </li>
+
+                    <li>
+                        <strong>৫ বছরের কন্যা:</strong>
+                        সুভগা
+                    </li>
+
+                    <li>
+                        <strong>৭ বছরের কন্যা:</strong>
+                        চণ্ডিকা
+                    </li>
+
+                    <li>
+                        <strong>৮ বছরের কন্যা:</strong>
+                        শম্ভবী
+                    </li>
+
+                    <li>
+                        <strong>৯ বছরের কন্যা:</strong>
+                        দুর্গা
+                    </li>
+
+                </ul>
+
+
+                <p>
+                    কন্যার চরণে ভক্তিভরে আলতা ও সিঁদুর
+                    পরিয়ে, ধূপ-দীপ দিয়ে আরতি করে
+                    কুমারী ভোজন করানো হয়।
+                </p>
+
+            </div>
+
+
+            <!-- 5 -->
+
+            <div class="navami-section">
+
+                <h2>
+                    🕯️ ধুনো পোড়ানো আচার
+                </h2>
+
+                <p>
+                    এটি বিশেষ করে সনাতনপন্থী বাঙালি পরিবার
+                    ও কিছু প্রাচীন পুজোয় দেখা যায়। এটি মূলত
+                    সন্তান ও পরিবারের মঙ্গল কামনায় মায়েদের
+                    একটি ব্রত।
+                </p>
+
+
+                <ul class="navami-list">
+
+                    <li>
+                        ব্রতধারী মহিলারা ভিজা সুতির কাপড়
+                        পরে জলছড়া দিয়ে বসেন।
+                    </li>
+
+                    <li>
+                        তাঁদের দুই হাতে এবং মাথার ওপর
+                        মাটির সরা রাখা হয়।
+                    </li>
+
+                    <li>
+                        সরার ওপর জ্বলন্ত অঙ্গার, ধুনো এবং
+                        কর্পূর ঢেলে দেওয়া হয়।
+                    </li>
+
+                    <li>
+                        তীব্র গরম সহ্য করেও মায়েরা স্থির হয়ে
+                        বসে দেবীর আরাধনা করেন।
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- 6 -->
+
+            <div class="navami-section">
+
+                <h2>
+                    ⚔️ নবমী বলিদান প্রথা
+                </h2>
+
+                <p>
+                    মহিষাসুর বধের প্রতীক হিসেবে মহানবমীর
+                    দিন বলিদানের প্রথা রয়েছে।
+                </p>
+
+                <p>
+                    প্রাচীনকালে জীববলি বা ছাগবলির ব্যাপক
+                    প্রচলন থাকলেও, বর্তমান যুগে অধিকাংশ
+                    মণ্ডপ ও বাড়িতে
+                    <strong>সাত্বিক বলি</strong> দেওয়া হয়।
+                </p>
+
+
+                <div class="navami-highlight">
+
+                    <strong>
+                        প্রতীকী বলি
+                    </strong>
+
+                    <br><br>
+
+                    চালকুমড়ো, আখ কিংবা ছাঁচি কুমড়ো
+                    উৎসর্গ করা হয়।
+
+                    <br><br>
+
+                    এগুলি কাটার মাধ্যমে মানুষের ভেতরের
+                    কাম, ক্রোধ ও লোভ নামক রিপুগুলিকে
+                    বলিদানের প্রতীকী রূপ দেওয়া হয়।
+
+                </div>
+
+            </div>
+
+
+            <!-- 7 -->
+
+            <div class="navami-section">
+
+                <h2>
+                    🌺 দক্ষিণান্ত ও আরতি
+                </h2>
+
+                <p>
+                    নবমীর রাতে দেবীর চরণে দক্ষিণা দিয়ে
+                    পূজার সমস্ত ভুলত্রুটির জন্য ক্ষমা
+                    চেয়ে নেওয়া হয়।
+                </p>
+
+                <p>
+                    ঢাকের একটানা তিন তালি ও গম্ভীর আওয়াজের
+                    সাথে সাথে ধুনুচি নাচে মেতে ওঠেন ভক্তরা।
+                </p>
+
+                <p>
+                    নবমীর রাত শেষ হওয়ার সাথে সাথেই
+                    মণ্ডপে মণ্ডপে বেজে ওঠে বিষাদের সুর,
+                    কারণ পরের দিনই দশমীতে মা দুর্গা
+                    কৈলাসে ফিরে যাবেন।
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 NAVAMI TIMING
+            ========================= -->
+
+            <div class="navami-section">
+
+                <h2>
+                    📅 ২০২৬ সালের মহানবমীর নির্ঘণ্ট
+                </h2>
+
+
+                <div class="navami-time-box">
+
+                    <p>
+
+                        <strong>
+                            মহানবমী:
+                        </strong>
+
+                        ২০ অক্টোবর ২০২৬, মঙ্গলবার
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            তিথি আরম্ভ:
+                        </strong>
+
+                        ১৯ অক্টোবর ২০২৬
+                        (২রা কার্তিক, সোমবার)
+                        সকাল ১০টা ৫৩ মিনিটে
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            তিথি সমাপ্তি:
+                        </strong>
+
+                        ২০ অক্টোবর ২০২৬
+                        (৩রা কার্তিক, মঙ্গলবার)
+                        দুপুর ১২টা ৫১ মিনিটে
+
+                    </p>
+
+
+                    <div class="navami-highlight">
+
+                        <strong>
+                            নবমী তিথি
+                        </strong>
+
+                        <br><br>
+
+                        ১৯ অক্টোবর সকাল ১০:৫৩ মিনিট
+                        থেকে
+                        ২০ অক্টোবর দুপুর ১২:৫১ মিনিট
+                        পর্যন্ত।
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+
+    <!-- =========================
+         SCRIPT
+    ========================= -->
+
+    <script>
+
+
+        /* =========================
+           BACK TO PUJA
+        ========================= */
+
+        const navamiBackLink =
+            document.getElementById(
+                "navamiBackLink"
+            );
+
+
+        if (navamiBackLink) {
+
+            navamiBackLink.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    if (
+                        window.parent !==
+                        window
+                    ) {
+
+                        window.parent.postMessage(
+                            {
+                                type:
+                                    "closeNavami"
+                            },
+                            "*"
+                        );
+
+                    } else {
+
+                        window.location.href =
+                            "index.html";
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* =========================
+           MAHA NAVAMI COUNTDOWN
+        ========================= */
+
+        function updateNavamiCountdown() {
+
+            const navamiStart =
+                new Date(
+                    "2026-10-19T10:53:00+05:30"
+                ).getTime();
+
+
+            const navamiEnd =
+                new Date(
+                    "2026-10-20T12:51:00+05:30"
+                ).getTime();
+
+
+            const now =
+                new Date().getTime();
+
+
+            const daysElement =
+                document.getElementById(
+                    "navamiDays"
+                );
+
+            const hoursElement =
+                document.getElementById(
+                    "navamiHours"
+                );
+
+            const minutesElement =
+                document.getElementById(
+                    "navamiMinutes"
+                );
+
+            const secondsElement =
+                document.getElementById(
+                    "navamiSeconds"
+                );
+
+            const messageElement =
+                document.getElementById(
+                    "navamiCountdownMessage"
+                );
+
+
+            if (
+                !daysElement ||
+                !hoursElement ||
+                !minutesElement ||
+                !secondsElement ||
+                !messageElement
+            ) {
+                return;
+            }
+
+
+            /* =========================
+               BEFORE NAVAMI
+            ========================= */
+
+            if (now < navamiStart) {
+
+                const distance =
+                    navamiStart - now;
+
+
+                const days =
+                    Math.floor(
+                        distance /
+                        (1000 * 60 * 60 * 24)
+                    );
+
+
+                const hours =
+                    Math.floor(
+                        (distance /
+                            (1000 * 60 * 60)) %
+                        24
+                    );
+
+
+                const minutes =
+                    Math.floor(
+                        (distance /
+                            (1000 * 60)) %
+                        60
+                    );
+
+
+                const seconds =
+                    Math.floor(
+                        (distance / 1000) %
+                        60
+                    );
+
+
+                daysElement.textContent =
+                    String(days).padStart(
+                        2,
+                        "0"
+                    );
+
+
+                hoursElement.textContent =
+                    String(hours).padStart(
+                        2,
+                        "0"
+                    );
+
+
+                minutesElement.textContent =
+                    String(minutes).padStart(
+                        2,
+                        "0"
+                    );
+
+
+                secondsElement.textContent =
+                    String(seconds).padStart(
+                        2,
+                        "0"
+                    );
+
+
+                messageElement.textContent =
+                    "Countdown to Maha Navami • 19 October 2026";
+
+                return;
+            }
+
+
+            /* =========================
+               NAVAMI IS CURRENTLY RUNNING
+            ========================= */
+
+            if (
+                now >= navamiStart &&
+                now < navamiEnd
+            ) {
+
+                daysElement.textContent =
+                    "00";
+
+                hoursElement.textContent =
+                    "00";
+
+                minutesElement.textContent =
+                    "00";
+
+                secondsElement.textContent =
+                    "00";
+
+
+                messageElement.textContent =
+                    "Maha Navami is here 🪔";
+
+                return;
+            }
+
+
+            /* =========================
+               NAVAMI IS OVER
+            ========================= */
+
+            daysElement.textContent =
+                "00";
+
+            hoursElement.textContent =
+                "00";
+
+            minutesElement.textContent =
+                "00";
+
+            secondsElement.textContent =
+                "00";
+
+
+            messageElement.textContent =
+                "Maha Navami Tithi has ended 🪔";
+
+        }
+
+
+        /* =========================
+           START COUNTDOWN
+        ========================= */
+
+        updateNavamiCountdown();
+
+
+        setInterval(
+            updateNavamiCountdown,
+            1000
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
+

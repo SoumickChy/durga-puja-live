@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>বিজয়া দশমী | Durga Puja Live</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family:
+                "Noto Sans Bengali",
+                "Nirmala UI",
+                Georgia,
+                serif;
+
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(15, 8, 8, 0.60),
+                    rgba(15, 8, 8, 0.88)
+                ),
+                url("images/dashami.jpg")
+                center / cover fixed no-repeat;
+
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           SMOKE
+        ========================= */
+
+        .smoke-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .smoke {
+            position: absolute;
+            bottom: -100px;
+
+            width: 180px;
+            height: 180px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,0.16),
+                    rgba(255,255,255,0.04) 45%,
+                    transparent 72%
+                );
+
+            filter: blur(18px);
+
+            animation:
+                smokeRise 13s linear infinite;
+        }
+
+        .smoke:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .smoke:nth-child(2) {
+            left: 30%;
+            width: 220px;
+            height: 220px;
+            animation-delay: 4s;
+        }
+
+        .smoke:nth-child(3) {
+            left: 60%;
+            width: 200px;
+            height: 200px;
+            animation-delay: 7s;
+        }
+
+        .smoke:nth-child(4) {
+            left: 82%;
+            width: 160px;
+            height: 160px;
+            animation-delay: 2s;
+        }
+
+        @keyframes smokeRise {
+            0% {
+                transform:
+                    translateY(0)
+                    translateX(0)
+                    scale(0.7);
+
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.45;
+            }
+
+            60% {
+                opacity: 0.25;
+            }
+
+            100% {
+                transform:
+                    translateY(-115vh)
+                    translateX(80px)
+                    scale(1.8);
+
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           FLOWER ANIMATION
+        ========================= */
+
+        .flower-container {
+            position: fixed;
+            inset: 0;
+
+            pointer-events: none;
+
+            overflow: hidden;
+
+            z-index: 5;
+        }
+
+        .flower {
+            position: absolute;
+
+            top: -50px;
+
+            font-size: 22px;
+
+            opacity: 0.85;
+
+            animation:
+                flowerFall linear infinite;
+        }
+
+        .flower:nth-child(1) {
+            left: 5%;
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+
+        .flower:nth-child(2) {
+            left: 18%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        .flower:nth-child(3) {
+            left: 32%;
+            animation-duration: 7s;
+            animation-delay: 4s;
+        }
+
+        .flower:nth-child(4) {
+            left: 48%;
+            animation-duration: 11s;
+            animation-delay: 1s;
+        }
+
+        .flower:nth-child(5) {
+            left: 64%;
+            animation-duration: 9s;
+            animation-delay: 3s;
+        }
+
+        .flower:nth-child(6) {
+            left: 78%;
+            animation-duration: 8s;
+            animation-delay: 5s;
+        }
+
+        .flower:nth-child(7) {
+            left: 92%;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+
+        @keyframes flowerFall {
+            0% {
+                transform:
+                    translateY(-60px)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.9;
+            }
+
+            80% {
+                opacity: 0.7;
+            }
+
+            100% {
+                transform:
+                    translateY(110vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .page {
+            position: relative;
+
+            z-index: 10;
+
+            width: min(900px, 92%);
+
+            margin: 0 auto;
+
+            padding:
+                35px
+                0
+                70px;
+        }
+
+        .top-section {
+            text-align: center;
+
+            padding: 35px 20px 25px;
+        }
+
+        .day-label {
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
+            color: #ffdca1;
+
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            margin: 0;
+
+            font-size:
+                clamp(34px, 7vw, 62px);
+
+            color: #ffe2a9;
+
+            text-shadow:
+                0 0 15px rgba(255,180,70,0.35),
+                0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        .subtitle {
+            margin-top: 12px;
+
+            font-size: 15px;
+
+            color: rgba(255,255,255,0.78);
+
+            line-height: 1.8;
+        }
+
+        /* =========================
+           COUNTDOWN
+        ========================= */
+
+        .dashami-countdown {
+            margin:
+                25px auto
+                35px;
+
+            padding: 22px;
+
+            max-width: 720px;
+
+            border:
+                1px solid
+                rgba(255,205,120,0.28);
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(70,30,15,0.45),
+                    rgba(20,8,6,0.60)
+                );
+
+            backdrop-filter: blur(8px);
+
+            box-shadow:
+                0 15px 45px
+                rgba(0,0,0,0.35);
+        }
+
+        .countdown-title {
+            text-align: center;
+
+            color: #ffd995;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            margin-bottom: 18px;
+        }
+
+        .countdown-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+        }
+
+        .countdown-item {
+            text-align: center;
+
+            padding: 14px 8px;
+
+            border-radius: 12px;
+
+            background:
+                rgba(255,255,255,0.055);
+
+            border:
+                1px solid
+                rgba(255,210,130,0.14);
+        }
+
+        .countdown-item span {
+            display: block;
+
+            font-size: 25px;
+
+            font-weight: 700;
+
+            color: #ffe3aa;
+        }
+
+        .countdown-item small {
+            display: block;
+
+            margin-top: 5px;
+
+            color:
+                rgba(255,255,255,0.65);
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        #dashamiCountdownMessage {
+            text-align: center;
+
+            margin-top: 16px;
+
+            font-size: 12px;
+
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* =========================
+           DETAILS
+        ========================= */
+
+        .details {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 18px;
+        }
+
+        .detail-card {
+            padding: 25px;
+
+            border-radius: 17px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(38,18,12,0.82),
+                    rgba(12,7,6,0.88)
+                );
+
+            border:
+                1px solid
+                rgba(255,205,125,0.18);
+
+            box-shadow:
+                0 12px 35px
+                rgba(0,0,0,0.30);
+        }
+
+        .detail-card h2 {
+            margin:
+                0 0 14px;
+
+            color: #ffd58d;
+
+            font-size: 22px;
+        }
+
+        .detail-card h3 {
+            margin:
+                18px 0 8px;
+
+            color: #ffe1ac;
+
+            font-size: 16px;
+        }
+
+        .detail-card p {
+            margin: 0;
+
+            color:
+                rgba(255,255,255,0.84);
+
+            line-height: 1.9;
+
+            font-size: 14px;
+        }
+
+        .detail-card ul {
+            margin:
+                12px 0 0;
+
+            padding-left: 22px;
+
+            color:
+                rgba(255,255,255,0.84);
+
+            line-height: 2;
+        }
+
+        .detail-card li {
+            padding-left: 4px;
+        }
+
+        .highlight {
+            color: #ffd98f;
+
+            font-weight: 600;
+        }
+
+        /* =========================
+           TIMING BOX
+        ========================= */
+
+        .timing-box {
+            margin-top: 18px;
+
+            padding: 18px;
+
+            border-radius: 13px;
+
+            background:
+                rgba(255,170,60,0.075);
+
+            border-left:
+                3px solid
+                rgba(255,190,90,0.65);
+        }
+
+        .timing-box strong {
+            color: #ffd58f;
+        }
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-area {
+            text-align: center;
+
+            margin-top: 38px;
+        }
+
+        #dashamiBackLink {
+            display: inline-block;
+
+            padding: 11px 20px;
+
+            border:
+                1px solid
+                rgba(255,210,120,0.35);
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,190,70,0.18),
+                    rgba(130,55,25,0.28)
+                );
+
+            color: #ffe0a3;
+
+            text-decoration: none;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            transition:
+                all 0.2s ease;
+
+            box-shadow:
+                0 4px 14px
+                rgba(0,0,0,0.25);
+        }
+
+        #dashamiBackLink:hover {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,190,70,0.30),
+                    rgba(150,65,25,0.38)
+                );
+
+            border-color:
+                rgba(255,210,120,0.60);
+
+            transform:
+                translateY(-1px);
+
+            box-shadow:
+                0 6px 18px
+                rgba(255,170,60,0.18);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            text-align: center;
+
+            margin-top: 45px;
+
+            color:
+                rgba(255,255,255,0.42);
+
+            font-size: 11px;
+
+            line-height: 1.8;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .page {
+                width: 94%;
+
+                padding-top: 20px;
+            }
+
+            .top-section {
+                padding:
+                    25px
+                    10px
+                    18px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .subtitle {
+                font-size: 13px;
+            }
+
+            .dashami-countdown {
+                padding: 15px;
+            }
+
+            .countdown-grid {
+                gap: 6px;
+            }
+
+            .countdown-item {
+                padding:
+                    11px 4px;
+            }
+
+            .countdown-item span {
+                font-size: 19px;
+            }
+
+            .countdown-item small {
+                font-size: 8px;
+            }
+
+            .detail-card {
+                padding: 19px;
+            }
+
+            .detail-card h2 {
+                font-size: 19px;
+            }
+
+            .detail-card p,
+            .detail-card li {
+                font-size: 13px;
+
+                line-height: 1.85;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+
+                animation-iteration-count: 1 !important;
+
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         SMOKE
+    ========================= -->
+
+    <div class="smoke-container">
+
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+
+    </div>
+
+
+    <!-- =========================
+         FLOWERS
+    ========================= -->
+
+    <div class="flower-container">
+
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>   
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>   
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌸</div>
+       
+
+    </div>
+
+
+    <!-- =========================
+         MAIN PAGE
+    ========================= -->
+
+    <main class="page">
+
+        <!-- =========================
+             HEADER
+        ========================= -->
+
+        <section class="top-section">
+
+            <div class="day-label">
+                BIJOYA DASHAMI • 2026
+            </div>
+
+            <h1>
+                বিজয়া দশমী
+            </h1>
+
+            <div class="subtitle">
+                মায়ের বিদায়ের দিন • শুভ বিজয়া
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COUNTDOWN
+        ========================= -->
+
+        <section class="dashami-countdown">
+
+            <div class="countdown-title">
+                Bijoya Dashami Countdown
+            </div>
+
+            <div class="countdown-grid">
+
+                <div class="countdown-item">
+                    <span id="dashamiDays">
+                        00
+                    </span>
+
+                    <small>
+                        Days
+                    </small>
+                </div>
+
+
+                <div class="countdown-item">
+                    <span id="dashamiHours">
+                        00
+                    </span>
+
+                    <small>
+                        Hours
+                    </small>
+                </div>
+
+
+                <div class="countdown-item">
+                    <span id="dashamiMinutes">
+                        00
+                    </span>
+
+                    <small>
+                        Minutes
+                    </small>
+                </div>
+
+
+                <div class="countdown-item">
+                    <span id="dashamiSeconds">
+                        00
+                    </span>
+
+                    <small>
+                        Seconds
+                    </small>
+                </div>
+
+            </div>
+
+            <div id="dashamiCountdownMessage">
+                Countdown to Bijoya Dashami
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETAILS
+        ========================= -->
+
+        <section class="details">
+
+
+            <!-- 1 -->
+
+            <article class="detail-card">
+
+                <h2>
+                    ১. দর্পণ বিসর্জন
+                </h2>
+
+                <p>
+                    দশমীর সকালে প্রথম এবং অত্যন্ত গুরুত্বপূর্ণ
+                    শাস্ত্রীয় আচার হলো
+                    <span class="highlight">
+                        দর্পণ বিসর্জন
+                    </span>।
+                </p>
+
+                <h3>
+                    কী করা হয়
+                </h3>
+
+                <p>
+                    একটি পাত্রে জল নিয়ে তার মধ্যে একটি দর্পণ
+                    বা আয়না এমনভাবে রাখা হয় যাতে দেবী প্রতিমার
+                    প্রতিফলন সেই আয়নায় দেখা যায়। পুরোহিত
+                    মন্ত্রোচ্চারণের মাধ্যমে সেই আয়নায় দেবীর
+                    চরণে ফুল ও চন্দন অর্পণ করেন।
+                </p>
+
+                <h3>
+                    তাৎপর্য
+                </h3>
+
+                <p>
+                    শাস্ত্রমতে, এই প্রক্রিয়ার মাধ্যমে মা
+                    দুর্গার মৃন্ময় প্রতিমা থেকে তাঁর দেবত্ব
+                    বা 'প্রাণ' প্রতীকীভাবে জল ও আয়নার মাধ্যমে
+                    ফিরিয়ে নেওয়া হয়। এর পর থেকেই প্রতিমাটি
+                    কেবলই মাটির কাঠামোতে পরিণত হয়।
+                </p>
+
+            </article>
+
+
+            <!-- 2 -->
+
+            <article class="detail-card">
+
+                <h2>
+                    ২. দেবী বরণ
+                </h2>
+
+                <p>
+                    দর্পণ বিসর্জনের পর শুরু হয় ঘরের মেয়েকে
+                    বিদায় জানানোর লৌকিক ও আবেগঘন পর্ব—
+                    <span class="highlight">
+                        দেবী বরণ
+                    </span>।
+                </p>
+
+                <h3>
+                    কী করা হয়
+                </h3>
+
+                <p>
+                    পাড়ার বা বাড়ির বিবাহিত মহিলারা নতুন
+                    লাল-পেড়ে সাদা শাড়ি পরে বরণ ডালা সাজিয়ে
+                    মায়ের সামনে আসেন। বরণ ডালায় থাকে পান-
+                    সুপারি, মিষ্টি, প্রদীপ, ধান ও দূর্বা।
+                </p>
+
+                <h3>
+                    প্রক্রিয়া
+                </h3>
+
+                <p>
+                    মহিলারা মায়ের কপালে সিঁদুর ছোঁয়ান,
+                    মিষ্টি মুখ করান এবং পান পাতা দিয়ে
+                    মায়ের চোখের জল মোছানোর অভিনয় করেন।
+                    মায়ের মুখের সামনে পান পাতা উল্টো করে
+                    ধরে এবং সোজা করে ধরে দেবীকে বিদায়
+                    জানানো হয়।
+                </p>
+
+                <p style="margin-top:12px;">
+                    অনেকে মায়ের আঁচলে ধান-দূর্বা বেঁধে দেন,
+                    যেন মেয়ে শ্বশুরবাড়ি যাওয়ার সময় বাপের
+                    বাড়ির সুখ-সমৃদ্ধি প্রার্থনা করছে।
+                </p>
+
+            </article>
+
+
+            <!-- 3 -->
+
+            <article class="detail-card">
+
+                <h2>
+                    ৩. সিঁদুর খেলা
+                </h2>
+
+                <p>
+                    দেবী বরণ শেষ হতেই শুরু হয় উৎসবের অন্যতম
+                    আনন্দঘন ও রঙিন অধ্যায়—
+                    <span class="highlight">
+                        সিঁদুর খেলা
+                    </span>।
+                </p>
+
+                <h3>
+                    কী করা হয়
+                </h3>
+
+                <p>
+                    মায়ের পায়ে ও কপালে সিঁদুর দেওয়ার পর,
+                    মহিলারা একে অপরের কপালে ও গালে
+                    সিঁদুর মাখিয়ে দেন।
+                </p>
+
+                <h3>
+                    তাৎপর্য
+                </h3>
+
+                <p>
+                    এটি মূলত সধবা মহিলাদের একটি আচার,
+                    যেখানে তাঁরা পরস্পরের স্বামীর দীর্ঘায়ু,
+                    সংসারের মঙ্গল এবং নিজেদের সৌভাগ্য
+                    কামনা করেন। আধুনিক সময়ে এটি আনন্দ,
+                    একতা ও বন্ধুত্বের উৎসব হিসেবেও পালিত হয়।
+                </p>
+
+            </article>
+
+
+            <!-- 4 -->
+
+            <article class="detail-card">
+
+                <h2>
+                    ৪. প্রতিমা নিরঞ্জন বা বিসর্জন যাত্রা
+                </h2>
+
+                <p>
+                    বিকেলের দিকে শুরু হয় প্রতিমা মণ্ডপ থেকে
+                    ঘাটের দিকে নিয়ে যাওয়ার চূড়ান্ত প্রস্তুতি।
+                </p>
+
+                <h3>
+                    যাত্রার আবহ
+                </h3>
+
+                <p>
+                    ঢাকের আওয়াজ, কাঁসর-ঘণ্টার শব্দ এবং
+                    শঙ্খধ্বনিতে চারদিক মুখরিত হয়ে ওঠে।
+                    "আসছে বছর আবার হবে" স্লোগানে দেবীকে
+                    বিদায় জানানো হয়।
+                </p>
+
+                <h3>
+                    জলে বিসর্জন
+                </h3>
+
+                <p>
+                    গঙ্গায় বা স্থানীয় কোনো নদী/জলাশয়ে
+                    প্রতিমা বিসর্জন দেওয়া হয়। প্রতিমা জলে
+                    তলিয়ে যাওয়ার সঙ্গে সঙ্গে মায়ের মর্ত্যলোকের
+                    যাত্রার সমাপ্তি ঘটে এবং তিনি স্বামী শিবের
+                    গৃহ কৈলাসে ফিরে যান।
+                </p>
+
+            </article>
+
+
+            <!-- 5 -->
+
+            <article class="detail-card">
+
+                <h2>
+                    ৫. শান্তিজল গ্রহণ ও বিজয়ার শুভেচ্ছা
+                </h2>
+
+                <h3>
+                    শান্তিজল
+                </h3>
+
+                <p>
+                    বিসর্জনের ঘাট থেকে ঘটের পবিত্র জল,
+                    যা শান্তিজল নামে পরিচিত, নিয়ে আসা হয়।
+                    পুরোহিত আমপাতা দিয়ে সেই জল সবার মাথায়
+                    ছেটান। এটি শান্তি, সমৃদ্ধি ও মঙ্গলের
+                    প্রতীক।
+                </p>
+
+                <h3>
+                    কোলাকুলি ও প্রণাম
+                </h3>
+
+                <p>
+                    ছোটরা গুরুজনদের পায়ে হাত দিয়ে প্রণাম
+                    করে আশীর্বাদ নেয়। সমবয়সীরা একে অপরকে
+                    জড়িয়ে ধরে কোলাকুলি করে।
+                </p>
+
+                <h3>
+                    মিষ্টিমুখ
+                </h3>
+
+                <p>
+                    বিজয়ার অন্যতম প্রধান অঙ্গ হলো মিষ্টিমুখ।
+                    নিমকি, নারকেলের নাড়ু, ঘুগনি ও নানা রকমের
+                    মিষ্টি দিয়ে অতিথি আপ্যায়ন করা হয়।
+                    শত্রুতা ভুলে নতুন করে সৌহার্দ্য স্থাপনের
+                    দিন এটি।
+                </p>
+
+            </article>
+
+
+            <!-- 6 -->
+
+            <article class="detail-card">
+
+                <h2>
+                    ৬. ২০২৬ বিজয়া দশমী
+                </h2>
+
+                <p>
+                    <span class="highlight">
+                        বিজয়া দশমী — বুধবার, ২১ অক্টোবর ২০২৬
+                    </span>
+                </p>
+
+                <p style="margin-top:12px;">
+                    তোমার দেওয়া তথ্য অনুযায়ী, বাংলা পঞ্জিকা
+                    অনুসারে ২১ অক্টোবর ২০২৬ বুধবার বিজয়া
+                    দশমীর প্রধান বিদায়-আচারগুলি অনুষ্ঠিত হবে।
+                </p>
+
+                <div class="timing-box">
+
+                    <p>
+                        <strong>
+                            দশমী তিথি শুরু:
+                        </strong><br>
+
+                        ২০ অক্টোবর ২০২৬,
+                        দুপুর ১২:৫০
+                    </p>
+
+                    <p style="margin-top:12px;">
+                        <strong>
+                            দশমী তিথি সমাপ্ত:
+                        </strong><br>
+
+                        ২১ অক্টোবর ২০২৬,
+                        দুপুর ০২:১১
+                    </p>
+
+                    <p style="margin-top:12px;">
+                        <strong>
+                            দুর্গা বিসর্জন মুহূর্ত:
+                        </strong><br>
+
+                        সকাল ০৬:৩০ – ০৮:৪৬
+                    </p>
+
+                    <p style="margin-top:12px;">
+                        <strong>
+                            বিজয় মুহূর্ত:
+                        </strong><br>
+
+                        দুপুর ০২:০৫ – ০২:৫০
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 7 -->
+
+            <article class="detail-card">
+
+                <h2>
+                    ৭. দশমীর দিনের মূল ধারাবাহিকতা
+                </h2>
+
+                <ul>
+
+                    <li>
+                        সকালে
+                        <span class="highlight">
+                            দর্পণ বিসর্জন
+                        </span>
+                    </li>
+
+                    <li>
+                        এরপর
+                        <span class="highlight">
+                            দেবী বরণ
+                        </span>
+                    </li>
+
+                    <li>
+                        তারপর
+                        <span class="highlight">
+                            সিঁদুর খেলা
+                        </span>
+                    </li>
+
+                    <li>
+                        বিকেল থেকে
+                        <span class="highlight">
+                            বিসর্জন যাত্রা
+                        </span>
+                    </li>
+
+                    <li>
+                        বিসর্জনের পর
+                        <span class="highlight">
+                            শান্তিজল, প্রণাম ও কোলাকুলি
+                        </span>
+                    </li>
+
+                    <li>
+                        শেষে
+                        <span class="highlight">
+                            বিজয়ার মিষ্টিমুখ
+                        </span>
+                    </li>
+
+                </ul>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             BACK BUTTON
+        ========================= -->
+
+        <div class="back-area">
+
+            <a
+                href="#"
+                id="dashamiBackLink"
+            >
+                ← Back to Puja
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             FOOTER
+        ========================= -->
+
+        <div class="footer">
+
+            শুভ বিজয়া দশমী 🪔🌸
+
+            <br>
+
+            আসছে বছর আবার হবে ❤️
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         SCRIPT
+    ========================= -->
+
+    <script>
+
+        /* =========================
+           BACK TO PUJA
+        ========================= */
+
+        const dashamiBackLink =
+            document.getElementById(
+                "dashamiBackLink"
+            );
+
+
+        if (dashamiBackLink) {
+
+            dashamiBackLink.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    if (
+                        window.parent !==
+                        window
+                    ) {
+
+                        window.parent.postMessage(
+                            {
+                                type:
+                                    "closeDashami"
+                            },
+                            "*"
+                        );
+
+                    }
+
+                    else {
+
+                        window.location.href =
+                            "index.html";
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* =========================
+           DASHAMI COUNTDOWN
+        ========================= */
+
+        function updateDashamiCountdown() {
+
+            /*
+             * Dashami Tithi starts:
+             * 20 October 2026
+             * 12:50 PM
+             */
+
+            const dashamiStart =
+                new Date(
+                    "2026-10-20T12:50:00+05:30"
+                ).getTime();
+
+
+            /*
+             * Dashami Tithi ends:
+             * 21 October 2026
+             * 02:11 PM
+             */
+
+            const dashamiEnd =
+                new Date(
+                    "2026-10-21T14:11:00+05:30"
+                ).getTime();
+
+
+            const now =
+                new Date().getTime();
+
+
+            const daysElement =
+                document.getElementById(
+                    "dashamiDays"
+                );
+
+            const hoursElement =
+                document.getElementById(
+                    "dashamiHours"
+                );
+
+            const minutesElement =
+                document.getElementById(
+                    "dashamiMinutes"
+                );
+
+            const secondsElement =
+                document.getElementById(
+                    "dashamiSeconds"
+                );
+
+            const messageElement =
+                document.getElementById(
+                    "dashamiCountdownMessage"
+                );
+
+
+            if (
+                !daysElement ||
+                !hoursElement ||
+                !minutesElement ||
+                !secondsElement ||
+                !messageElement
+            ) {
+
+                return;
+
+            }
+
+
+            /* =========================
+               BEFORE DASHAMI
+            ========================= */
+
+            if (
+                now <
+                dashamiStart
+            ) {
+
+                const distance =
+                    dashamiStart -
+                    now;
+
+
+                const days =
+                    Math.floor(
+                        distance /
+                        (1000 * 60 * 60 * 24)
+                    );
+
+
+                const hours =
+                    Math.floor(
+                        (
+                            distance /
+                            (1000 * 60 * 60)
+                        ) % 24
+                    );
+
+
+                const minutes =
+                    Math.floor(
+                        (
+                            distance /
+                            (1000 * 60)
+                        ) % 60
+                    );
+
+
+                const seconds =
+                    Math.floor(
+                        (
+                            distance /
+                            1000
+                        ) % 60
+                    );
+
+
+                daysElement.textContent =
+                    String(days)
+                        .padStart(2, "0");
+
+
+                hoursElement.textContent =
+                    String(hours)
+                        .padStart(2, "0");
+
+
+                minutesElement.textContent =
+                    String(minutes)
+                        .padStart(2, "0");
+
+
+                secondsElement.textContent =
+                    String(seconds)
+                        .padStart(2, "0");
+
+
+                messageElement.textContent =
+                    "Countdown to Bijoya Dashami • 21 October 2026";
+
+                return;
+            }
+
+
+            /* =========================
+               DASHAMI CURRENTLY RUNNING
+            ========================= */
+
+            if (
+                now >= dashamiStart &&
+                now < dashamiEnd
+            ) {
+
+                daysElement.textContent =
+                    "00";
+
+                hoursElement.textContent =
+                    "00";
+
+                minutesElement.textContent =
+                    "00";
+
+                secondsElement.textContent =
+                    "00";
+
+
+                messageElement.textContent =
+                    "Bijoya Dashami is here 🪔🌸";
+
+                return;
+            }
+
+
+            /* =========================
+               DASHAMI OVER
+            ========================= */
+
+            daysElement.textContent =
+                "00";
+
+            hoursElement.textContent =
+                "00";
+
+            minutesElement.textContent =
+                "00";
+
+            secondsElement.textContent =
+                "00";
+
+
+            messageElement.textContent =
+                "Bijoya Dashami Tithi has ended 🪔";
+
+        }
+
+
+        /* =========================
+           START COUNTDOWN
+        ========================= */
+
+        updateDashamiCountdown();
+
+
+        setInterval(
+            updateDashamiCountdown,
+            1000
+        );
+
+    </script>
+
+</body>
+</html>
+

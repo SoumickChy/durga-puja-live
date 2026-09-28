@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>মহা সপ্তমী | Durga Puja Live</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family:
+                "Noto Sans Bengali",
+                "Nirmala UI",
+                Arial,
+                sans-serif;
+
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(15, 8, 8, 0.60),
+                    rgba(15, 8, 8, 0.84)
+                ),
+                url("images/saptami.jpg") center / cover fixed no-repeat;
+        }
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .page {
+            min-height: 100vh;
+            padding: 30px 20px 45px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* =========================
+           TOP AREA
+        ========================= */
+
+        .top-area {
+            width: 100%;
+            max-width: 1050px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 28px;
+        }
+
+        #saptamiBackLink {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 9px 15px;
+
+            color: #ffe3a6;
+            background: rgba(20, 12, 10, 0.65);
+
+            border: 1px solid rgba(255, 210, 130, 0.35);
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 16px rgba(0, 0, 0, 0.30);
+
+            text-decoration: none;
+
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+
+            transition: all 0.2s ease;
+        }
+
+        #saptamiBackLink:hover {
+            color: #fff0c7;
+            background: rgba(70, 38, 20, 0.75);
+
+            border-color: rgba(255, 210, 130, 0.60);
+
+            transform: translateY(-1px);
+        }
+
+        .brand {
+            text-align: right;
+
+            font-family: Arial, sans-serif;
+        }
+
+        .brand-title {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.7px;
+
+            opacity: 0.92;
+        }
+
+        .brand-subtitle {
+            margin-top: 3px;
+
+            font-size: 9px;
+            letter-spacing: 1px;
+
+            opacity: 0.55;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            width: 100%;
+            max-width: 900px;
+
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-small {
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+            letter-spacing: 2px;
+
+            color: rgba(255, 225, 180, 0.78);
+
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            margin: 0;
+
+            font-size: clamp(42px, 7vw, 78px);
+
+            font-weight: 700;
+
+            line-height: 1.08;
+
+            color: #fff4df;
+
+            text-shadow:
+                0 4px 22px rgba(0, 0, 0, 0.80),
+                0 0 22px rgba(255, 190, 90, 0.14);
+        }
+
+        .hero h2 {
+            margin: 12px 0 10px;
+
+            font-size: clamp(18px, 3vw, 28px);
+
+            font-weight: 500;
+
+            color: #ffe5b3;
+        }
+
+        .hero-description {
+            max-width: 720px;
+
+            margin: 0 auto;
+
+            font-size: 14px;
+            line-height: 1.7;
+
+            color: rgba(255, 255, 255, 0.74);
+        }
+
+        .date-badge {
+            display: inline-block;
+
+            margin-top: 17px;
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 220, 160, 0.22);
+
+            color: #ffe2aa;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+            letter-spacing: 0.5px;
+
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* =========================
+           ARTICLE CARD
+        ========================= */
+
+        .article-card {
+            width: 100%;
+            max-width: 900px;
+
+            padding: 20px;
+
+            background: rgba(15, 9, 9, 0.52);
+
+            border: 1px solid rgba(255, 255, 255, 0.16);
+
+            border-radius: 20px;
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            box-shadow:
+                0 14px 45px rgba(0, 0, 0, 0.40);
+
+            overflow: hidden;
+        }
+
+        /* =========================
+           LANGUAGE BUTTON
+        ========================= */
+
+        .article-toolbar {
+            display: flex;
+            justify-content: flex-end;
+
+            margin-bottom: 10px;
+        }
+
+        #languageBtn {
+            padding: 7px 12px;
+
+            border-radius: 9px;
+
+            border: 1px solid rgba(255, 210, 130, 0.30);
+
+            background: rgba(255, 190, 70, 0.10);
+
+            color: #ffe2ad;
+
+            font-size: 10px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+        }
+
+        #languageBtn:hover {
+            background: rgba(255, 190, 70, 0.20);
+
+            border-color: rgba(255, 210, 130, 0.55);
+
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           ARTICLE
+        ========================= */
+
+        .article-content {
+            max-height: 650px;
+
+            overflow-y: auto;
+
+            padding: 5px 10px 10px 5px;
+
+            scrollbar-width: thin;
+            scrollbar-color:
+                rgba(255, 205, 130, 0.40)
+                transparent;
+        }
+
+        .article-content::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .article-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .article-content::-webkit-scrollbar-thumb {
+            background: rgba(255, 205, 130, 0.40);
+
+            border-radius: 10px;
+        }
+
+        .article-content h3 {
+            margin: 22px 0 9px;
+
+            color: #ffe0a3;
+
+            font-size: 18px;
+
+            font-weight: 700;
+        }
+
+        .article-content h3:first-child {
+            margin-top: 5px;
+        }
+
+        .article-content h4 {
+            margin: 20px 0 8px;
+
+            color: #ffd995;
+
+            font-size: 15px;
+        }
+
+        .article-content p {
+            margin: 0 0 13px;
+
+            color: rgba(255, 255, 255, 0.82);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            text-align: left;
+        }
+
+        .article-content strong {
+            color: #ffe7b8;
+        }
+
+        .article-content ul {
+            margin: 7px 0 16px;
+            padding-left: 22px;
+        }
+
+        .article-content li {
+            margin-bottom: 8px;
+
+            color: rgba(255, 255, 255, 0.80);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        /* =========================
+           TIMING BOX
+        ========================= */
+
+        .timing-box {
+            margin: 24px 0 8px;
+
+            padding: 15px;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 190, 70, 0.10),
+                    rgba(80, 35, 20, 0.20)
+                );
+
+            border: 1px solid rgba(255, 210, 130, 0.22);
+        }
+
+        .timing-box h3 {
+            margin-top: 0;
+            margin-bottom: 13px;
+        }
+
+        .timing-row {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 10px 0;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .timing-row:last-child {
+            border-bottom: none;
+        }
+
+        .timing-label {
+            color: rgba(255, 255, 255, 0.68);
+
+            font-size: 11px;
+        }
+
+        .timing-value {
+            color: #ffe2aa;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            text-align: right;
+        }
+
+        /* =========================
+           KEY FACTS
+        ========================= */
+
+        .facts-box {
+            margin-top: 22px;
+
+            padding: 15px;
+
+            border-radius: 14px;
+
+            background: rgba(255, 255, 255, 0.045);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.10);
+        }
+
+        .facts-box h3 {
+            margin-top: 0;
+        }
+
+        .fact {
+            display: flex;
+
+            gap: 10px;
+
+            margin-bottom: 9px;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .fact:last-child {
+            margin-bottom: 0;
+        }
+
+        .fact-mark {
+            color: #ffd68e;
+
+            flex: 0 0 auto;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .page-footer {
+            width: 100%;
+            max-width: 900px;
+
+            text-align: center;
+
+            margin-top: 18px;
+
+            color: rgba(255, 255, 255, 0.42);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 0.5px;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .page {
+                padding: 18px 12px 30px;
+            }
+
+            .top-area {
+                margin-bottom: 20px;
+            }
+
+            .brand {
+                display: none;
+            }
+
+            .hero {
+                margin-bottom: 18px;
+            }
+
+            .hero-small {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+            }
+
+            .hero h1 {
+                font-size: clamp(36px, 12vw, 58px);
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero-description {
+                font-size: 12px;
+                line-height: 1.65;
+            }
+
+            .article-card {
+                padding: 13px;
+
+                border-radius: 16px;
+            }
+
+            .article-content {
+                max-height: 68vh;
+
+                padding-right: 6px;
+            }
+
+            .article-content h3 {
+                font-size: 16px;
+            }
+
+            .article-content h4 {
+                font-size: 14px;
+            }
+
+            .article-content p,
+            .article-content li {
+                font-size: 12px;
+
+                line-height: 1.85;
+            }
+
+            .timing-row {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .timing-value {
+                text-align: left;
+            }
+        }
+
+        /* =========================
+           SMALL PHONE
+        ========================= */
+
+        @media (max-width: 400px) {
+
+            .page {
+                padding: 14px 9px 25px;
+            }
+
+            #saptamiBackLink {
+                padding: 8px 11px;
+                font-size: 10px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .hero-description {
+                font-size: 11px;
+            }
+
+            .date-badge {
+                font-size: 9px;
+            }
+
+            .article-card {
+                padding: 10px;
+            }
+
+            .article-content {
+                max-height: 70vh;
+            }
+
+            .article-content p,
+            .article-content li {
+                font-size: 11.5px;
+            }
+
+            .fact {
+                font-size: 11px;
+            }
+        }
+        .saptami-countdown {
+    width: min(520px, 100%);
+    margin: 18px auto 0;
+    padding: 13px 14px;
+
+    background: rgba(15, 8, 8, 0.42);
+    border: 1px solid rgba(255, 210, 130, 0.20);
+    border-radius: 14px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.countdown-title {
+    margin-bottom: 10px;
+
+    color: #ffe0a3;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+}
+
+.countdown-item {
+    padding: 8px 4px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9px;
+}
+
+.countdown-item span {
+    display: block;
+
+    color: #fff0cf;
+
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.countdown-item small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    text-transform: uppercase;
+}
+
+#saptamiCountdownMessage {
+    margin-top: 9px;
+
+    color: rgba(255, 225, 180, 0.72);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+}
+
+@media (max-width: 400px) {
+
+    .saptami-countdown {
+        padding: 10px;
+    }
+
+    .countdown-item span {
+        font-size: 17px;
+    }
+
+    .countdown-item small {
+        font-size: 7px;
+    }
+}
+#saptamiBottomBack {
+    display: block;
+    width: fit-content;
+    margin: 45px auto 20px;
+    padding: 8px 14px;
+
+    color: #ffe0a3;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    background: rgba(20, 15, 15, 0.35);
+    border: 1px solid rgba(255, 210, 130, 0.25);
+    border-radius: 9px;
+
+    transition: all 0.2s ease;
+}
+
+#saptamiBottomBack:hover {
+    background: rgba(255, 190, 70, 0.15);
+    border-color: rgba(255, 210, 130, 0.5);
+    transform: translateY(-1px);
+}
+
+
+        /* =========================
+           SAPTAMI FLOWERS + DIYA + SMOKE
+           Same visual style as the Saptami effect
+        ========================= */
+
+        .saptami-flowers {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 40;
+        }
+
+        .saptami-flower {
+            position: absolute;
+            top: -40px;
+            opacity: 0;
+            animation: saptamiFlowerFall linear infinite;
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.25));
+        }
+
+        .saptami-flower:nth-child(1) { left: 8%; font-size: 17px; animation-duration: 10s; animation-delay: 0s; }
+        .saptami-flower:nth-child(2) { left: 22%; font-size: 13px; animation-duration: 13s; animation-delay: 2s; }
+        .saptami-flower:nth-child(3) { left: 37%; font-size: 19px; animation-duration: 11s; animation-delay: 4s; }
+        .saptami-flower:nth-child(4) { left: 52%; font-size: 14px; animation-duration: 14s; animation-delay: 1s; }
+        .saptami-flower:nth-child(5) { left: 68%; font-size: 18px; animation-duration: 12s; animation-delay: 5s; }
+        .saptami-flower:nth-child(6) { left: 82%; font-size: 15px; animation-duration: 15s; animation-delay: 3s; }
+        .saptami-flower:nth-child(7) { left: 94%; font-size: 12px; animation-duration: 11s; animation-delay: 6s; }
+
+        @keyframes saptamiFlowerFall {
+            0% { top: -40px; opacity: 0; transform: translateX(0) rotate(0deg); }
+            10% { opacity: 0.8; }
+            45% { transform: translateX(35px) rotate(150deg); }
+            75% { opacity: 0.65; transform: translateX(-30px) rotate(270deg); }
+            100% { top: 105%; opacity: 0; transform: translateX(20px) rotate(360deg); }
+        }
+
+        .saptami-diya-scene {
+            position: fixed;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 150px;
+            z-index: 50;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .saptami-diya-glow {
+            position: absolute;
+            bottom: 8px;
+            width: 75px;
+            height: 48px;
+            background: radial-gradient(ellipse, rgba(255, 177, 55, 0.30) 0%, rgba(255, 125, 25, 0.12) 40%, transparent 75%);
+            filter: blur(5px);
+            animation: saptamiDiyaGlow 2.2s ease-in-out infinite alternate;
+        }
+
+        .saptami-diya {
+            position: absolute;
+            bottom: 9px;
+            width: 64px;
+            height: 25px;
+            background: linear-gradient(to bottom, #c97932, #8d431e 75%, #54200f);
+            border-radius: 0 0 34px 34px;
+            box-shadow: inset 0 4px 5px rgba(255, 205, 120, 0.25), 0 5px 15px rgba(0, 0, 0, 0.45);
+        }
+
+        .saptami-diya::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 4px;
+            width: 56px;
+            height: 12px;
+            background: linear-gradient(to bottom, #e29a4c, #9c4c22);
+            border-radius: 50%;
+            box-shadow: inset 0 2px 3px rgba(255, 225, 160, 0.35);
+        }
+
+        .saptami-wick {
+            position: absolute;
+            bottom: 32px;
+            width: 4px;
+            height: 10px;
+            background: #35170d;
+            border-radius: 50%;
+            z-index: 3;
+            transform: rotate(3deg);
+        }
+
+        .saptami-flame {
+            position: absolute;
+            bottom: 37px;
+            width: 17px;
+            height: 30px;
+            background: linear-gradient(to top, #ff7a18, #ffc247 55%, #fff3bd);
+            border-radius: 55% 45% 55% 45%;
+            filter: drop-shadow(0 0 7px rgba(255, 170, 45, 0.8));
+            animation: saptamiDiyaFlame 0.75s ease-in-out infinite alternate, saptamiDiyaFloat 2s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        .saptami-flame::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            bottom: 3px;
+            width: 7px;
+            height: 17px;
+            background: #fff8d6;
+            border-radius: 50%;
+        }
+
+        .saptami-smoke {
+            position: absolute;
+            bottom: 63px;
+            width: 48px;
+            height: 75px;
+            z-index: 1;
+            opacity: 0.65;
+        }
+
+        .saptami-smoke span {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: rgba(225, 225, 215, 0.20);
+            filter: blur(4px);
+            animation: saptamiSmoke 4.5s ease-out infinite;
+        }
+
+        .saptami-smoke span:nth-child(1) { animation-delay: 0s; }
+        .saptami-smoke span:nth-child(2) { animation-delay: 1.2s; }
+        .saptami-smoke span:nth-child(3) { animation-delay: 2.4s; }
+        .saptami-smoke span:nth-child(4) { animation-delay: 3.6s; }
+
+        @keyframes saptamiDiyaGlow {
+            from { opacity: 0.55; transform: scale(0.92); }
+            to { opacity: 1; transform: scale(1.08); }
+        }
+
+        @keyframes saptamiDiyaFlame {
+            0% { transform: rotate(-4deg) scale(0.94); }
+            50% { transform: rotate(4deg) scale(1.05); }
+            100% { transform: rotate(-2deg) scale(0.98); }
+        }
+
+        @keyframes saptamiDiyaFloat {
+            0%, 100% { margin-left: 0; }
+            50% { margin-left: 2px; }
+        }
+
+        @keyframes saptamiSmoke {
+            0% { bottom: 0; left: 50%; opacity: 0; transform: scale(0.45); }
+            15% { opacity: 0.45; }
+            45% { opacity: 0.30; }
+            75% { opacity: 0.12; }
+            100% { bottom: 70px; left: 35%; opacity: 0; transform: scale(2.4); }
+        }
+
+        @media (max-width: 600px) {
+            .saptami-diya-scene {
+                bottom: 12px;
+                transform: translateX(-50%) scale(0.82);
+                transform-origin: bottom center;
+            }
+            .saptami-flower { font-size: 13px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- =========================
+         TOP
+    ========================= -->
+
+   <div class="top-area">
+
+    <a href="#" id="saptamiBackLink">
+        ← Back to Puja
+    </a>
+
+    
+
+        <div class="brand">
+            <div class="brand-title">
+                Durga Puja Live
+            </div>
+
+            <div class="brand-subtitle">
+                SHARADIYA DURGA PUJA 2026
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-small">
+            DURGA PUJA LIVE
+        </div>
+
+        <h1>মহা সপ্তমী</h1>
+
+        <h2>
+            দেবীর মহাশক্তি ও নবপত্রিকা পূজার দিন
+        </h2>
+
+        <p class="hero-description">
+            দুর্গাপূজার অন্যতম পবিত্র দিন,
+            নবপত্রিকা পূজা, মহাস্নান ও প্রাণপ্রতিষ্ঠার
+            মাধ্যমে দেবীর মহাশক্তিকে আহ্বান করার দিন।
+        </p>
+
+        <div class="date-badge">
+            17 October 2026 • Saturday
+        </div>
+
+        <div class="saptami-countdown">
+            <div class="countdown-title">
+                Maha Saptami Countdown
+            </div>
+
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <span id="saptamiDays">00</span>
+                    <small>Days</small>
+                </div>
+                <div class="countdown-item">
+                    <span id="saptamiHours">00</span>
+                    <small>Hours</small>
+                </div>
+                <div class="countdown-item">
+                    <span id="saptamiMinutes">00</span>
+                    <small>Minutes</small>
+                </div>
+                <div class="countdown-item">
+                    <span id="saptamiSeconds">00</span>
+                    <small>Seconds</small>
+                </div>
+            </div>
+
+            <div id="saptamiCountdownMessage"></div>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ARTICLE CARD
+    ========================= -->
+
+    <section class="article-card">
+
+        <div class="article-toolbar">
+
+            <button id="languageBtn">
+                Translate to English
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             BENGALI
+        ========================= -->
+
+        <div class="article-content" id="bengaliContent">
+
+            <h3>মহা সপ্তমী — দেবীর মহাশক্তির জাগরণের দিন</h3>
+
+            <p>
+                মহা সপ্তমী দুর্গাপূজার অন্যতম গুরুত্বপূর্ণ ও পবিত্র দিন।
+                আশ্বিন মাসের শুক্লপক্ষের সপ্তমী তিথিতে এই দিনটি পালিত হয়।
+                এই দিন থেকেই দুর্গাপূজার প্রধান ও নিবিড় আচার-অনুষ্ঠানের
+                সূচনা হয়। নবপত্রিকা পূজা, মহাস্নান ও প্রাণপ্রতিষ্ঠার মতো
+                আচার-অনুষ্ঠানের মাধ্যমে দেবীর মহাশক্তিকে আহ্বান করা হয়।
+            </p>
+
+            <p>
+                মহা সপ্তমী দেবীর মর্ত্যে আগমন, শক্তির জাগরণ এবং অশুভ শক্তির
+                বিরুদ্ধে শুভ শক্তির প্রস্তুতির প্রতীক। এই দিনটি ভক্তির পাশাপাশি
+                আত্মশুদ্ধি, সাহস, শৃঙ্খলা ও আধ্যাত্মিক জাগরণের বার্তাও বহন করে।
+            </p>
+
+            <h3>🌿 নবপত্রিকা ও কলাবউ</h3>
+
+            <p>
+                মহা সপ্তমীর অন্যতম প্রধান আচার হলো <strong>নবপত্রিকা পূজা</strong>।
+                নয়টি উদ্ভিদকে একত্র করে দেবীর বিভিন্ন শক্তির প্রতীক হিসেবে
+                পূজা করা হয়। এই উদ্ভিদগুলোকে সাদা অপরাজিতা গাছের মূল দিয়ে
+                বাঁধা হয় এবং লালপাড় হলুদ শাড়িতে আবৃত করা হয়। এই রূপটিকেই
+                প্রচলিতভাবে <strong>কলাবউ</strong> বলা হয়।
+            </p>
+
+            <p>
+                নবপত্রিকাকে ভোরবেলায় নদী বা জলাশয়ে নিয়ে গিয়ে আনুষ্ঠানিক
+                স্নান করানো হয়। এই আচার প্রকৃতি, জীবন ও দেবীশক্তির গভীর
+                সম্পর্ককে প্রকাশ করে এবং প্রকৃতির মধ্যেও দেবীর উপস্থিতিকে
+                স্মরণ করিয়ে দেয়।
+            </p>
+
+            <div class="fact">
+                <span class="fact-mark">🌿</span>
+                <span>
+                    নবপত্রিকার নয়টি উদ্ভিদের মধ্যে রম্ভা বা কলা, কচু, হলুদ,
+                    জয়ন্তী, বিল্ব, ডালিম, অশোক, মানক ও ধান উল্লেখযোগ্য।
+                </span>
+            </div>
+
+            <div class="fact">
+                <span class="fact-mark">🌺</span>
+                <span>
+                    কলাবউকে অনেক সময় গণেশের স্ত্রী মনে করা হয়। তবে এখানে
+                    নবপত্রিকা দেবীশক্তি এবং প্রকৃতি ও কৃষিজীবনের ঐশ্বরিক
+                    প্রতীক হিসেবে পূজিত হয়।
+                </span>
+            </div>
+
+            <h3>🪔 বোধন ও অধিবাস</h3>
+
+            <p>
+                সপ্তমীর আচার-অনুষ্ঠানের সঙ্গে দেবীর ঐশ্বরিক উপস্থিতিকে
+                আহ্বান ও প্রতিষ্ঠা করার ধারণা যুক্ত। বোধন ও অধিবাসের মাধ্যমে
+                দেবীকে পূজার জন্য আনুষ্ঠানিকভাবে আহ্বান ও বরণ করা হয়।
+            </p>
+
+            <p>
+                শঙ্খধ্বনি, ঢাকের বাদ্য এবং মন্ত্রোচ্চারণে পূজামণ্ডপে এক গভীর
+                আধ্যাত্মিক পরিবেশ সৃষ্টি হয়। এই আচারগুলোর মধ্য দিয়ে
+                পূজার পবিত্রতা ও ভক্তির আবহ আরও গভীর হয়ে ওঠে।
+            </p>
+
+            <h3>🔱 মহাস্নান ও প্রাণপ্রতিষ্ঠা</h3>
+
+            <p>
+                মহা সপ্তমীর অন্যতম গুরুত্বপূর্ণ আচার হলো <strong>মহাস্নান</strong>।
+                ঐতিহ্যবাহী পদ্ধতিতে দর্পণে দেবীর প্রতিবিম্ব স্থাপন করে
+                বিভিন্ন প্রকার জল, তেল ও মাটির মাধ্যমে সেই প্রতিবিম্বের
+                আনুষ্ঠানিক স্নান করানো হয়।
+            </p>
+
+            <p>
+                এরপর <strong>প্রাণপ্রতিষ্ঠা</strong>র মাধ্যমে বৈদিক মন্ত্রোচ্চারণ
+                করে দেবীর ঐশ্বরিক জীবনশক্তিকে প্রতিমার মধ্যে আহ্বান করা হয়।
+                এরপর ষোড়শোপচার পূজায় সুগন্ধি, ফুল, ধূপ, প্রদীপ ও ভোগসহ
+                বিভিন্ন উপচার নিবেদন করা হয়। দেবীসূক্ত ও অর্গলা স্তোত্রের
+                মতো স্তোত্রপাঠও অনেক পূজায় প্রচলিত।
+            </p>
+
+            <h3>🌸 বাঙালি পূজার রীতি</h3>
+
+            <p>
+                পশ্চিমবঙ্গে মহা সপ্তমী অত্যন্ত আনন্দ ও ভক্তির সঙ্গে পালিত হয়।
+                অঞ্জলির সময় ভক্তরা ফুল হাতে নিয়ে দেবীর উদ্দেশ্যে প্রার্থনা করেন।
+                ঢাকের শব্দ, ধুনুচি নাচ, শঙ্খধ্বনি এবং বিভিন্ন সাংস্কৃতিক আয়োজন
+                পূজার পরিবেশকে আরও প্রাণবন্ত করে তোলে।
+            </p>
+
+            <p>
+                পরিবার ও সম্প্রদায় একত্র হয়ে পূজা, অঞ্জলি, ভোগ, গান ও
+                সাংস্কৃতিক অনুষ্ঠানে অংশগ্রহণ করে। এই মিলিত আনন্দই
+                দুর্গাপূজার সামাজিক ও সাংস্কৃতিক সৌন্দর্যকে আরও প্রকাশ করে।
+            </p>
+
+            <h3>🗺️ বিভিন্ন অঞ্চলে মহা সপ্তমী</h3>
+
+            <h4>ওড়িশা</h4>
+            <p>
+                ওড়িশায় দেবী দুর্গার পূজা বিশেষ আড়ম্বরের সঙ্গে পালিত হয়।
+                বিভিন্ন স্থানে ঐতিহ্যবাহী আচার এবং ওড়িয়া ভোগের মাধ্যমে
+                দেবীর আরাধনা করা হয়।
+            </p>
+
+            <h4>অসম</h4>
+            <p>
+                অসমে দুর্গাপূজা নিজস্ব আঞ্চলিক রীতি, নৃত্য ও সাংস্কৃতিক
+                অনুষ্ঠানের মাধ্যমে উদযাপিত হয়।
+            </p>
+
+            <h4>উত্তর ভারত</h4>
+            <p>
+                উত্তর ভারতের বিভিন্ন অঞ্চলে সপ্তমী নবরাত্রির অংশ হিসেবে
+                উপবাস, ভক্তিগীতি এবং ধর্মীয় অনুষ্ঠানের মাধ্যমে পালিত হয়।
+            </p>
+
+            <h4>গুজরাট</h4>
+            <p>
+                নবরাত্রির সাংস্কৃতিক উদযাপনে গরবা ও ডান্ডিয়া রাস বিশেষ
+                গুরুত্ব পায় এবং মানুষ সংগীত ও নৃত্যের মাধ্যমে উৎসবে অংশ নেয়।
+            </p>
+
+            <h4>দক্ষিণ ভারত</h4>
+            <p>
+                দক্ষিণ ভারতে নবরাত্রির বিভিন্ন ঐতিহ্যের মধ্যে গোলু বা
+                পুতুল প্রদর্শন এবং শাস্ত্রীয় নৃত্য ও সাংস্কৃতিক অনুষ্ঠান
+                বিশেষভাবে উল্লেখযোগ্য।
+            </p>
+
+            <h3>🍚 ভোগ ও খাদ্যরীতি</h3>
+
+            <p>
+                মহা সপ্তমীর পূজায় ভোগ একটি গুরুত্বপূর্ণ অংশ। খিচুড়ি, লাবড়া,
+                টমেটোর চাটনি, পায়েস, নারকেলের লাড্ডু এবং বিভিন্ন ঋতুভিত্তিক
+                খাবার ভোগ হিসেবে নিবেদন করা হয়।
+            </p>
+
+            <p>
+                অনেক ভক্ত এই সময় সাত্ত্বিক বা উপবাসভিত্তিক খাদ্য গ্রহণ করেন।
+                পূজার পর প্রসাদ বিতরণের মাধ্যমে সকলের মধ্যে ভক্তি, সমতা,
+                ভ্রাতৃত্ব ও একসঙ্গে আনন্দ ভাগ করে নেওয়ার অনুভূতি গড়ে ওঠে।
+            </p>
+
+            <h3>⚔️ দেবী ও মহিষাসুরের যুদ্ধ</h3>
+
+            <p>
+                পৌরাণিক কাহিনিতে দেবী দুর্গার সঙ্গে মহিষাসুরের যুদ্ধ শুভ ও
+                অশুভ শক্তির চিরন্তন সংঘর্ষের প্রতীক। মহা সপ্তমী সেই ঐশ্বরিক
+                সংগ্রামের একটি গুরুত্বপূর্ণ পর্যায়কে নির্দেশ করে, যেখানে
+                দেবী তাঁর শক্তি ও অস্ত্র নিয়ে অশুভ শক্তির বিরুদ্ধে প্রস্তুত হন।
+            </p>
+
+            <p>
+                এই যুদ্ধের অর্থ কেবল বাহ্যিক কোনো অসুরকে পরাজিত করা নয়।
+                মানুষের অন্তরের রাগ, লোভ, আসক্তি ও অজ্ঞতার মতো নেতিবাচক
+                শক্তিকেও জয় করার একটি আধ্যাত্মিক প্রতীক হিসেবে এটি বিবেচিত হয়।
+            </p>
+
+            <h3>✨ শক্তি ও আত্মিক জাগরণ</h3>
+
+            <p>
+                মহা সপ্তমীর মূল ভাবনার কেন্দ্রে রয়েছে <strong>শক্তি</strong>—
+                মহাজাগতিক ঐশ্বরিক শক্তি। নবপত্রিকার মাধ্যমে প্রকৃতির মধ্যেও
+                দেবীশক্তির উপস্থিতিকে স্মরণ করা হয়।
+            </p>
+
+            <p>
+                সপ্তমীর আচার ভক্তকে নিজের অন্তরের শক্তি, সাহস ও চেতনা জাগিয়ে
+                তুলতে অনুপ্রাণিত করে। শুদ্ধি, ভক্তি ও আত্মিক পরিবর্তনের মধ্য দিয়ে
+                ভক্ত মহাষ্টমী ও মহানবমীর আরও গভীর সাধনার দিকে এগিয়ে যান।
+            </p>
+
+            <h3>🤝 সম্প্রদায় ও সাংস্কৃতিক মিলন</h3>
+
+            <p>
+                মহা সপ্তমী শুধুমাত্র ব্যক্তিগত পূজার দিন নয়। পরিবার, বন্ধু,
+                প্রতিবেশী ও সমগ্র সম্প্রদায়কে একত্রিত করার ক্ষেত্রেও এই দিনের
+                বিশেষ ভূমিকা রয়েছে।
+            </p>
+
+            <p>
+                পূজা, সংগীত, নৃত্য, শিল্পকর্ম, প্রতিমা নির্মাণ, আলোকসজ্জা এবং
+                বিভিন্ন সাংস্কৃতিক অনুষ্ঠানের মাধ্যমে মানুষের মধ্যে একতা ও
+                আনন্দের পরিবেশ তৈরি হয়। বিভিন্ন প্রজন্মের মানুষ একসঙ্গে
+                অংশগ্রহণ করার মাধ্যমে ঐতিহ্য ও সাংস্কৃতিক জ্ঞানও সংরক্ষিত হয়।
+            </p>
+
+            <h3>🌺 মহা সপ্তমীর মূল কথা</h3>
+
+            <p>
+                মহা সপ্তমী হলো জাগরণ, শুদ্ধি, শক্তি ও ভক্তির দিন। নবপত্রিকা
+                পূজা থেকে মহাস্নান, প্রাণপ্রতিষ্ঠা থেকে অঞ্জলি ও ভোগ—প্রতিটি
+                আচার দেবীশক্তির প্রতি মানুষের গভীর শ্রদ্ধা এবং প্রকৃতির সঙ্গে
+                আধ্যাত্মিক সম্পর্ককে প্রকাশ করে।
+            </p>
+
+            <p>
+                এই পবিত্র দিন ভক্তকে মনে করিয়ে দেয় যে সত্যিকারের শক্তি শুধু
+                বাহ্যিক জগতে নয়, মানুষের নিজের অন্তরেও নিহিত রয়েছে।
+            </p>
+
+            <p style="text-align:center; color:#ffe0a3; font-weight:700;">
+                🌺 জয় মা দুর্গা 🌺
+            </p>
+
+            <div class="facts-box">
+                <h3>মহা সপ্তমীর মূল তথ্য</h3>
+                <div class="fact"><span class="fact-mark">🌿</span><span>নবপত্রিকা পূজা মহা সপ্তমীর অন্যতম প্রধান আচার।</span></div>
+                <div class="fact"><span class="fact-mark">🔱</span><span>মহাস্নান ও প্রাণপ্রতিষ্ঠার মাধ্যমে দেবীর পূজা আরও নিবিড় হয়।</span></div>
+                <div class="fact"><span class="fact-mark">🌺</span><span>নবপত্রিকা প্রকৃতি ও দেবীশক্তির গভীর সম্পর্কের প্রতীক।</span></div>
+                <div class="fact"><span class="fact-mark">🥁</span><span>ঢাক, শঙ্খধ্বনি, অঞ্জলি ও সাংস্কৃতিক আয়োজনে সপ্তমীর পরিবেশ প্রাণবন্ত হয়ে ওঠে।</span></div>
+                <div class="fact"><span class="fact-mark">🙏</span><span>সপ্তমীর মূল ভাবনা হলো শক্তির জাগরণ, ভক্তি ও আত্মিক পরিবর্তন।</span></div>
+            </div>
+
+        </div>
+
+        <!-- =========================
+             ENGLISH
+        ========================= -->
+
+        <div class="article-content" id="englishContent" style="display:none;">
+
+            <h3>Maha Saptami — The Day of Divine Awakening</h3>
+
+            <p>
+                Maha Saptami is one of the most important and sacred days of Durga Puja.
+                Observed on the seventh day of the bright fortnight of Ashwin, it marks
+                the beginning of the most intense phase of the festival. Rituals such as
+                Nabapatrika Puja, Maha Snan and Prana Pratishtha invoke and establish
+                the divine presence of Goddess Durga.
+            </p>
+
+            <p>
+                The day represents divine arrival, the awakening of Shakti and the
+                preparation of good against destructive forces. Its rituals also carry
+                ideas of purification, courage, discipline and spiritual awakening.
+            </p>
+
+            <h3>🌿 Nabapatrika &amp; Kola Bou</h3>
+
+            <p>
+                One of the central rituals of Maha Saptami is <strong>Nabapatrika Puja</strong>.
+                Nine plants are tied together as symbolic representations of different
+                aspects of the divine feminine. They are traditionally bound with the
+                roots of the white Aparajita plant and wrapped in a red-bordered yellow sari.
+                In this form, the Nabapatrika is commonly known as <strong>Kola Bou</strong>.
+            </p>
+
+            <p>
+                The Nabapatrika is traditionally taken to a river or water body at dawn
+                for a ceremonial bath. The ritual expresses the close connection between
+                nature, life and divine energy.
+            </p>
+
+            <h3>🪔 Bodhon &amp; Adhivasan</h3>
+
+            <p>
+                The rituals of Saptami are connected with invoking and establishing the
+                divine presence of the Goddess. Bodhon and Adhivasan form part of the
+                ceremonial process of welcoming the Goddess into the Puja. Conch shells,
+                dhak and sacred chanting create a deeply devotional atmosphere.
+            </p>
+
+            <h3>🔱 Maha Snan &amp; Prana Pratishtha</h3>
+
+            <p>
+                Maha Snan is an important ritual of the day. In a traditional practice,
+                a mirror reflecting the Goddess is ceremonially bathed with different
+                forms of water, oils and soil. This is followed by <strong>Prana Pratishtha</strong>,
+                in which Vedic mantras are recited to invoke the divine life force into the idol.
+            </p>
+
+            <p>
+                Shodashopachara Puja may then be performed with offerings including fragrance,
+                flowers, incense, lamps and food. Devotional recitations such as Devi Suktam
+                and Argala Stotram are also associated with these hours of worship.
+            </p>
+
+            <h3>🌸 Bengali Puja Traditions</h3>
+
+            <p>
+                In West Bengal, Maha Saptami is celebrated with devotion and great cultural
+                energy. Devotees offer anjali with flowers, while dhak, conch shells, dhunuchi
+                dance and cultural activities create the distinctive atmosphere of Durga Puja.
+            </p>
+
+            <h3>🗺️ Regional Celebrations</h3>
+
+            <h4>Odisha</h4>
+            <p>
+                Durga Puja is celebrated with elaborate rituals and traditional Odia offerings,
+                carrying distinctive regional influences.
+            </p>
+
+            <h4>Assam</h4>
+            <p>
+                Durga Puja is observed with regional customs, devotional activities, dances and cultural celebrations.
+            </p>
+
+            <h4>North India</h4>
+            <p>
+                In many parts of North India, Saptami forms part of Navratri traditions involving fasting, devotional singing and religious activities.
+            </p>
+
+            <h4>Gujarat</h4>
+            <p>
+                Garba and Dandiya Raas are prominent cultural expressions of Navratri celebrations.
+            </p>
+
+            <h4>South India</h4>
+            <p>
+                South Indian Navaratri traditions may include Golu displays, classical dance and cultural performances.
+            </p>
+
+            <h3>🍚 Bhog &amp; Dietary Practices</h3>
+
+            <p>
+                Bhog is an important part of the day's worship. Preparations such as khichuri,
+                labra, tomato chutney, payesh, coconut laddoo and other seasonal foods may be offered.
+            </p>
+
+            <p>
+                Many devotees follow a sattvic or fasting-oriented diet. Distribution of Prasad
+                after worship reinforces a sense of equality, community and shared celebration.
+            </p>
+
+            <h3>⚔️ The Goddess and the Battle with Mahishasura</h3>
+
+            <p>
+                The mythological battle between Goddess Durga and Mahishasura symbolizes the
+                enduring struggle between divine and destructive forces. Maha Saptami represents
+                an important stage in this sacred struggle as the Goddess gathers her strength
+                and prepares to confront darkness.
+            </p>
+
+            <p>
+                The symbolism also extends inward, representing the effort to overcome anger,
+                greed, attachment and ignorance within oneself.
+            </p>
+
+            <h3>✨ Shakti &amp; Inner Transformation</h3>
+
+            <p>
+                At the heart of Maha Saptami is <strong>Shakti</strong>, the primordial divine energy.
+                Through Nabapatrika, nature itself becomes a reminder of the presence of the Goddess.
+            </p>
+
+            <p>
+                The rituals encourage devotees to awaken inner courage, discipline and awareness,
+                preparing them for the deeper devotion associated with Maha Ashtami and Mahanavami.
+            </p>
+
+            <h3>🤝 Community &amp; Cultural Expressions</h3>
+
+            <p>
+                Maha Saptami brings families, friends and communities together through Puja, music,
+                dance, art, food and cultural activities. These celebrations also create opportunities
+                for different generations to share and preserve traditions.
+            </p>
+
+            <h3>🌺 The Essence of Maha Saptami</h3>
+
+            <p>
+                Maha Saptami is a day of awakening, purification, strength and devotion. From
+                Nabapatrika Puja and Maha Snan to Prana Pratishtha, anjali and bhog, the rituals
+                express reverence for Shakti and the spiritual relationship between humanity and nature.
+            </p>
+
+            <p style="text-align:center; color:#ffe0a3; font-weight:700;">
+                🌺 Jai Maa Durga 🌺
+            </p>
+
+            <div class="facts-box">
+                <h3>Key Facts of Maha Saptami</h3>
+                <div class="fact"><span class="fact-mark">🌿</span><span>Nabapatrika Puja is one of the central rituals of Maha Saptami.</span></div>
+                <div class="fact"><span class="fact-mark">🔱</span><span>Maha Snan and Prana Pratishtha deepen the ceremonial worship of the Goddess.</span></div>
+                <div class="fact"><span class="fact-mark">🌺</span><span>Nabapatrika symbolizes the close relationship between nature and divine energy.</span></div>
+                <div class="fact"><span class="fact-mark">🥁</span><span>Dhak, conch shells, anjali and cultural activities create the festive atmosphere.</span></div>
+                <div class="fact"><span class="fact-mark">🙏</span><span>The central themes are awakening, devotion, Shakti and inner transformation.</span></div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+<a href="#" id="saptamiBottomBack">
+    ← Back to Durga Puja Live
+</a>
+
+
+<div class="saptami-flowers">
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+    <div class="saptami-flower">🌸</div>
+</div>
+
+<div class="saptami-diya-scene">
+    <div class="saptami-smoke"><span></span><span></span><span></span><span></span></div>
+    <div class="saptami-diya-glow"></div>
+    <div class="saptami-wick"></div>
+    <div class="saptami-flame"></div>
+    <div class="saptami-diya"></div>
+</div>
+
+    <div class="page-footer">
+        Durga Puja Live • Sharadiya Durga Puja 2026
+    </div>
+
+</div>
+
+
+<script>
+
+    /* =========================
+       LANGUAGE TOGGLE
+    ========================= */
+
+    const languageBtn =
+        document.getElementById("languageBtn");
+
+    const bengaliContent =
+        document.getElementById("bengaliContent");
+
+    const englishContent =
+        document.getElementById("englishContent");
+
+    let englishMode = false;
+
+    languageBtn.addEventListener("click", function () {
+
+        englishMode = !englishMode;
+
+        if (englishMode) {
+
+            bengaliContent.style.display = "none";
+            englishContent.style.display = "block";
+
+            languageBtn.textContent =
+                "বাংলায় দেখুন";
+
+        } else {
+
+            englishContent.style.display = "none";
+            bengaliContent.style.display = "block";
+
+            languageBtn.textContent =
+                "Translate to English";
+        }
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    /* =========================
+       BACK TO MAIN PAGE
+    ========================= */
+
+    const saptamiBackLink =
+        document.getElementById("saptamiBackLink");
+
+    if (saptamiBackLink) {
+
+        saptamiBackLink.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                if (window.parent !== window) {
+
+                    window.parent.postMessage(
+                        {
+                            type: "closeSaptami"
+                        },
+                        "*"
+                    );
+
+                } else {
+
+                    window.location.href =
+                        "index.html";
+                }
+
+            }
+        );
+    }
+/* =========================
+   SAPTAMI COUNTDOWN
+========================= */
+
+const saptamiTargetDate =
+    new Date(2026, 9, 17, 0, 0, 0).getTime();
+
+function updateSaptamiCountdown() {
+
+    const now = new Date().getTime();
+    const distance = saptamiTargetDate - now;
+
+    const days = Math.max(0, Math.floor(distance / (1000 * 60 * 60 * 24)));
+    const hours = Math.max(0, Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    const minutes = Math.max(0, Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+    const seconds = Math.max(0, Math.floor((distance % (1000 * 60)) / 1000));
+
+    document.getElementById("saptamiDays").textContent = String(days).padStart(2, "0");
+    document.getElementById("saptamiHours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("saptamiMinutes").textContent = String(minutes).padStart(2, "0");
+    document.getElementById("saptamiSeconds").textContent = String(seconds).padStart(2, "0");
+
+    document.getElementById("saptamiCountdownMessage").textContent =
+        distance > 0
+            ? "Countdown to Maha Saptami • 17 October 2026"
+            : "Maha Saptami is here 🪔";
+}
+
+updateSaptamiCountdown();
+setInterval(updateSaptamiCountdown, 1000);
+</script>
+
+</body>
+</html>
